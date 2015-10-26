@@ -9,14 +9,26 @@ var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
-
+var less = require('gulp-less');
+var watch      = require('gulp-watch');
 
 // TASKS !
 
 // default task
-gulp.task('default',
-  ['lint', 'browserify', 'connect']
-);
+gulp.task('default', ['lint', 'browserify', 'connect', 'compile-less', 'watch-less']);
+
+/* Task to compile less */
+gulp.task('compile-less', function() {  
+  gulp.src('./app/css/main.less')
+    .pipe(less())
+    .pipe(gulp.dest('./app/css/'));
+});
+
+/* Task to watch less changes */
+gulp.task('watch-less', function() {  
+  gulp.watch('./app/css/**/*.less' , ['compile-less']);
+});
+
 
 gulp.task('lint', function() {
   gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
@@ -34,6 +46,7 @@ gulp.task('minify-css', function() {
     .pipe(minifyCSS(opts))
     .pipe(gulp.dest('./dist/'))
 });
+
 gulp.task('minify-js', function() {
   gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
     .pipe(uglify({
@@ -93,4 +106,14 @@ gulp.task('browserifyDist', function() {
   }))
   .pipe(concat('bundled.js'))
   .pipe(gulp.dest('./dist/js'))
+});
+
+// gulp-less
+gulp.task('less', function () {
+  return gulp.src('./less/**/*.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ],
+      plugins: [autoprefix, cleancss]
+    }))
+    .pipe(gulp.dest('./public/css'));
 });
