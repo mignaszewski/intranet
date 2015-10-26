@@ -16,6 +16,9 @@
   },
   "homepage": "https://github.com/mignaszewski/intranet#readme",
   "dependencies": {
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-route": "^1.4.7",
     "bower": "^1.6.5",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
