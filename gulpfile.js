@@ -24,19 +24,23 @@ gulp.task('clean', function() {
 });
 
 // *** default task *** //
-gulp.task('default', function(done) {
-  runSequence('clean', 'browserify', 'connect', 'compile-less', 'watch-less', 'lint', function() {
-    console.log('default end.');
-    done();
+//gulp.task('default', function(done) {
+//  runSequence('clean', 'browserify', 'connect', 'compile-less', 'watch-less', 'lint', function() {
+//    done();
+//  });
+//});
+
+gulp.task('default', function() {
+  runSequence(['clean'], ['browserify', 'connect', 'compile-less', 'watch-less', 'lint'], function() {
+
   });
 });
 
 
 // build task
 gulp.task('build', function(done) {
-  runSequence('clean', 'minify-css', 'browserifyDist', 'copy-html-files', 'copy-bower-components', 'connectDist', 'lint', function(){
-    console.log('build end.');
-    done();
+  runSequence(['clean'], ['minify-css', 'browserifyDist', 'copy-html-files', 'copy-bower-components', 'connectDist', 'lint'], function(){
+
   });
 });
 
@@ -56,7 +60,7 @@ gulp.task('watch-less', function() {
 
 
 gulp.task('lint', function() {
-  gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
+  gulp.src(['./app/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(jshint.reporter('fail'));
