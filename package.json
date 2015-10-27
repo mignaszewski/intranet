@@ -30,8 +30,14 @@
     "gulp-uglify": "^1.4.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
     "gulp-less": "^3.0.3",
-    "gulp-watch": "^4.3.5"
+    "gulp-run-seq": "^1.2.2",
+    "gulp-sequence": "^0.4.1",
+    "gulp-watch": "^4.3.5",
+    "jshint": "^2.8.0",
+    "run-sequence": "^1.1.4"
   },
   "description": ""
 }
