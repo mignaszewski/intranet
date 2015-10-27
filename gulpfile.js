@@ -23,12 +23,6 @@ gulp.task('clean', function() {
       .pipe(clean({force: true}))
 });
 
-// *** default task *** //
-//gulp.task('default', function(done) {
-//  runSequence('clean', 'browserify', 'connect', 'compile-less', 'watch-less', 'lint', function() {
-//    done();
-//  });
-//});
 
 gulp.task('default', function() {
   runSequence(['clean'], ['browserify', 'connect', 'compile-less', 'watch-less', 'lint'], function() {
@@ -38,10 +32,12 @@ gulp.task('default', function() {
 
 
 // build task
-gulp.task('build', function(done) {
-  runSequence(['clean'], ['minify-css', 'browserifyDist', 'copy-html-files', 'copy-bower-components', 'connectDist', 'lint'], function(){
+gulp.task('build', ['clean'], function() {
+  setTimeout(function() {
+    runSequence(['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist'], function () {
 
-  });
+    });
+  },2000);
 });
 
 
