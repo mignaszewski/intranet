@@ -24,4 +24,14 @@
       $scope.test = "Testing...";
     }
   ]);
+
+  .controller('MainController', ['$scope', mainCtrl])
+  .controller('CalendarController', ['$scope', calendarCtrl])
+  .directive('navigation', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'navigation.html'
+    };
+  });
+
 }());
