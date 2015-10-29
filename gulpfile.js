@@ -11,9 +11,22 @@ var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var less = require('gulp-less');
-var watch = require('gulp-watch');
+var browserSync = require('browser-sync').create();
 
-// TASKS !
+// Default task !
+gulp.task('default', function() {
+  runSequence(['clean'], ['lint', 'serve'], function() {
+  });
+});
+
+// Build task
+gulp.task('build', ['clean'], function() {
+  setTimeout(function() {
+    runSequence(['clean'], ['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist'], function () {
+
+    });
+  },2000);
+});
 
 // clean task
 gulp.task('clean', function() {
@@ -23,23 +36,20 @@ gulp.task('clean', function() {
       .pipe(clean({force: true}))
 });
 
+// create a task that ensures the `js` task is complete before reloading browsers, delay by 1sec
+gulp.task('js-watch', ['lint', 'browserify'], function() {
+  setTimeout(browserSync.reload, 1000);
+});
 
-gulp.task('default', function() {
-  runSequence(['clean'], ['browserify', 'connect', 'compile-less', 'watch-less', 'lint'], function() {
 
+// Refreshing page after change, starting browser for dev
+gulp.task('serve', ['browserify', 'compile-less'], function() {
+  browserSync.init({
+    server: "./app"
   });
+  gulp.watch(['./app/js/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'], ['js-watch']);
+  gulp.watch('./app/css/**/*.less' , ['compile-less', browserSync.reload]);
 });
-
-
-// build task
-gulp.task('build', ['clean'], function() {
-  setTimeout(function() {
-    runSequence(['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist'], function () {
-
-    });
-  },2000);
-});
-
 
 /* Task to compile less */
 gulp.task('compile-less', function() {  
@@ -47,12 +57,6 @@ gulp.task('compile-less', function() {
     .pipe(less())
     .pipe(gulp.dest('./app/css/'));
 });
-
-/* Task to watch less changes */
-gulp.task('watch-less', function() {  
-  gulp.watch('./app/css/**/*.less' , ['compile-less']);
-});
-
 
 
 gulp.task('lint', function() {
@@ -88,19 +92,6 @@ gulp.task('copy-html-files', function () {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('connect', function () {
-  connect.server({
-    root: 'app/',
-    port: 8888
-  });
-});
-
-gulp.task('connectDist', function () {
-  connect.server({
-    root: 'dist/',
-    port: 9999
-  });
-});
 
 gulp.task('browserify', function() {
   gulp.src(['app/js/main.js'])
@@ -120,4 +111,11 @@ gulp.task('browserifyDist', function() {
   }))
   .pipe(concat('bundled.js'))
   .pipe(gulp.dest('./dist/js'))
+});
+
+gulp.task('connectDist', function () {
+  connect.server({
+    root: 'dist/',
+    port: 9999
+  });
 });

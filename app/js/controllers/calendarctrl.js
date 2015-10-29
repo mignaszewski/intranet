@@ -1,3 +1,4 @@
 module.exports = function($scope) {
-  $scope.sometext = "Calendar..";
+  $scope.sometext = "jakiś tekst jeeeedeeeeeenn";
+  // $scope.sometext = "jakiś tekst dwaaaaaa";
 };
