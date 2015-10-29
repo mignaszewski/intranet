@@ -49,6 +49,7 @@ gulp.task('serve', ['browserify', 'compile-less'], function() {
   });
   gulp.watch(['./app/js/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'], ['js-watch']);
   gulp.watch('./app/css/**/*.less' , ['compile-less', browserSync.reload]);
+  gulp.watch('./app/**/*.html' , [browserSync.reload]);
 });
 
 /* Task to compile less */

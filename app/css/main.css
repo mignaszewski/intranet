@@ -1,96 +1,37 @@
-#hero {
-  /*background-color: rgb(184, 214, 164);*/
-  height: 200px;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #b8d6a4;
+  font-family: "Verdana", "Arial", sans-serif;
+  font-size: 20px;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+}
+.view-ng {
+  display: inline-block;
   width: 100%;
-  box-sizining: border-box;
-  border-bottom: solid black 1px;
 }
-
-/* SEARCH BOX */
-.box {
-  margin-left: 1250px;
-  padding-top: 10px;
-}
-.container-4{
-  overflow: hidden;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.container-4 input#search{
-  width: 300px;
-  height: 50px;
-  background: #ddd;
-  border: none;
-  font-size: 10pt;
-  float: left;
-  color: #fff;
-  padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.container-4 input#search::-webkit-input-placeholder {
-   color: #817d7d;
-}
-.container-4 input#search:-moz-placeholder { /* Firefox 18- */
-   color: #817d7d;  
-}
-.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
-   color: #817d7d;  
-}
-.container-4 input#search:-ms-input-placeholder {  
-   color: #817d7d;  
-}
-.container-4 button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
- 
-  border: none;
-  background: #aaa;
-  height: 50px;
-  width: 50px;
-  color: #eee;
-  opacity: 0;
-  font-size: 10pt;
- 
-  -webkit-transition: all .55s ease;
-  -moz-transition: all .55s ease;
-  -ms-transition: all .55s ease;
-  -o-transition: all .55s ease;
-  transition: all .55s ease;
-}
-.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
-  outline: none;
-  opacity: 1;
-  margin-left: -50px;
-}
-.container-4:hover button.icon:hover{
-  background: #bbb;
-}
-/* END OF SEARCH BOX */
-/* LOGO + BACKGROUND IMG */
-.logo-container {
-  width: 35%;
+section {
   display: inline-block;
 }
-.logo {
-  padding-left: 50px;
-  padding-bottom: 30px;
-}
-.background-container {
-  width: 600px;
-  height: 200px;
+aside {
   display: inline-block;
-  vertical-align: top;
 }
-.background {
-  height: 120px;
-  margin-top: 60px;
-  margin-left: 
+article {
+  display: inline-block;
 }
-/* END OF LOGO + BACKGROUND IMG */
+footer {
+  display: inline-block;
+}
+.background-page {
+  width: 100%;
+  margin: 50px 0px;
+  background-color: #eff6ea;
+}
