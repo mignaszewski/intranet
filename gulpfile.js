@@ -12,13 +12,7 @@ var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var less = require('gulp-less');
 var watchify = require('gulp-watchify');
-var bundlePaths = {
-    src: [
-        'app/js/**/*.js',
-        "!app/js/**/lib/**" // Don't bundle libs
-    ],
-    dest:'build/js/'
-};
+
 // TASKS !
 
 // clean task
@@ -31,7 +25,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('default', function() {
-  runSequence(['clean'], ['browserifyy' ,'browserify', 'connect', 'compile-less', 'watch-less', 'lint'], function() {
+  runSequence(['clean'], ['browserify', 'connect', 'compile-less', 'watch-less', 'lint'], function() {
   });
 });
 
@@ -39,32 +33,14 @@ gulp.task('default', function() {
 // build task
 gulp.task('build', ['clean'], function() {
   setTimeout(function() {
-    runSequence(['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist'], function () {
+    runSequence(['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist',  'compile-less', 'watch-less'], function () {
 
     });
   },2000);
 });
 // ############################################################################################3
 
-// Hack to enable configurable watchify watching
-var watching = false
-gulp.task('enable-watch-mode', function() { watching = true })
 
-// Browserify and copy js files
-gulp.task('browserifyy', watchify(function(watchify) {
-    return gulp.src(bundlePaths.src)
-        .pipe(watchify({
-            watch:watching
-        }))
-        .pipe(gulp.dest(bundlePaths.dest))
-}))
-
-gulp.task('watchify', ['enable-watch-mode', 'browserifyy'])
-
-
-// Rerun tasks when a file changes
-gulp.task('watch', ['watchify'], function () {
-})
 
 // ############################################################################################3
 
