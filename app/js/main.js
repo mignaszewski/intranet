@@ -17,20 +17,20 @@
           redirectTo: '/'
         });
     }
-  ]);
+  ])
   //Load controller
-  angular.module('SampleApp')
-    .controller('MainController', ['$scope', function($scope) {
-      $scope.test = "Testing...";
-    }
-  ]);
+  // angular.module('SampleApp')
+  //   .controller('MainController', ['$scope', function($scope) {
+  //     $scope.test = "Testing...";
+  //   }
+  // ]);
 
   .controller('MainController', ['$scope', mainCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .directive('navigation', function() {
     return {
       restrict: 'E',
-      templateUrl: 'navigation.html'
+      templateUrl: './partials/navigation.html'
     };
   });
 

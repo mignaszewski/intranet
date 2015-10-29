@@ -11,25 +11,43 @@
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!--     <link rel="stylesheet/less" href="css/main.less"> -->
   </head>
   <body>
-    <div ng-controller="CalendarController">
-      <navigation></navigation>
+  <!-- nav -->
+    <div id="hero">
+      <div class="box">
+        <div class="container-4">
+          <input type="search" id="search" placeholder="Szukaj..." />
+          <button class="icon"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+      <div class="logo-container">
+        <img class="logo" src="./img/logo-intranet.jpg"/>
+      </div>
+      <div class="background-container">
+        <img class="background" src="./img/background.jpg"/>
+      </div>
     </div>
-    <!--<navigation id="hero">
-      <img class="logo" src="C://users/ankala/Desktop/Mockup/logo.jpg"/>
-      <p class="intranet_logo_text"> Intranet </p>
-      <br/>
-      <p class="welcome"> funny image/text here </p>
-      <form id="searchbox">
-        <input type="text" placeholder="Szukana fraza">
-        <input id="submit" type"submit" value="Szukaj">
-      </form>
-    </navigation>-->
-    <h1>Angular-Gulp-Browserify-Starter</h1>
+    
     <!-- views -->
-    <div class="view-ng" ng-view></div>
+    <section>
+      <div class="view-ng" ng-view></div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer">
+      <div> Offices
+        <div>Wrocław</div>
+        <div>Warszawa</div>
+      </div>
+      <div id="social-media">
+        <div>FB</div>
+        <div>LinkedIn</div>
+      </div>
+    </div>
+
     <!-- scripts -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
