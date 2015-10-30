@@ -1,12 +1,37 @@
 #hero {
   height: 100px;
   width: 100%;
+/* LOGO + BACKGROUND IMG */
+  .logo-container {
+    float: left;
+    width: 35%;
+    height: 100%;
+    display: inline-block;
+    .logo {
+      height: 75px;
+      width: 285px;
+      padding-left: 50px;
+      display: inline-block;
+    }
+  }
+  .background-container {
+    display: inline-block;
+    float: left;
+    // position: absolute;
+    .background {
+      height: 90px;
+      // margin-top: -30px;
+      position: relative;
+    }
+  }
+/* END OF LOGO + BACKGROUND IMG */
+}
   /* SEARCH BOX */
   .box {
-    margin-left: 1270px;
+    float: right;
     padding-top: 10px;
     display: inline-block;
-  }
+
     .container-4 {
       overflow: hidden;
       width: 300px;
@@ -68,35 +93,12 @@
     .container-4:hover button.icon:hover{
       background: #bbb;
     }
+  }
 /* END OF SEARCH BOX */
-/* LOGO + BACKGROUND IMG */
-  .logo-container {
-    width: 35%;
-    height: 100%;
-    display: inline-block;
-    .logo {
-      height: 75px;
-      width: 285px;
-      padding-left: 50px;
-      margin-top: -40px;
-      display: inline-block;
-    }
-  }
-  .background-container {
-    display: inline-block;
-    position: absolute;
-    .background {
-      height: 90px;
-      margin-top: -30px;
-      position: relative;
-    }
-  }
-/* END OF LOGO + BACKGROUND IMG */
-}
 // FOOTER
 footer {
-  position: fixed;
-  bottom: 0px;
+  display: inline-block;
+  bottom: 0;
   text-align: center;
   .offices {
     padding-right: 80px;

@@ -7,11 +7,6 @@ body {
   background-color: white;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 20px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 ul {
   list-style-type: none;
@@ -22,7 +17,6 @@ img {
 .view-ng {
   display: block;
   background: #77b5d4;
-  position: absolute;
   width: 100%;
   top: 100px;
   bottom: 100px;
@@ -52,23 +46,42 @@ footer {
 #hero {
   height: 100px;
   width: 100%;
-  /* SEARCH BOX */
-  /* END OF SEARCH BOX */
   /* LOGO + BACKGROUND IMG */
   /* END OF LOGO + BACKGROUND IMG */
 }
-#hero .box {
-  margin-left: 1270px;
+#hero .logo-container {
+  float: left;
+  width: 35%;
+  height: 100%;
+  display: inline-block;
+}
+#hero .logo-container .logo {
+  height: 75px;
+  width: 285px;
+  padding-left: 50px;
+  display: inline-block;
+}
+#hero .background-container {
+  display: inline-block;
+  float: left;
+}
+#hero .background-container .background {
+  height: 90px;
+  position: relative;
+}
+/* SEARCH BOX */
+.box {
+  float: right;
   padding-top: 10px;
   display: inline-block;
 }
-#hero .container-4 {
+.box .container-4 {
   overflow: hidden;
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
 }
-#hero .container-4 input#search {
+.box .container-4 input#search {
   width: 300px;
   height: 40px;
   background: #ddd;
@@ -81,21 +94,21 @@ footer {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-#hero .container-4 input#search::-webkit-input-placeholder {
+.box .container-4 input#search::-webkit-input-placeholder {
   color: #817d7d;
 }
-#hero .container-4 input#search:-moz-placeholder {
+.box .container-4 input#search:-moz-placeholder {
   /* Firefox 18- */
   color: #817d7d;
 }
-#hero .container-4 input#search::-moz-placeholder {
+.box .container-4 input#search::-moz-placeholder {
   /* Firefox 19+ */
   color: #817d7d;
 }
-#hero .container-4 input#search:-ms-input-placeholder {
+.box .container-4 input#search:-ms-input-placeholder {
   color: #817d7d;
 }
-#hero .container-4 button.icon {
+.box .container-4 button.icon {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -115,40 +128,20 @@ footer {
   -o-transition: all .55s ease;
   transition: all .55s ease;
 }
-#hero .container-4:hover button.icon,
-#hero .container-4:active button.icon,
-#hero .container-4:focus button.icon {
+.box .container-4:hover button.icon,
+.box .container-4:active button.icon,
+.box .container-4:focus button.icon {
   outline: none;
   opacity: 1;
   margin-left: -50px;
 }
-#hero .container-4:hover button.icon:hover {
+.box .container-4:hover button.icon:hover {
   background: #bbb;
 }
-#hero .logo-container {
-  width: 35%;
-  height: 100%;
-  display: inline-block;
-}
-#hero .logo-container .logo {
-  height: 75px;
-  width: 285px;
-  padding-left: 50px;
-  margin-top: -40px;
-  display: inline-block;
-}
-#hero .background-container {
-  display: inline-block;
-  position: absolute;
-}
-#hero .background-container .background {
-  height: 90px;
-  margin-top: -30px;
-  position: relative;
-}
+/* END OF SEARCH BOX */
 footer {
-  position: fixed;
-  bottom: 0px;
+  display: inline-block;
+  bottom: 0;
   text-align: center;
 }
 footer .offices {
