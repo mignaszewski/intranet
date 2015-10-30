@@ -20,7 +20,7 @@
       // routes
       $routeProvider
         .when("/", {
-          templateUrl: "./partials/partial1.html",
+          templateUrl: "./partials/main_view.html",
           controller: "MainController"
         })
         .when("/calendar", { 
