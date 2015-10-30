@@ -1,20 +1,23 @@
 #hero {
   height: 100px;
   width: 100%;
+  /* SEARCH BOX */
+  /* END OF SEARCH BOX */
+  /* LOGO + BACKGROUND IMG */
+  /* END OF LOGO + BACKGROUND IMG */
 }
 #hero .box {
   margin-left: 1270px;
   padding-top: 10px;
   display: inline-block;
 }
-#hero .box .container-4 {
+#hero .container-4 {
   overflow: hidden;
   width: 300px;
   vertical-align: middle;
   white-space: nowrap;
 }
-/* SEARCH BOX */
-.container-4 input#search {
+#hero .container-4 input#search {
   width: 300px;
   height: 40px;
   background: #ddd;
@@ -27,21 +30,21 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.container-4 input#search::-webkit-input-placeholder {
+#hero .container-4 input#search::-webkit-input-placeholder {
   color: #817d7d;
 }
-.container-4 input#search:-moz-placeholder {
+#hero .container-4 input#search:-moz-placeholder {
   /* Firefox 18- */
   color: #817d7d;
 }
-.container-4 input#search::-moz-placeholder {
+#hero .container-4 input#search::-moz-placeholder {
   /* Firefox 19+ */
   color: #817d7d;
 }
-.container-4 input#search:-ms-input-placeholder {
+#hero .container-4 input#search:-ms-input-placeholder {
   color: #817d7d;
 }
-.container-4 button.icon {
+#hero .container-4 button.icon {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -61,53 +64,71 @@
   -o-transition: all .55s ease;
   transition: all .55s ease;
 }
-.container-4:hover button.icon,
-.container-4:active button.icon,
-.container-4:focus button.icon {
+#hero .container-4:hover button.icon,
+#hero .container-4:active button.icon,
+#hero .container-4:focus button.icon {
   outline: none;
   opacity: 1;
   margin-left: -50px;
 }
-.container-4:hover button.icon:hover {
+#hero .container-4:hover button.icon:hover {
   background: #bbb;
 }
-/* END OF SEARCH BOX */
-/* LOGO + BACKGROUND IMG */
-.logo-container {
+#hero .logo-container {
   width: 35%;
   height: 100%;
   display: inline-block;
 }
-.logo {
+#hero .logo-container .logo {
   height: 75px;
   width: 285px;
   padding-left: 50px;
   margin-top: -40px;
   display: inline-block;
 }
-.background-container {
+#hero .background-container {
   display: inline-block;
   position: absolute;
 }
-.background {
+#hero .background-container .background {
   height: 90px;
   margin-top: -30px;
   position: relative;
 }
-/* END OF LOGO + BACKGROUND IMG */
 footer {
   position: fixed;
   bottom: 0px;
   text-align: center;
 }
-.headquarter,
-.warsaw-location,
-.social-media {
+footer .offices {
+  padding-right: 80px;
+}
+footer .headquarter1,
+footer .headquarter2,
+footer .warsaw-location,
+footer .social-media {
   display: inline-block;
 }
-.headquarter {
-  padding-right: 30px;
+footer .headquarter1,
+footer .headquarter2,
+footer .warsaw-location {
+  padding-left: 50px;
 }
-.warsaw-location {
-  padding-left: 30px;
+footer .headquarter {
+  padding-right: 50px;
+}
+footer .warsaw-location {
+  padding-left: 50px;
+}
+footer .social-media {
+  float: right;
+  padding-right: 50px;
+  padding-top: 15px;
+}
+footer .social-media .facebook {
+  display: inline-block;
+  padding-right: 15px;
+}
+footer .social-media .linkedin {
+  display: inline-block;
 }
