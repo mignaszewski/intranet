@@ -41,6 +41,10 @@ gulp.task('js-watch', ['lint', 'browserify'], function() {
   setTimeout(browserSync.reload, 1000);
 });
 
+gulp.task('html-watch', function() {
+  setTimeout(browserSync.reload, 1000);
+});
+
 
 // Refreshing page after change, starting browser for dev
 gulp.task('serve', ['browserify', 'compile-less'], function() {
@@ -49,7 +53,7 @@ gulp.task('serve', ['browserify', 'compile-less'], function() {
   });
   gulp.watch(['./app/js/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'], ['js-watch']);
   gulp.watch('./app/css/**/*.less' , ['compile-less', browserSync.reload]);
-  gulp.watch('./app/**/*.html' , [browserSync.reload]);
+  gulp.watch('./app/**/*.html' , ['html-watch']);
 });
 
 /* Task to compile less */
