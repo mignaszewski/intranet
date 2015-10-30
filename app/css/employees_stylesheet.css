@@ -14,3 +14,17 @@
   width: 80%;
   border: 1px solid black;
 }
+.injected-employees .main-emplo-content .staff-members-ul {
+  width: 100%;
+}
+.injected-employees .main-emplo-content .staff-members-ul .staff-member-li {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  background-color: pink;
+  border: 1px solid #91560d;
+}
