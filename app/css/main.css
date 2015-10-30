@@ -178,3 +178,6 @@ footer .social-media .facebook {
 footer .social-media .linkedin {
   display: inline-block;
 }
+#main_view {
+  display: inline-table;
+}
