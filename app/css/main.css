@@ -15,7 +15,7 @@ img {
   max-width: 100%;
 }
 .view-ng {
-  display: block;
+  display: inline-block;
   background: #77b5d4;
   width: 100%;
   top: 100px;
@@ -50,6 +50,7 @@ footer {
   /* END OF LOGO + BACKGROUND IMG */
 }
 #hero .logo-container {
+  padding-top: 15px;
   float: left;
   width: 35%;
   height: 100%;
@@ -62,6 +63,7 @@ footer {
   display: inline-block;
 }
 #hero .background-container {
+  padding-top: 10px;
   display: inline-block;
   float: left;
 }
