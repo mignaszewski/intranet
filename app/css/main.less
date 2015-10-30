@@ -1,4 +1,5 @@
-@backgroundColor: rgb(184,214,164);
+// @backgroundColor: rgb(184,214,164);
+@backgroundColor: white;
 @fontFamily: "Verdana", "Arial", sans-serif;
 @fontSize: 20px;
 
@@ -16,6 +17,11 @@ body {
   background-color: @backgroundColor;
   font-family: @fontFamily;
   font-size: @fontSize;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 ul {
@@ -27,8 +33,12 @@ img {
 }
 
 .view-ng {
-  display: inline-block;
+  display: block;
+  background: #77b5d4;
+  position: absolute;
   width: 100%;
+  top: 100px;
+  bottom: 100px;
 }
 
 section {
@@ -45,6 +55,10 @@ article {
 
 footer {
   display: inline-block;
+  height: 100px;
+  width: 100%;
 }
 
+
 @import "calendar_stylesheet.less";
+@import "index_stylesheet.less";
