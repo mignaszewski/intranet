@@ -1,8 +1,16 @@
-.left-emplo-navbar {
+.injected-employees {
+  width: 100%;
+  height: 100%;
+}
+.injected-employees .left-emplo-navbar {
+  float: left;
   display: inline-block;
   width: 20%;
+  border: 1px solid black;
 }
-.main-emplo-content {
+.injected-employees .main-emplo-content {
+  float: right;
   display: inline-block;
-  width: 75%;
+  width: 80%;
+  border: 1px solid black;
 }
