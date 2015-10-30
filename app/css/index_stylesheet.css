@@ -1,6 +1,8 @@
 #hero {
   height: 100px;
   width: 100%;
+  position: absolute;
+  top: 0;
   /* LOGO + BACKGROUND IMG */
   /* END OF LOGO + BACKGROUND IMG */
 }
@@ -97,8 +99,11 @@
 }
 /* END OF SEARCH BOX */
 footer {
-  display: inline-block;
+  position: absolute;
   bottom: 0;
+  weight: 100%;
+  height: 100px;
+  display: inline-block;
   text-align: center;
 }
 footer .offices {
