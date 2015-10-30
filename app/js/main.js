@@ -8,6 +8,7 @@
   
   var mainCtrl = require('./controllers/mainctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
+  var employeesCtrl = require('./controllers/employeesctrl');
 
   angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
 
@@ -26,6 +27,10 @@
           templateUrl: "./partials/calendar.html",
           controller: "CalendarController"
         })
+        .when("/employees", { 
+          templateUrl: "./partials/employees.html",
+          controller: "EmployeesController"
+        })
         .otherwise({
            redirectTo: '/'
         });
@@ -34,6 +39,6 @@
 
   //Load controller
   .controller('MainController', ['$scope', mainCtrl])
-  .controller('CalendarController', ['$scope', calendarCtrl]);
-
+  .controller('CalendarController', ['$scope', calendarCtrl])
+  .controller('EmployeesController', ['$scope', employeesCtrl]);
 }());
