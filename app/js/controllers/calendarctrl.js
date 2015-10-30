@@ -1,4 +1,3 @@
 module.exports = function($scope) {
-  $scope.sometext = "jakiś tekst jeeeedeeeeeenn";
-  // $scope.sometext = "jakiś tekst dwaaaaaa";
+  // $scope.sometext = "Kalendarz Wewnętrzny dla pracowników Altimi Solutions! :)";
 };
