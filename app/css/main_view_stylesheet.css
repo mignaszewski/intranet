@@ -1,67 +1,67 @@
-#main_view {
+#main-view {
   width: 100%;
   height: 100%;
   text-align: center;
+  padding-top: 15px;
 }
-#main_view ul .home-target-li {
+#main-view ul .home-target-li {
   display: inline-block;
   border: 2px solid #404040;
   width: 30%;
   height: 190px;
   margin: 0.5%;
-  box-shadow: 7px 8px 6px #333222;
+  box-shadow: 7px 7px 6px #333222;
   position: relative;
 }
-#main_view ul .home-target-li .home-target-div {
+#main-view ul .home-target-li .home-target-div {
   width: 100%;
   height: 100%;
 }
-#main_view ul .home-target-li .home-target-div a {
+#main-view ul .home-target-li .home-target-div a {
   text-decoration: none;
   color: black;
   position: relative;
 }
-#main_view ul .home-target-li .home-target-div a .home-target-head {
+#main-view ul .home-target-li .home-target-div a .home-target-head {
   width: 100%;
   padding: 0.1rem 0.1rem;
   border-bottom: 2px solid #404040;
 }
-#main_view ul .home-target-li .home-target-div a .home-target-head h2 {
+#main-view ul .home-target-li .home-target-div a .home-target-head h2 {
   text-align: left;
   margin-left: 5%;
 }
-#main_view ul .home-target-li .home-target-div a .announcements-bckgrd {
+#main-view ul .home-target-li .home-target-div a .announcements-bckgrd {
   background-color: #ed4523;
 }
-#main_view ul .home-target-li .home-target-div a .news-bckgrd {
+#main-view ul .home-target-li .home-target-div a .news-bckgrd {
   background-color: #ed4574;
 }
-#main_view ul .home-target-li .home-target-div a .profile-bckgrd {
+#main-view ul .home-target-li .home-target-div a .profile-bckgrd {
   background-color: #8face6;
 }
-#main_view ul .home-target-li .home-target-div a .team-bckgrd {
+#main-view ul .home-target-li .home-target-div a .team-bckgrd {
   background-color: #e87ee8;
 }
-#main_view ul .home-target-li .home-target-div a .download-bckgrd {
+#main-view ul .home-target-li .home-target-div a .download-bckgrd {
   background-color: #82e352;
 }
-#main_view ul .home-target-li .home-target-div a .calendar-bckgrd {
+#main-view ul .home-target-li .home-target-div a .calendar-bckgrd {
   background-color: #90e8bd;
 }
-#main_view ul .home-target-li .home-target-div a .home-target-content {
+#main-view ul .home-target-li .home-target-div a .home-target-content {
   display: block;
   width: 100%;
   height: 64%;
-  background-color: #e6e6e6;
   background-color: white;
 }
-#main_view ul .home-target-li:hover {
+#main-view ul .home-target-li:hover {
   -webkit-animation-name: example;
   /* Chrome, Safari, Opera */
-  -webkit-animation-duration: 0.2s;
+  -webkit-animation-duration: 0.3s;
   /* Chrome, Safari, Opera */
   animation-name: example;
-  animation-duration: 0.2s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -71,8 +71,19 @@
     top: 0px;
   }
   100% {
-    left: 7px;
-    top: 8px;
+    left: 4px;
+    top: 4px;
+    box-shadow: none;
+  }
+}
+@keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 5px;
+    top: 5px;
     box-shadow: none;
   }
 }

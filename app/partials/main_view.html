@@ -1,83 +1,27 @@
-<section id="main_view">
-  <ul>
+<div>
+  <section id="main-view" ng-class="main-view-ngclass">
+    <ul>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head announcements-bckgrd">
-            <h2> <i class="fa fa-exclamation-triangle"></i> Announcements</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
+      <li class="home-target-li" ng-repeat="elem in elements">
+        <div class="home-target-div">
+          <a href="" ng-click="isWhat(elem.clickName)">
+            <div class="{{elem.className}}">
+              <h2> <i class="{{elem.fontAwe}}"></i> {{elem.name}}</h2>
+            </div>
+            <div class="home-target-content">
+              content here
+            </div>
+          </a>
+        </div>
+      </li>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head news-bckgrd">
-            <h2> <i class="fa fa-list-alt"></i> News</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head profile-bckgrd">
-            <h2> <i class="fa fa-user"></i> Your Profile</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head team-bckgrd">
-            <h2> <i class="fa fa-users"></i> Our Team</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head download-bckgrd">
-            <h2> <i class="fa fa-download"></i> Download</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head calendar-bckgrd">
-            <h2> <i class="fa fa-birthday-cake"></i> Calendar</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-  </ul>
-</section>
+    </ul>
+  </section>
+  <div ng-include="'./partials/announcements.html'"></div>
+  <div ng-include="'./partials/news.html'"></div>
+  <div ng-include="'./partials/yourprofile.html'"></div>
+  <div ng-include="'./partials/employees.html'"></div>
+  <div ng-include="'./partials/download.html'"></div>
+  <div ng-include="'./partials/calendar.html'"></div
+></div>

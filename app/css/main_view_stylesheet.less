@@ -1,8 +1,9 @@
-#main_view {
+#main-view {
   width: 100%;
   height: 100%;
   // display: inline-block;
   text-align: center;
+  padding-top: 15px;
 
   ul {
     .home-target-li {     //element listy
@@ -11,7 +12,7 @@
       width: 30%;
       height: 190px;
       margin: 0.5%;
-      box-shadow: 7px 8px 6px #333222;
+      box-shadow: 7px 7px 6px #333222;
 
       position: relative;
 
@@ -21,7 +22,6 @@
         width: 100%;
         height: 100%;
 
-
         a {           //ahref na wszystko w divie
           text-decoration: none;
           color: black;
@@ -29,7 +29,6 @@
 
           .home-target-head {     //div górny, kolorowy
             width: 100%;
-            // background-color: rgba(255,255,255,0.2);
             padding: 0.1rem 0.1rem; 
             border-bottom: 2px solid lighten(black, 25%);
 
@@ -61,7 +60,7 @@
             display: block;
             width: 100%;
             height: 64%;
-            background-color: darken(white, 10%);
+            // background-color: darken(white, 10%);
             background-color: white;
           }
         }
@@ -69,19 +68,20 @@
     }
     .home-target-li:hover {
       -webkit-animation-name: example; /* Chrome, Safari, Opera */
-      -webkit-animation-duration: 0.2s; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0.3s; /* Chrome, Safari, Opera */
       animation-name: example;
-      animation-duration: 0.2s;
+      animation-duration: 0.3s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
     }
     @-webkit-keyframes example {
       0% {left: 0px; top: 0px;}
-      100% {left: 7px; top: 8px; box-shadow: none}
+      100% {left: 4px; top: 4px; box-shadow: none}
     }
-    // @keyframes example {
-    //   0% {left: 0px; top: 0px;}
-    //   100% {left: 7px; top: 8px; box-shadow: none;}
-    // }
+    @keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 5px; top: 5px; box-shadow: none}
+    }
+
   }
 }
