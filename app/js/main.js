@@ -6,7 +6,7 @@
   require('angular-route');
   require('angular-animate');
   
-  var mainCtrl = require('./controllers/mainctrl');
+  var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
 
@@ -21,7 +21,7 @@
       $routeProvider
         .when("/", {
           templateUrl: "./partials/main_view.html",
-          controller: "MainController"
+          controller: "MainViewController"
         })
         .when("/calendar", { 
           templateUrl: "./partials/calendar.html",
@@ -38,7 +38,7 @@
   ])
 
   //Load controller
-  .controller('MainController', ['$scope', mainCtrl])
+  .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl]);
 }());

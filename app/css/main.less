@@ -16,6 +16,11 @@ body {
   background-color: @backgroundColor;
   font-family: @fontFamily;
   font-size: @fontSize;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 ul {
@@ -27,11 +32,15 @@ img {
 }
 
 .view-ng {
-  display: inline-block;
-  background: #77b5d4;
-  width: 100%;
-  top: 100px;
+  position: absolute;
   bottom: 100px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  // width: 100%;
+  background: #77b5d4;
+
 }
 
 section {
