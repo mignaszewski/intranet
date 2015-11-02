@@ -14,25 +14,46 @@
   //   width: 80%;
     // border: 1px solid black;
 
-    .search_container ul, li {
-      display: inline-block;
-    }
-
-    .staff-members-ul {
+  .staff-members {
       width: 100%;
       // text-align: center;
       
-      .staff-member-li {
+    .staff-member {
       width: 200px;
       height: 200px;
       overflow: hidden;
       margin: 10px;
       position: relative;
-      background-color: rgba(0,0,0,0.2);
+      // background-color: rgba(0,0,0,0.2);
       display: inline-block;
-      background-color: pink;
       border: 1px solid darken(#817d7d, 40%);
-      }
     }
-  
+    .member-description {
+      background-color: rgba(255,255,255,0.5);
+      padding: 36px;
+      position: absolute;
+      bottom: -200px;
+      transition: all 0.5s ease;
+    }
+    .full-name {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      // position: absolute;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
+      // top: 80%;
+      // margin-bottom: 0;
+      // text-align: center;
+      // box-sizing: border-box;
+      // background-color: rgba(0,0,0,0.3);
+    }
+    .staff-member:hover .member-description {
+      // background-clip: content-box;
+      // background-color: pink;
+      // color: rgb(237, 69, 35);
+       background-color: rgba(0,0,0,0.3);
+       bottom: 0;
+    }
+  }
 }
