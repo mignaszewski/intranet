@@ -1,0 +1,17 @@
+<!-- POKAZYANIE DANYCH PRACOWNIKA PO KLIKNIĘCIU NA NIEGO -->
+<div class="show-employee" ng-show="popupvisible">
+    <div id="popup-wrapper">
+        <div id="popup-container">
+            <div id="employee-card">
+                <img src="./img/temp_employees/profile.jpg">
+                <h3>Imię i nazwisko</h3>
+                <h4>stanowisko</h4>
+                <h5>e-mail:</h5><p>bla@bla.com</p>
+                <p> telefon:</p><p>xxx-xxx-xxx</p>
+                <p class="popup-close" ng-click="toggle()">[x]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- po kliknięciu na konkretnym pracowniku po get element by id zostanie tutaj pobrana treść z jsona -->

@@ -3,57 +3,56 @@
   height: 100%;
 
   .left-emplo-navbar {
-    // float: left;
-    // display: inline-block;
-    // width: 20%;
     border-right: 1px solid black;
   }
-  // .main-emplo-content {
-  //   float: right;
-  //   display: inline-block;
-  //   width: 80%;
-    // border: 1px solid black;
-
   .staff-members {
       width: 100%;
-      // text-align: center;
+      padding-left: 60px;
+      padding-top: 20px;
       
     .staff-member {
-      width: 200px;
-      height: 200px;
+      width: 120px;
+      height: 120px;
       overflow: hidden;
       margin: 10px;
       position: relative;
-      // background-color: rgba(0,0,0,0.2);
       display: inline-block;
       border: 1px solid darken(#817d7d, 40%);
-    }
-    .member-description {
-      background-color: rgba(255,255,255,0.5);
-      padding: 36px;
-      position: absolute;
-      bottom: -200px;
-      transition: all 0.5s ease;
-    }
-    .full-name {
-      font-size: 1.5em;
-      margin-bottom: 0.5em;
-      // position: absolute;
-      // left: 0;
-      // right: 0;
-      // bottom: 0;
-      // top: 80%;
-      // margin-bottom: 0;
-      // text-align: center;
-      // box-sizing: border-box;
-      // background-color: rgba(0,0,0,0.3);
+      // background-color: black;
+
+      // .object-fit_contain {
+      //   object-fit: contain;
+      //   width: 100%;
+      //   height: 100%;
+      //   vertical-align: center;
+      //   margin: auto; 
+      // }
+    
+      .member-description {
+        background-color: rgba(255,255,255,0.5);
+        padding-bottom: auto;
+        position: absolute;
+        bottom: -120px;
+        transition: all 0.5s ease;
+        text-align: center;
+    
+        .full-name {
+          font-size: 0.8em;
+          margin-bottom: 0.3em;
+          padding-top: 1em;
+          margin-top: 0;
+        }
+        .member-position {
+          font-size: 0.7em;
+          margin-bottom: 0.4em;
+        }
+      }
     }
     .staff-member:hover .member-description {
-      // background-clip: content-box;
-      // background-color: pink;
-      // color: rgb(237, 69, 35);
-       background-color: rgba(0,0,0,0.3);
-       bottom: 0;
+      background-color: rgba(0,0,0,0.7);
+      bottom: 0;
+      height: 100%;
+      color: white;
     }
   }
 }
