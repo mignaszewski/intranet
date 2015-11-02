@@ -4,52 +4,84 @@
   // display: inline-block;
   text-align: center;
 
-  .home-target-li {
-    display: inline-block;
-    border: 1px dashed black;
-    width: 30%;
-    height: 200px;
-    margin: 0.5%;
-    
-    .home-target-div {
-      width: 100%;
-      height: 100%;
-      a {
-        text-decoration: none;
-        color: black;
-        position: relative;
+  ul {
+    .home-target-li {     //element listy
+      display: inline-block;
+      border: 2px solid lighten(black, 25%);
+      width: 30%;
+      height: 190px;
+      margin: 0.5%;
+      box-shadow: 7px 8px 6px #333222;
 
-        .home-target-head {
-          width: 100%;
-          // background-color: rgba(255,255,255,0.2);
-          padding: 0.1rem 0.1rem;
-        }
-        .announcements-bckgrd {
-          background-color: rgb(237,69,35)
-        }
-        .news-bckgrd {
-          background-color: rgb(237,69,116)
-        }
-        .profile-bckgrd {
-          background-color: rgb(143,172,230)
-        }
-        .team-bckgrd {
-          background-color: rgb(232,126,232)
-        }
-        .download-bckgrd {
-          background-color: rgb(130,227,82)
-        }
-        .calendar-bckgrd {
-          background-color: rgb(144,232,189)
-        }
+      position: relative;
 
-        .home-target-content {
-          display: block;
-          width: 100%;
-          height: 67%;
-          // background-color: red;
+
+      
+      .home-target-div {      //div zewnetrzny
+        width: 100%;
+        height: 100%;
+
+
+        a {           //ahref na wszystko w divie
+          text-decoration: none;
+          color: black;
+          position: relative;
+
+          .home-target-head {     //div górny, kolorowy
+            width: 100%;
+            // background-color: rgba(255,255,255,0.2);
+            padding: 0.1rem 0.1rem; 
+            border-bottom: 2px solid lighten(black, 25%);
+
+            h2 {        //news, profile, calendar, download
+              text-align: left;
+              margin-left: 5%;
+            }
+          }
+          .announcements-bckgrd {
+            background-color: rgb(237,69,35);
+          }
+          .news-bckgrd {
+            background-color: rgb(237,69,116);
+          }
+          .profile-bckgrd {
+            background-color: rgb(143,172,230);
+          }
+          .team-bckgrd {
+            background-color: rgb(232,126,232);
+          }
+          .download-bckgrd {
+            background-color: rgb(130,227,82);
+          }
+          .calendar-bckgrd {
+            background-color: rgb(144,232,189);
+          }
+
+          .home-target-content {        //dolny div z contentem,
+            display: block;
+            width: 100%;
+            height: 64%;
+            background-color: darken(white, 10%);
+            background-color: white;
+          }
         }
       }
     }
+    .home-target-li:hover {
+      -webkit-animation-name: example; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0.2s; /* Chrome, Safari, Opera */
+      animation-name: example;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 7px; top: 8px; box-shadow: none}
+    }
+    // @keyframes example {
+    //   0% {left: 0px; top: 0px;}
+    //   100% {left: 7px; top: 8px; box-shadow: none;}
+    // }
   }
 }

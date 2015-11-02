@@ -3,6 +3,7 @@
   width: 100%;
   position: absolute;
   top: 0;
+  border-bottom: 2px solid #404040;
   /* LOGO + BACKGROUND IMG */
   /* END OF LOGO + BACKGROUND IMG */
 }
@@ -20,7 +21,7 @@
   display: inline-block;
 }
 #hero .background-container {
-  padding-top: 10px;
+  padding-top: 5px;
   display: inline-block;
   float: left;
 }
@@ -105,9 +106,14 @@ footer {
   height: 100px;
   display: inline-block;
   text-align: center;
+  border-top: 2px solid #404040;
+  background-color: #262626;
 }
 footer .offices {
   padding-right: 80px;
+}
+footer .offices h4 {
+  color: white;
 }
 footer .headquarter1,
 footer .headquarter2,
@@ -119,6 +125,7 @@ footer .headquarter1,
 footer .headquarter2,
 footer .warsaw-location {
   padding-left: 50px;
+  color: white;
 }
 footer .headquarter {
   padding-right: 50px;

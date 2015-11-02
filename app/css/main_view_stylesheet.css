@@ -3,46 +3,76 @@
   height: 100%;
   text-align: center;
 }
-#main_view .home-target-li {
+#main_view ul .home-target-li {
   display: inline-block;
-  border: 1px dashed black;
+  border: 2px solid #404040;
   width: 30%;
-  height: 200px;
+  height: 190px;
   margin: 0.5%;
+  box-shadow: 7px 8px 6px #333222;
+  position: relative;
 }
-#main_view .home-target-li .home-target-div {
+#main_view ul .home-target-li .home-target-div {
   width: 100%;
   height: 100%;
 }
-#main_view .home-target-li .home-target-div a {
+#main_view ul .home-target-li .home-target-div a {
   text-decoration: none;
   color: black;
   position: relative;
 }
-#main_view .home-target-li .home-target-div a .home-target-head {
+#main_view ul .home-target-li .home-target-div a .home-target-head {
   width: 100%;
   padding: 0.1rem 0.1rem;
+  border-bottom: 2px solid #404040;
 }
-#main_view .home-target-li .home-target-div a .announcements-bckgrd {
+#main_view ul .home-target-li .home-target-div a .home-target-head h2 {
+  text-align: left;
+  margin-left: 5%;
+}
+#main_view ul .home-target-li .home-target-div a .announcements-bckgrd {
   background-color: #ed4523;
 }
-#main_view .home-target-li .home-target-div a .news-bckgrd {
+#main_view ul .home-target-li .home-target-div a .news-bckgrd {
   background-color: #ed4574;
 }
-#main_view .home-target-li .home-target-div a .profile-bckgrd {
+#main_view ul .home-target-li .home-target-div a .profile-bckgrd {
   background-color: #8face6;
 }
-#main_view .home-target-li .home-target-div a .team-bckgrd {
+#main_view ul .home-target-li .home-target-div a .team-bckgrd {
   background-color: #e87ee8;
 }
-#main_view .home-target-li .home-target-div a .download-bckgrd {
+#main_view ul .home-target-li .home-target-div a .download-bckgrd {
   background-color: #82e352;
 }
-#main_view .home-target-li .home-target-div a .calendar-bckgrd {
+#main_view ul .home-target-li .home-target-div a .calendar-bckgrd {
   background-color: #90e8bd;
 }
-#main_view .home-target-li .home-target-div a .home-target-content {
+#main_view ul .home-target-li .home-target-div a .home-target-content {
   display: block;
   width: 100%;
-  height: 67%;
+  height: 64%;
+  background-color: #e6e6e6;
+  background-color: white;
+}
+#main_view ul .home-target-li:hover {
+  -webkit-animation-name: example;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.2s;
+  /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes example {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 7px;
+    top: 8px;
+    box-shadow: none;
+  }
 }
