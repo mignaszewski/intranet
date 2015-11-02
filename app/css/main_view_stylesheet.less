@@ -68,20 +68,48 @@
     }
     .home-target-li:hover {
       -webkit-animation-name: example; /* Chrome, Safari, Opera */
-      -webkit-animation-duration: 0.3s; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0.15s; /* Chrome, Safari, Opera */
       animation-name: example;
-      animation-duration: 0.3s;
+      animation-duration: 0.15s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
     }
     @-webkit-keyframes example {
       0% {left: 0px; top: 0px;}
-      100% {left: 4px; top: 4px; box-shadow: none}
+      100% {left: 5px; top: 5px; box-shadow: none}
     }
     @keyframes example {
       0% {left: 0px; top: 0px;}
       100% {left: 5px; top: 5px; box-shadow: none}
     }
+    
+    .home-target-li-smaller {
+      display: inline-block;
+      border: 2px solid lighten(black, 25%);
+      width: 50px;
+      height: 50px;
+      margin: 0.5%;
+      box-shadow: 7px 7px 6px #333222;
+
+      position: relative;
+    }
 
   }
+}
+
+.main-view-slide-left {
+      -webkit-animation-name: mainviewslide; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0.4s; /* Chrome, Safari, Opera */
+      animation-name: mainviewslide;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+}
+@-webkit-keyframes mainviewslide {
+  0% {left: 0px; top: 0px;}
+  100% {left: 0px; top: 0px; width: 10%; height: 100%;}
+}
+@keyframes mainviewslide {
+  0% {left: 0px; top: 0px;}
+  100% {left: 0px; top: 0px; width: 10%; height: 100%;}
 }
