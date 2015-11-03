@@ -16,6 +16,16 @@
       width: 285px;
       padding-left: 50px;
       display: inline-block;
+      @media only screen and (max-width: 480px){   
+        height: 40px;
+        width: 160px;
+        padding-left: 30px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        height: 60px;
+        width: 210px;
+        padding-left: 40px;
+      };
     }
   }
   .background-container {
@@ -24,9 +34,16 @@
     float: left;
     // position: absolute;
     .background {
+      // width: 40%;
       height: 90px;
       // margin-top: -30px;
       position: relative;
+      @media only screen and (max-width: 480px){   
+        height: 45px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        height: 60px;
+      };
     }
   }
 /* END OF LOGO + BACKGROUND IMG */
@@ -121,12 +138,6 @@ footer {
     h4 {
       color: white;
       font-size: 1.8rem;
-      @media only screen and (max-width: 480px){
-        font-size: 1.3rem;
-      };
-      @media only screen and (min-width: 481px) and (max-width: 767px){ 
-        font-size: 1.5rem;
-      };
     }
   }
   .headquarter1, .headquarter2, .warsaw-location, .social-media {
@@ -143,12 +154,6 @@ footer {
     };
     h5 {
       font-size: 1.2rem;
-      @media only screen and (max-width: 480px){
-        font-size: 0.8rem;   
-      };
-      @media only screen and (min-width: 481px) and (max-width: 767px){ 
-        font-size: 1rem;
-      };
     }
   }
   .headquarter {

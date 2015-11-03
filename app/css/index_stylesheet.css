@@ -20,6 +20,20 @@
   padding-left: 50px;
   display: inline-block;
 }
+@media only screen and (max-width: 480px) {
+  #hero .logo-container .logo {
+    height: 40px;
+    width: 160px;
+    padding-left: 30px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #hero .logo-container .logo {
+    height: 60px;
+    width: 210px;
+    padding-left: 40px;
+  }
+}
 #hero .background-container {
   padding-top: 5px;
   display: inline-block;
@@ -28,6 +42,16 @@
 #hero .background-container .background {
   height: 90px;
   position: relative;
+}
+@media only screen and (max-width: 480px) {
+  #hero .background-container .background {
+    height: 45px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #hero .background-container .background {
+    height: 60px;
+  }
 }
 /* SEARCH BOX */
 .box {
@@ -126,16 +150,6 @@ footer .offices h4 {
   color: white;
   font-size: 1.8rem;
 }
-@media only screen and (max-width: 480px) {
-  footer .offices h4 {
-    font-size: 1.3rem;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  footer .offices h4 {
-    font-size: 1.5rem;
-  }
-}
 footer .headquarter1,
 footer .headquarter2,
 footer .warsaw-location,
@@ -166,20 +180,6 @@ footer .headquarter1 h5,
 footer .headquarter2 h5,
 footer .warsaw-location h5 {
   font-size: 1.2rem;
-}
-@media only screen and (max-width: 480px) {
-  footer .headquarter1 h5,
-  footer .headquarter2 h5,
-  footer .warsaw-location h5 {
-    font-size: 0.8rem;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  footer .headquarter1 h5,
-  footer .headquarter2 h5,
-  footer .warsaw-location h5 {
-    font-size: 1rem;
-  }
 }
 footer .headquarter {
   padding-right: 50px;

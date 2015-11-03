@@ -1,6 +1,5 @@
 @backgroundColor: white;
 @fontFamily: "Verdana", "Arial", sans-serif;
-@fontSize: 10px;
 
 #grad{
 }
@@ -14,7 +13,13 @@
 
 html {
   font-family: @fontFamily;
-  font-size: @fontSize;
+  font-size: 10px;
+  @media only screen and (max-width: 480px){  
+    font-size: 6px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    font-size: 8px;
+  };
 }
 
 body {
@@ -45,12 +50,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  @media only screen and (max-width: 480px){   
-    bottom: 50px;
-  }
-  @media only screen and (min-width: 481px) and (max-width: 767px){ 
-    bottom: 80px;
-  }
 }
 
 section {
