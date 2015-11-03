@@ -28,10 +28,10 @@
 
     </ul>
   </section>
-  <div class="included-tmpl" ng-include="'./partials/announcements.html'"></div>
-  <div class="included-tmpl" ng-include="'./partials/news.html'"></div>
-  <div class="included-tmpl" ng-include="'./partials/yourprofile.html'"></div>
-  <div class="included-tmpl" ng-include="'./partials/employees.html'"></div>
-  <div class="included-tmpl" ng-include="'./partials/download.html'"></div>
-  <div class="included-tmpl" ng-include="'./partials/calendar.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'announcements', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/announcements.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'news', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/news.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'yourprofile', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/yourprofile.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'employees', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/employees.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'download', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/download.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'calendar', 'included-tmpl-invisible': menu.length == 0}" ng-include="'./partials/calendar.html'"></div>
 </div>

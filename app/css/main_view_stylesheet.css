@@ -21,6 +21,7 @@
   text-decoration: none;
   color: black;
   position: relative;
+  cursor: default;
 }
 #main-view ul .home-target-li .home-target-div a .home-target-head {
   width: 100%;
@@ -104,6 +105,7 @@
   text-decoration: none;
   color: black;
   position: relative;
+  cursor: default;
 }
 #main-view ul .home-target-li-smaller .home-target-div a .home-target-head {
   width: 100%;
@@ -178,6 +180,10 @@
   animation-fill-mode: forwards;
   height: 100%;
   width: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 @-webkit-keyframes mainviewslide {
   0% {
@@ -203,9 +209,23 @@
     height: 100%;
   }
 }
-.included-tmpl {
+.included-tmpl-visible {
   display: inline-block;
   width: 83%;
   background-color: black;
   float: right;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+  transition-delay: 1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+}
+.included-tmpl-invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
 }

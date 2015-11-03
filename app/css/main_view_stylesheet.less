@@ -26,7 +26,7 @@
           text-decoration: none;
           color: black;
           position: relative;
-
+          cursor: default;
           .home-target-head {     //div górny, kolorowy
             width: 100%;
             padding: 0.1rem 0.1rem; 
@@ -101,6 +101,7 @@
           text-decoration: none;
           color: black;
           position: relative;
+          cursor: default;
           .home-target-head {     //div górny, kolorowy
             width: 100%;
             padding: 0.1rem 0.1rem; 
@@ -155,15 +156,19 @@
 }
 
 .main-view-slide-left {
-      display: inline-block;
-      -webkit-animation-name: mainviewslide; /* Chrome, Safari, Opera */
-      -webkit-animation-duration: 0.4s; /* Chrome, Safari, Opera */
-      animation-name: mainviewslide;
-      animation-duration: 0.4s;
-      // animation-timing-function: linear;
-      animation-fill-mode: forwards;
-      height: 100%;
-      width: 15%;
+  display: inline-block;
+  -webkit-animation-name: mainviewslide; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.4s; /* Chrome, Safari, Opera */
+  animation-name: mainviewslide;
+  animation-duration: 0.4s;
+  // animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 @-webkit-keyframes mainviewslide {
   0% {left: 0px; top: 0px;}
@@ -174,9 +179,23 @@
   100% {left: 0px; top: 0px; width: 15%; height: 100%;}
 }
 
-.included-tmpl {
+.included-tmpl-visible {
   display: inline-block;
   width: 83%;
   background-color: black;
   float: right;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+  transition-delay: 1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+}
+.included-tmpl-invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
 }
