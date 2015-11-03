@@ -42,6 +42,12 @@ module.exports = function($scope) {
       className: 'home-target-head calendar-bckgrd',
       fontAwe: 'fa fa-birthday-cake'
     },
+    {
+      clickName: "",
+      name: 'Main Page',
+      className: 'home-target-head go-main-page',
+      fontAwe: 'fa fa-home'
+    }
   ];
 
 

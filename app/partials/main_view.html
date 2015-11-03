@@ -2,13 +2,23 @@
   <section id="main-view" ng-class="{'main-view-slide-left': menu.length > 0}">
     <ul>
 
-      <li ng-repeat="elem in elements" ng-class="{'home-target-li-smaller': menu.length > 0, 'home-target-li': menu.length == 0}">
-        <div class="home-target-div" ng-if="menu == 0">
+      <li class="home-target-li-smaller" ng-if="menu.length > 0">
+          <div class="home-target-div" >
+          <a href="" ng-click="isWhat(elements[6].clickName)">
+            <div class="{{elements[6].className}}">
+              <h2> <i class="{{elements[6].fontAwe}}"></i> {{elements[6].name}}</h2>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <li ng-repeat="elem in elements|limitTo:6" ng-class="{'home-target-li-smaller': menu.length > 0, 'home-target-li': menu.length == 0}">
+        <div class="home-target-div" >
           <a href="" ng-click="isWhat(elem.clickName)">
             <div class="{{elem.className}}">
               <h2> <i class="{{elem.fontAwe}}"></i> {{elem.name}}</h2>
             </div>
-            <div class="home-target-content">
+            <div class="home-target-content" ng-if="menu.length == 0">
               {{elem.name}} content here
             </div>
           </a>
@@ -18,10 +28,10 @@
 
     </ul>
   </section>
-  <div ng-include="'./partials/announcements.html'"></div>
-  <div ng-include="'./partials/news.html'"></div>
-  <div ng-include="'./partials/yourprofile.html'"></div>
-  <div ng-include="'./partials/employees.html'"></div>
-  <div ng-include="'./partials/download.html'"></div>
-  <div ng-include="'./partials/calendar.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/announcements.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/news.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/yourprofile.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/employees.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/download.html'"></div>
+  <div class="included-tmpl" ng-include="'./partials/calendar.html'"></div>
 </div>

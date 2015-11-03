@@ -90,13 +90,53 @@
 #main-view ul .home-target-li-smaller {
   display: inline-block;
   border: 2px solid #404040;
-  width: 50px;
+  width: 150px;
   height: 50px;
   margin: 0.5%;
   box-shadow: 7px 7px 6px #333222;
   position: relative;
 }
+#main-view ul .home-target-li-smaller .home-target-div {
+  width: 100%;
+  height: 100%;
+}
+#main-view ul .home-target-li-smaller .home-target-div a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .home-target-head {
+  width: 100%;
+  padding: 0.1rem 0.1rem;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .home-target-head h2 {
+  text-align: left;
+  margin-left: 5%;
+  font-size: 1.2rem;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .announcements-bckgrd {
+  background-color: #ed4523;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .news-bckgrd {
+  background-color: #ed4574;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .profile-bckgrd {
+  background-color: #8face6;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .team-bckgrd {
+  background-color: #e87ee8;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .download-bckgrd {
+  background-color: #82e352;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .calendar-bckgrd {
+  background-color: #90e8bd;
+}
+#main-view ul .home-target-li-smaller .home-target-div a .go-main-page {
+  background-color: #ababab;
+}
 .main-view-slide-left {
+  display: inline-block;
   -webkit-animation-name: mainviewslide;
   /* Chrome, Safari, Opera */
   -webkit-animation-duration: 0.4s;
@@ -105,6 +145,8 @@
   animation-duration: 0.4s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  height: 100%;
+  width: 15%;
 }
 @-webkit-keyframes mainviewslide {
   0% {
@@ -114,7 +156,7 @@
   100% {
     left: 0px;
     top: 0px;
-    width: 10%;
+    width: 15%;
     height: 100%;
   }
 }
@@ -126,7 +168,13 @@
   100% {
     left: 0px;
     top: 0px;
-    width: 10%;
+    width: 15%;
     height: 100%;
   }
+}
+.included-tmpl {
+  display: inline-block;
+  width: 83%;
+  background-color: black;
+  float: right;
 }
