@@ -55,7 +55,8 @@
   height: 64%;
   background-color: white;
 }
-#main-view ul .home-target-li:hover {
+#main-view ul .home-target-li:hover,
+#main-view ul .home-target-li-smaller:hover {
   -webkit-animation-name: example;
   /* Chrome, Safari, Opera */
   -webkit-animation-duration: 0.15s;
@@ -143,7 +144,6 @@
   /* Chrome, Safari, Opera */
   animation-name: mainviewslide;
   animation-duration: 0.4s;
-  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   height: 100%;
   width: 15%;
