@@ -34,7 +34,7 @@
   </section>
   <!-- <h1>{{test}}</h1> -->
 
-    <div class="container">
+    <div class="search-container">
         <div class="row">    
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="input-group">
@@ -67,94 +67,21 @@
         </div>
     </div>
 
-  <section class="main-emplo-content" ng-controller="EmployeeCardController as employeeCardCtrl"> 
-    <div class="staff-members">
-      <div class="staff-member" ng-click="toggle()"> <!-- po kliknięciu wyskoczy popup z danymi pracownika (mail, telefon)--> 
-        <img class="object-fit_contain" src="./img/temp_employees/Tomasz.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Tomasz Podoba</h4>
-            <p class="member-position">Prezes</p>
+    <section class="main-emplo-content" ng-controller="EmployeesController"> 
+        <div class="staff-members">
+            <div class="staff-member" ng-repeat="employee in employees">
+                <div id="wrapper">
+                    <a ng-click="toggle(employee)">
+                        <img class="object-fit_contain" ng-src="{{employee.img}}" alt="">
+                            <div class="member-description">
+                                <h4 class="full-name">{{ employee.name }}</h4>
+                                <p class="member-position">{{ employee.position }}</p>
+                            </div>
+                        </img>
+                    </a>
+                </div>
+                <employee-card></employee-card>
+            </div>
         </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/Aleksander.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Aleksander Lewicki</h4>
-            <p class="member-position">Prezes</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/Monika.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Monika Zmuda</h4>
-            <p class="member-position">COO</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/Beata.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Beata Ocetkiewicz</h4>
-            <p class="member-position">Delivery IT Manager</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/Małgorzata.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Małgorzata Pędziwiatr-Wagan</h4>
-            <p class="member-position">Kierownik Działu Rekrutacji</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-      <div class="staff-member">
-        <img class="object-fit_contain" src="./img/temp_employees/profile.jpg" alt="">
-        <div class="member-description">
-            <h4 class="full-name">Imię i nazwisko</h4>
-            <p class="member-position">stanowisko</p>
-        </div>
-      </div>
-   </div>
-  </section>
-    
-
+    </section>
 </section>

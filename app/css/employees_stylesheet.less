@@ -5,10 +5,20 @@
   .left-emplo-navbar {
     border-right: 1px solid black;
   }
+  .search-container {
+    position: fixed;
+    display: inline-block;
+    padding-top: 15px;
+    .input-group{
+      position: relative;
+      z-index: 10;
+      overflow: visible;
+    }
+  }
   .staff-members {
       width: 100%;
       padding-left: 60px;
-      padding-top: 20px;
+      padding-top: 70px;
       
     .staff-member {
       width: 120px;
@@ -19,7 +29,6 @@
       display: inline-block;
       border: 1px solid darken(#817d7d, 40%);
       // background-color: black;
-
       // .object-fit_contain {
       //   object-fit: contain;
       //   width: 100%;
@@ -27,7 +36,12 @@
       //   vertical-align: center;
       //   margin: auto; 
       // }
-    
+      @media only screen and (max-width: 480px){  
+        width: 80px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        width: 100px;
+      };
       .member-description {
         background-color: rgba(255,255,255,0.5);
         padding-bottom: auto;
