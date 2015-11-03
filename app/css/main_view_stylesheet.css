@@ -31,6 +31,7 @@
 #main-view ul .home-target-li .home-target-div a .home-target-head h2 {
   text-align: left;
   margin-left: 5%;
+  font-size: 2rem;
 }
 #main-view ul .home-target-li .home-target-div a .announcements-bckgrd {
   background-color: #ed4523;
@@ -53,7 +54,7 @@
 #main-view ul .home-target-li .home-target-div a .home-target-content {
   display: block;
   width: 100%;
-  height: 64%;
+  height: 70%;
   background-color: white;
 }
 #main-view ul .home-target-li:hover {
@@ -114,7 +115,7 @@
 #main-view ul .home-target-li-smaller .home-target-div a .home-target-head h2 {
   text-align: left;
   margin-left: 5%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 #main-view ul .home-target-li-smaller .home-target-div a .announcements-bckgrd {
   background-color: #ed4523;

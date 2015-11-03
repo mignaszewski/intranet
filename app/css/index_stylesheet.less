@@ -102,18 +102,31 @@
 /* END OF SEARCH BOX */
 // FOOTER
 footer {
+  height: 100px;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  weight: 100%;
-  height: 100px;
   display: inline-block;
   text-align: center;
   border-top: 2px solid lighten(black, 25%);
   background-color: lighten(black, 10%);
   .offices {
     padding-right: 80px;
+    @media only screen and (max-width: 480px){   
+      padding-right: 40px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-right: 60px;
+    };
     h4 {
       color: white;
+      font-size: 1.8rem;
+      @media only screen and (max-width: 480px){
+        font-size: 1.3rem;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        font-size: 1.5rem;
+      };
     }
   }
   .headquarter1, .headquarter2, .warsaw-location, .social-media {
@@ -122,20 +135,61 @@ footer {
   .headquarter1, .headquarter2, .warsaw-location {
     padding-left: 50px;
     color: white;
+    @media only screen and (max-width: 480px){   
+      padding-left: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-left: 37px;
+    };
+    h5 {
+      font-size: 1.2rem;
+      @media only screen and (max-width: 480px){
+        font-size: 0.8rem;   
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        font-size: 1rem;
+      };
+    }
   }
   .headquarter {
     padding-right: 50px;
+    @media only screen and (max-width: 480px){   
+      padding-right: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-right: 37px;
+    };
   }
   .warsaw-location {
     padding-left: 50px;
+    @media only screen and (max-width: 480px){   
+      padding-left: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-left: 37px;
+    };
   }
   .social-media {
     float: right;
     padding-right: 50px;
     padding-top: 15px;
+    @media only screen and (max-width: 480px){   
+      padding-top: 5px;
+      padding-right: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-top: 10px;
+      padding-right: 37px;
+    };
     .facebook {
       display: inline-block;
       padding-right: 15px;
+      @media only screen and (max-width: 480px){   
+        padding-right: 5px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        padding-right: 10px;
+      };
     }
     .linkedin {
       display: inline-block;
