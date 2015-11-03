@@ -7,10 +7,20 @@
   /* LOGO + BACKGROUND IMG */
   /* END OF LOGO + BACKGROUND IMG */
 }
+@media only screen and (max-width: 480px) {
+  #hero {
+    height: 70px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #hero {
+    height: 80px;
+  }
+}
 #hero .logo-container {
   padding-top: 15px;
   float: left;
-  width: 35%;
+  width: 25%;
   height: 100%;
   display: inline-block;
 }
@@ -35,9 +45,10 @@
   }
 }
 #hero .background-container {
+  width: 40%;
   padding-top: 5px;
   display: inline-block;
-  float: left;
+  position: absolute;
 }
 #hero .background-container .background {
   height: 90px;
@@ -55,6 +66,7 @@
 }
 /* SEARCH BOX */
 .box {
+  width: 30%;
   float: right;
   padding-top: 10px;
   display: inline-block;
@@ -65,18 +77,45 @@
   vertical-align: middle;
   white-space: nowrap;
 }
+@media only screen and (max-width: 480px) {
+  .box .container-4 {
+    width: 130px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .box .container-4 {
+    width: 200px;
+  }
+}
 .box .container-4 input#search {
   width: 300px;
   height: 40px;
   background: #ddd;
   border: none;
   font-size: 10pt;
-  float: left;
   color: #fff;
   padding-left: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+@media only screen and (max-width: 480px) {
+  .box .container-4 input#search {
+    width: 100px;
+    height: 15px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .box .container-4 input#search {
+    width: 150px;
+    height: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .box .container-4 input#search {
+    width: 200px;
+    height: 30px;
+  }
 }
 .box .container-4 input#search::-webkit-input-placeholder {
   color: #817d7d;
@@ -105,12 +144,30 @@
   width: 50px;
   color: #eee;
   opacity: 0;
-  font-size: 10pt;
+  font-size: 1rem;
   -webkit-transition: all .55s ease;
   -moz-transition: all .55s ease;
   -ms-transition: all .55s ease;
   -o-transition: all .55s ease;
   transition: all .55s ease;
+}
+@media only screen and (max-width: 480px) {
+  .box .container-4 button.icon {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .box .container-4 button.icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .box .container-4 button.icon {
+    height: 30px;
+    width: 30px;
+  }
 }
 .box .container-4:hover button.icon,
 .box .container-4:active button.icon,
@@ -118,6 +175,27 @@
   outline: none;
   opacity: 1;
   margin-left: -50px;
+}
+@media only screen and (max-width: 480px) {
+  .box .container-4:hover button.icon,
+  .box .container-4:active button.icon,
+  .box .container-4:focus button.icon {
+    margin-left: -20px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .box .container-4:hover button.icon,
+  .box .container-4:active button.icon,
+  .box .container-4:focus button.icon {
+    margin-left: -25px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .box .container-4:hover button.icon,
+  .box .container-4:active button.icon,
+  .box .container-4:focus button.icon {
+    margin-left: -33px;
+  }
 }
 .box .container-4:hover button.icon:hover {
   background: #bbb;
