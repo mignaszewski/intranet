@@ -1,0 +1,91 @@
+.show-employees {
+   margin: 1%;
+}
+.injected-employees {
+  width: 100%;
+  height: 100%;
+
+  .fixed-class {
+    position: fixed;
+  }
+  .unfixed-class {
+    position: none;
+  }
+  .search-container {
+    display: inline-block;
+    
+    .input-group {
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+        font-size: 0.09rem;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px) {
+        width: 80%;
+      };
+
+      #search_concept {
+        padding-left: 0.5rem;
+        @media only screen and (max-width: 480px) {
+          visibility: hidden;
+          display: none;
+        }
+      }
+      .form-control {
+        @media only screen and (max-width: 480px) {
+         width: 100%; 
+         font-size: 1.4rem;
+         
+        }
+      }
+    }
+  }
+
+  .staff-members {
+      width: 100%;
+      padding-left: 60px;
+      padding-top: 20px;
+      // position: absolute;
+      
+    .staff-member {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+      border: 1px solid darken(#817d7d, 40%);
+     
+      @media only screen and (max-width: 480px){  
+        width: 80px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        width: 100px;
+      };
+      .member-description {
+        background-color: rgba(255,255,255,0.5);
+        padding-bottom: auto;
+        position: absolute;
+        bottom: -120px;
+        transition: all 0.5s ease;
+        text-align: center;
+    
+        .full-name {
+          font-size: 0.8em;
+          margin-bottom: 0.3em;
+          padding-top: 1em;
+          margin-top: 0;
+        }
+        .member-position {
+          font-size: 0.7em;
+          margin-bottom: 0.4em;
+        }
+      }
+    }
+    .staff-member:hover .member-description {
+      background-color: rgba(0,0,0,0.7);
+      bottom: 0;
+      height: 100%;
+      color: white;
+    }
+  }
+}

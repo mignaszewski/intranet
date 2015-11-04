@@ -42,5 +42,14 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
-  .controller('NewsController', ['$scope', newsCtrl]);
+  .controller('NewsController', ['$scope', newsCtrl])
+
+
+// Load directive
+  .directive('employeeCard', function() {
+    return {
+      restrict: 'E',
+      templateUrl: './partials/employee-card.html'
+    };
+  });
 }());

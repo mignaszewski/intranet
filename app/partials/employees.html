@@ -1,4 +1,54 @@
-<!-- employees.html -->
-<div ng-if="menu === 'employees'">
-  EMPLOYEES !!!
+<div ng-if="menu === 'employees'" class="show-employees">
+  <section class="injected-employees">
+      <div class="search-container" ng-class="{'fixed-class': click === 1, 'unfixed-class': click === 0}">
+          <div class="row">    
+              <div class="col-xs-8 col-xs-offset-2">
+                  <div class="input-group">
+                      <div class="input-group-btn search-panel">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></span> 
+                            <span id="search_concept">Wybierz dział</span> <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#board">Zarząd</a></li>
+                            <li><a href="#pm">Project Manager</a></li>
+                            <li><a href="#hr">Rekrutacja</a></li>
+                            <li><a href="#sales">Handel</a></li>
+                            <li><a href="#personnel">Kadry</a></li>
+                            <li><a href="#finance">Finanse</a></li>
+                            <li><a href="#businessdevelop">Business Development</a></li>
+                            <li><a href="#marketing">Marketing</a></li>
+                            <li><a href="#secretary">Sekretariat</a></li>
+                            <li><a href="#research">Research</a></li>
+                            <li><a href="#quality">Quality</a></li>
+                            <li><a href="#support">IT Support</a></li>
+                          </ul>
+                      </div>
+                      <input type="hidden" name="search_param" value="all" id="search_param">         
+                      <input type="text" class="form-control" name="x" placeholder="Imię, nazwisko...">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <section class="main-emplo-content"> 
+          <div class="staff-members">
+              <div class="staff-member" ng-repeat="employee in employees">
+                  <div id="wrapper">
+                      <a ng-click="toggle(employee, 1)">
+                          <img class="object-fit_contain" ng-src="{{employee.img}}" alt="">
+                              <div class="member-description">
+                                  <h4 class="full-name">{{ employee.name }}</h4>
+                                  <p class="member-position">{{ employee.position }}</p>
+                              </div>
+                          </img>
+                      </a>
+                  </div>
+                  <employee-card></employee-card>
+              </div>
+          </div>
+      </section>
+  </section>
 </div>
