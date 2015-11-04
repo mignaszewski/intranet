@@ -1,6 +1,13 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
-  <article class="news-main-content">
-    buauauauaua
+  <article class="news-main-content" ng-repeat="news in allNews | limitTo: 2">
+    <aside class="left-news-description">
+      <h4>{{news.date}}</h4>
+      <h2>{{news.tittle}}</h2>
+      <p>{{news.description}}</p>
+    </aside>
+    <aside class="right-news-tumb">
+      <img ng-src="{{news.img[0]}}">
+    </aside>
   </article>
 </div>
