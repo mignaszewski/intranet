@@ -42,6 +42,7 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
+  .controller('NewsController', ['$scope', newsCtrl])
 
 
 // Load directive
