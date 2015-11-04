@@ -28,13 +28,13 @@
         @media only screen and (max-width: 480px) {
           visibility: hidden;
           display: none;
-        }
+        };
       }
       .form-control {
+        height: 87%;
         @media only screen and (max-width: 480px) {
          width: 100%; 
          font-size: 1.4rem;
-         
         }
       }
     }
@@ -54,6 +54,7 @@
       position: relative;
       display: inline-block;
       border: 1px solid darken(#817d7d, 40%);
+      text-align: middle;
      
       @media only screen and (max-width: 480px){  
         width: 80px;
@@ -67,17 +68,18 @@
         position: absolute;
         bottom: -120px;
         transition: all 0.5s ease;
-        text-align: center;
-    
+        
+        width: 100%;
+  
         .full-name {
-          font-size: 0.8em;
-          margin-bottom: 0.3em;
-          padding-top: 1em;
-          margin-top: 0;
+          // font-size: 0.8em;
+          // margin-bottom: 0.3em;
+          // padding-top: 0.5em;
+          // margin-top: 1em;
         }
         .member-position {
-          font-size: 0.7em;
-          margin-bottom: 0.4em;
+          // font-size: 0.7em;
+          // margin-bottom: 0.7em;
         }
       }
     }
@@ -86,6 +88,7 @@
       bottom: 0;
       height: 100%;
       color: white;
+      
     }
   }
 }

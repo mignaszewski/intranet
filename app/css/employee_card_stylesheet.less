@@ -5,20 +5,24 @@
   background-color: rgba(0,0,0,0.3);
   width: 100%;
   height: 100%;
+  color: rgb(51, 51, 51);
 }
 #popup-wrapper {
-  width: 500px;
+  width: auto;
   margin: 70px auto;
   text-align: center;
 }
 #popup-container {
   background-color: white;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 1.3rem;
+  border-radius: 1rem;
   text-align: center;
   color: black;
-  height: 600px;
-  // left: 0%;
+  height: 25em;
+  width: 45em;
+  display: inline-block;
+  margin: auto;
+  border: 3px solid black;
 }
 .popup-close {
   text-align: right;
@@ -28,17 +32,52 @@
   width: 100%;
   text-align: center;
   background-color: pink;
-
-  // border-top: solid 1px;
-  // border-color: black;
   margin-bottom: 0;
 }
+.card-img-container {
+  height: 28rem;
+  width: 18rem;
+  margin: none;
+  display: inline-block;
+}
 .card-image {
-  width: 50%;
-  height: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  // padding-top: 1.3em;
+  border-radius: 1rem;
+ 
 }
-.card-content p {
-  font-size: 20px;
-  text-align: justify;
-  padding-top: 15px;
+.card-content {
+  float: right;
+  text-align: left;
+  margin: 1.5rem;
+  padding-right: 1rem;
+  display: inline-block;
+  h3 {
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+
+  }
+  h4 {
+    font-size: 1.5em;
+    margin-bottom: 5rem;
+    border-bottom: 0.2rem solid rgb(237,69,116);
+    line-height: 4rem;
+  }
+  p {
+    font-size: 20px;
+  }
+  .fa.fa-envelope-o, .fa.fa-phone, .fa.fa-mobile {
+    margin-right: 1.3rem;
+  }
+  .show-mobile {
+    visibility: visible;
+  }
+  .hide-mobile {
+    visibility: hidden;
+  }
 }
+
+
+
