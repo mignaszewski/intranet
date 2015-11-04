@@ -3,11 +3,19 @@
   width: 100%;
   position: absolute;
   top: 0;
+  border-bottom: 2px solid lighten(black, 25%);
+  
+  @media only screen and (max-width: 480px){   
+    height: 70px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    height: 80px;
+  };
 /* LOGO + BACKGROUND IMG */
   .logo-container {
     padding-top: 15px;
     float: left;
-    width: 35%;
+    width: 25%;
     height: 100%;
     display: inline-block;
     .logo {
@@ -15,33 +23,57 @@
       width: 285px;
       padding-left: 50px;
       display: inline-block;
+      @media only screen and (max-width: 480px){   
+        height: 40px;
+        width: 160px;
+        padding-left: 30px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        height: 60px;
+        width: 210px;
+        padding-left: 40px;
+      };
     }
   }
   .background-container {
-    padding-top: 10px;
+    width: 40%;
+    padding-top: 5px;
     display: inline-block;
-    float: left;
-    // position: absolute;
+    // float: left;
+    position: absolute;
     .background {
+      // width: 40%;
       height: 90px;
       // margin-top: -30px;
       position: relative;
+      @media only screen and (max-width: 480px){   
+        height: 45px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        height: 60px;
+      };
     }
   }
 /* END OF LOGO + BACKGROUND IMG */
 }
   /* SEARCH BOX */
   .box {
+    width: 30%;
     float: right;
     padding-top: 10px;
     margin-right: 30px;
     display: inline-block;
-
     .container-4 {
       overflow: hidden;
       width: 300px;
       vertical-align: middle;
       white-space: nowrap;
+      @media only screen and (max-width: 480px){   
+        width: 130px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        width: 200px;
+      };
     }
     .container-4 input#search{
       width: 300px;
@@ -49,12 +81,27 @@
       background: #ddd;
       border: none;
       font-size: 10pt;
-      float: left;
-      color: black;
+      // float: left;
+      color: #fff;
       padding-left: 15px;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
+      @media only screen and (max-width: 480px){   
+        width: 100px;
+        height: 15px;
+        // float: right;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        width: 150px;
+        height: 20px;
+        // float: right;
+      };
+      @media only screen and (min-width: 768px) and (max-width: 1023px){
+        width: 200px;
+        height: 30px;
+        // float: right;
+      };
     }
     .container-4 input#search::-webkit-input-placeholder {
        color: #817d7d;
@@ -82,18 +129,41 @@
       width: 50px;
       color: #eee;
       opacity: 0;
-      font-size: 10pt;
+      font-size: 1rem;
+
      
       -webkit-transition: all .55s ease;
       -moz-transition: all .55s ease;
       -ms-transition: all .55s ease;
       -o-transition: all .55s ease;
       transition: all .55s ease;
+
+      @media only screen and (max-width: 480px){
+        height: 15px;
+        width: 15px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        height: 20px;
+        width: 20px;
+      };
+      @media only screen and (min-width: 768px) and (max-width: 1023px){
+        height: 30px;
+        width: 30px;
+      };
     }
     .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
       outline: none;
       opacity: 1;
       margin-left: -50px;
+      @media only screen and (max-width: 480px){
+        margin-left: -20px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        margin-left: -25px;
+      };
+      @media only screen and (min-width: 768px) and (max-width: 1023px){
+        margin-left: -33px;
+      };
     }
     .container-4:hover button.icon:hover{
       background: #bbb;
@@ -102,34 +172,82 @@
 /* END OF SEARCH BOX */
 // FOOTER
 footer {
+  height: 100px;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  weight: 100%;
-  height: 100px;
   display: inline-block;
   text-align: center;
+  border-top: 2px solid lighten(black, 25%);
+  background-color: lighten(black, 10%);
   .offices {
     padding-right: 80px;
+    @media only screen and (max-width: 480px){   
+      padding-right: 40px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-right: 60px;
+    };
+    h4 {
+      color: white;
+      font-size: 1.8rem;
+    }
   }
   .headquarter1, .headquarter2, .warsaw-location, .social-media {
     display: inline-block;
   }
   .headquarter1, .headquarter2, .warsaw-location {
     padding-left: 50px;
+    color: white;
+    @media only screen and (max-width: 480px){   
+      padding-left: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-left: 37px;
+    };
+    h5 {
+      font-size: 1.2rem;
+    }
   }
   .headquarter {
     padding-right: 50px;
+    @media only screen and (max-width: 480px){   
+      padding-right: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-right: 37px;
+    };
   }
   .warsaw-location {
     padding-left: 50px;
+    @media only screen and (max-width: 480px){   
+      padding-left: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-left: 37px;
+    };
   }
   .social-media {
     float: right;
     padding-right: 50px;
     padding-top: 15px;
+    @media only screen and (max-width: 480px){   
+      padding-top: 5px;
+      padding-right: 25px;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){ 
+      padding-top: 10px;
+      padding-right: 37px;
+    };
     .facebook {
       display: inline-block;
       padding-right: 15px;
+      @media only screen and (max-width: 480px){   
+        padding-right: 5px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){ 
+        padding-right: 10px;
+      };
     }
     .linkedin {
       display: inline-block;

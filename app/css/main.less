@@ -1,7 +1,5 @@
-// @backgroundColor: rgb(184,214,164);
 @backgroundColor: white;
 @fontFamily: "Verdana", "Arial", sans-serif;
-@fontSize: 20px;
 
 #grad{
 }
@@ -12,10 +10,20 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+html {
+  font-family: @fontFamily;
+  font-size: 10px;
+  @media only screen and (max-width: 480px){  
+    font-size: 6px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    font-size: 8px;
+  };
+}
+
 body {
   background-color: @backgroundColor;
-  font-family: @fontFamily;
-  font-size: @fontSize;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,9 +46,17 @@ img {
   left: 0;
   right: 0;
   overflow: auto;
-  // width: 100%;
-  background: #77b5d4;
-
+  background-image: url("../img/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+  @media only screen and (max-width: 480px){   
+    top: 70px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    top: 80px;
+  };
 }
 
 section {
@@ -55,11 +71,7 @@ article {
   display: inline-block;
 }
 
-footer {
-  display: inline-block;
-  height: 100px;
-  width: 100%;
-}
+
 
 
 @import "calendar_stylesheet.less";

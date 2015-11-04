@@ -1,10 +1,249 @@
-#main_view {
+#main-view {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 15px;
+  // font-size: 1.5rem;
+  ul {
+    .home-target-li {     //element listy
+      display: inline-block;
+      border: 2px solid lighten(black, 25%);
+      width: 30%;
+      height: 190px;
+      margin: 0.5%;
+      box-shadow: 7px 7px 6px #333222;
+
+      position: relative;
+      
+      @media only screen and (max-width: 480px){
+        width: 90%;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        width: 45%;
+      };
+
+      .home-target-div {      //div zewnetrzny
+        width: 100%;
+        height: 100%;
+        a {           //ahref na wszystko w divie
+          text-decoration: none;
+          color: black;
+          position: relative;
+          cursor: default;
+          .home-target-head {     //div górny, kolorowy
+            width: 100%;
+            padding: 0.1rem 0.1rem; 
+            border-bottom: 2px solid lighten(black, 25%);
+
+            h2 {        //news, profile, calendar, download
+              text-align: left;
+              margin-left: 5%;
+              font-size: 2rem;
+            }
+          }
+          .announcements-bckgrd {
+            background-color: rgb(237,69,35);
+          }
+          .news-bckgrd {
+            background-color: rgb(237,69,116);
+          }
+          .profile-bckgrd {
+            background-color: rgb(143,172,230);
+          }
+          .team-bckgrd {
+            background-color: rgb(232,126,232);
+          }
+          .download-bckgrd {
+            background-color: rgb(130,227,82);
+          }
+          .calendar-bckgrd {
+            background-color: rgb(144,232,189);
+          }
+
+          .home-target-content {        //dolny div z contentem,
+            display: block;
+            width: 100%;
+            height: 70%;
+            // background-color: darken(white, 10%);
+            background-color: white;
+
+            @media only screen and (max-width: 480px){
+              height: 75%;
+            };
+            @media only screen and (min-width: 481px) and (max-width: 767px){
+              height: 73%;
+            };
+          }
+        }
+      }
+    }
+    .home-target-li:hover{
+      -webkit-animation-name: example; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0.1s; /* Chrome, Safari, Opera */
+      animation-name: example;
+      animation-duration: 0.1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 5px; top: 5px; box-shadow: none}
+    }
+    @keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 5px; top: 5px; box-shadow: none}
+    }
+  }
+}
+
+// ////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////// WSZYSTKO MNIEJSZE \/ //////////
+.main-view-slide-left {
   display: inline-block;
-  list-style-type: none;
+  -webkit-animation-name: mainviewslide; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.4s; /* Chrome, Safari, Opera */
+  animation-name: mainviewslide;
+  animation-duration: 0.4s;
+  // animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
 
+  ul {
+    .home-target-li-smaller {
+      display: inline-block;
+      border: 2px solid lighten(black, 25%);
+      width: 150px;
+      height: 50px;
+      margin: 0.5%;
+      box-shadow: 7px 7px 6px #333222;
+      position: relative;
+      
+      @media only screen and (max-width: 480px){
+        width: 100px;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        width: 115px;
+      };
+      @media only screen and (min-width: 768px) and (max-width: 859px){
+        width: 125px;
+      };
+      @media only screen and (min-width: 860px) and (max-width: 1023px){
+        width: 130px;
+      };
+      @media only screen and (min-width: 1024px) and (max-width: 1199px){
+        width: 140px;
+      };
 
+      .home-target-div {      //div zewnetrzny
+        width: 100%;
+        height: 100%;
+        a {           //ahref na wszystko w divie
+          text-decoration: none;
+          color: black;
+          position: relative;
+          cursor: default;
+          .home-target-head {     //div górny, kolorowy
+            width: 100%;
+            padding: 0.1rem 0.1rem; 
+
+            h2 {        //news, profile, calendar, download
+              text-align: left;
+              margin-left: 5%;
+              font-size: 1.3rem;
+            }
+          }
+          .announcements-bckgrd {
+            background-color: rgb(237,69,35);
+          }
+          .news-bckgrd {
+            background-color: rgb(237,69,116);
+          }
+          .profile-bckgrd {
+            background-color: rgb(143,172,230);
+          }
+          .team-bckgrd {
+            background-color: rgb(232,126,232);
+          }
+          .download-bckgrd {
+            background-color: rgb(130,227,82);
+          }
+          .calendar-bckgrd {
+            background-color: rgb(144,232,189);
+          }
+          .go-main-page {
+            background-color: darken(white, 33%);
+          }
+        }
+      }
+    }
+    .home-target-li-smaller:hover{
+      -webkit-animation-name: example; /* Chrome, Safari, Opera */
+      -webkit-animation-duration: 0s; /* Chrome, Safari, Opera */
+      animation-name: example;
+      animation-duration: 0s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 5px; top: 5px; box-shadow: none}
+    }
+    @keyframes example {
+      0% {left: 0px; top: 0px;}
+      100% {left: 5px; top: 5px; box-shadow: none}
+    }
+  }
 }
-#main_view ul li {
-  border: solid 1px black;
+@-webkit-keyframes mainviewslide {
+  0% {left: 0px; top: 0px;}
+  100% {left: 0px; top: 0px; width: 15%; height: 100%;}
 }
-// css animacja przechodzenia kategorii menu na lewo po kliknięciu w kategorię
+@keyframes mainviewslide {
+  0% {left: 0px; top: 0px;}
+  100% {left: 0px; top: 0px; width: 15%; height: 100%;}
+}
+
+.included-tmpl-visible {
+  display: inline-block;
+  width: 83%;
+  background-color: black;
+  float: right;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+  transition-delay: 1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+
+  @media only screen and (max-width: 480px){
+    width: 66%;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 639px){
+    width: 68%;
+  };
+  @media only screen and (min-width: 640px) and (max-width: 767px){
+    width: 74%;
+  };
+  @media only screen and (min-width: 768px) and (max-width: 859px){
+    width: 74%;
+  };
+  @media only screen and (min-width: 860px) and (max-width: 1023px){
+    width: 77%;
+  };
+  @media only screen and (min-width: 1024px) and (max-width: 1199px){
+    width: 80%;
+  };
+}
+.included-tmpl-invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
