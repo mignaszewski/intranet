@@ -13,7 +13,33 @@
   }
   .search-container {
     display: inline-block;
+    
+    .input-group {
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+        font-size: 0.09rem;
+      };
+      @media only screen and (min-width: 481px) and (max-width: 767px) {
+        width: 80%;
+      };
+
+      #search_concept {
+        padding-left: 0.5rem;
+        @media only screen and (max-width: 480px) {
+          visibility: hidden;
+          display: none;
+        }
+      }
+      .form-control {
+        @media only screen and (max-width: 480px) {
+         width: 100%; 
+         font-size: 1.4rem;
+         
+        }
+      }
+    }
   }
+
   .staff-members {
       width: 100%;
       padding-left: 60px;
@@ -28,14 +54,7 @@
       position: relative;
       display: inline-block;
       border: 1px solid darken(#817d7d, 40%);
-      // background-color: black;
-      // .object-fit_contain {
-      //   object-fit: contain;
-      //   width: 100%;
-      //   height: 100%;
-      //   vertical-align: center;
-      //   margin: auto; 
-      // }
+     
       @media only screen and (max-width: 480px){  
         width: 80px;
       };
