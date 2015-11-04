@@ -34,7 +34,7 @@
   </section>
   <!-- <h1>{{test}}</h1> -->
 
-    <div class="search-container">
+    <div class="search-container" ng-class="{'fixed-class': click === 1, 'unfixed-class': click === 0}">
         <div class="row">    
             <div class="col-xs-8 col-xs-offset-2">
                 <div class="input-group">
@@ -67,11 +67,11 @@
         </div>
     </div>
 
-    <section class="main-emplo-content" ng-controller="EmployeesController"> 
+    <section class="main-emplo-content"> 
         <div class="staff-members">
             <div class="staff-member" ng-repeat="employee in employees">
                 <div id="wrapper">
-                    <a ng-click="toggle(employee)">
+                    <a ng-click="toggle(employee, 1)">
                         <img class="object-fit_contain" ng-src="{{employee.img}}" alt="">
                             <div class="member-description">
                                 <h4 class="full-name">{{ employee.name }}</h4>

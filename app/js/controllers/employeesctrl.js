@@ -3,10 +3,14 @@ module.exports = function($scope) {
 
   $scope.popupvisible = false;
   $scope.showcard = {};
-  $scope.toggle = function(obj) {
+  $scope.click = 0;
+  $scope.toggle = function(obj, val) {
     $scope.popupvisible = !$scope.popupvisible;
     $scope.showcard = obj;
+    $scope.click = val;
+    console.log($scope.click);
   };
+
 };
 
 var employees = [

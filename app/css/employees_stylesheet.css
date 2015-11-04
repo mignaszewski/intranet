@@ -3,28 +3,62 @@
   height: 100%;
 }
 .injected-employees .left-emplo-navbar {
-  float: left;
-  display: inline-block;
-  width: 20%;
-  border: 1px solid black;
+  border-right: 1px solid black;
 }
-.injected-employees .main-emplo-content {
-  float: right;
-  display: inline-block;
-  width: 80%;
-  border: 1px solid black;
+.injected-employees .fixed-class {
+  position: fixed;
 }
-.injected-employees .main-emplo-content .staff-members-ul {
+.injected-employees .unfixed-class {
+  position: none;
+}
+.injected-employees .search-container {
+  display: inline-block;
+}
+.injected-employees .staff-members {
   width: 100%;
+  padding-left: 60px;
+  padding-top: 20px;
 }
-.injected-employees .main-emplo-content .staff-members-ul .staff-member-li {
-  width: 200px;
-  height: 200px;
+.injected-employees .staff-members .staff-member {
+  width: 120px;
+  height: 120px;
   overflow: hidden;
   margin: 10px;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
   display: inline-block;
-  background-color: pink;
-  border: 1px solid #91560d;
+  border: 1px solid #191919;
+}
+@media only screen and (max-width: 480px) {
+  .injected-employees .staff-members .staff-member {
+    width: 80px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .injected-employees .staff-members .staff-member {
+    width: 100px;
+  }
+}
+.injected-employees .staff-members .staff-member .member-description {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: auto;
+  position: absolute;
+  bottom: -120px;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+.injected-employees .staff-members .staff-member .member-description .full-name {
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
+  padding-top: 1em;
+  margin-top: 0;
+}
+.injected-employees .staff-members .staff-member .member-description .member-position {
+  font-size: 0.7em;
+  margin-bottom: 0.4em;
+}
+.injected-employees .staff-members .staff-member:hover .member-description {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  height: 100%;
+  color: white;
 }
