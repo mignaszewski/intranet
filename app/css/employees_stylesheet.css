@@ -1,9 +1,9 @@
+.show-employees {
+  margin: 1%;
+}
 .injected-employees {
   width: 100%;
   height: 100%;
-}
-.injected-employees .left-emplo-navbar {
-  border-right: 1px solid black;
 }
 .injected-employees .fixed-class {
   position: fixed;
