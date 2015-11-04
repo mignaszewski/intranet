@@ -9,6 +9,7 @@
   var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
+  var newsCtrl = require('./controllers/newsctrl');
 
   angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
 
@@ -40,5 +41,6 @@
   //Load controller
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
-  .controller('EmployeesController', ['$scope', employeesCtrl]);
+  .controller('EmployeesController', ['$scope', employeesCtrl])
+  .controller('NewsController', ['$scope', newsCtrl]);
 }());

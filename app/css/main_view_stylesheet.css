@@ -150,6 +150,7 @@
   bottom: 0;
 }
 .main-view-slide-left ul .home-target-li-smaller {
+  float: left;
   display: inline-block;
   border: 2px solid #404040;
   width: 150px;
@@ -301,7 +302,8 @@
 }
 .included-tmpl-visible {
   display: inline-block;
-  width: 83%;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0.7);
   float: right;
   visibility: visible;
   opacity: 1;
