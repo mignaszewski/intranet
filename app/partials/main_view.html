@@ -3,25 +3,21 @@
     <ul>
 
       <li class="home-target-li-smaller" ng-if="menu.length > 0">
-          <div class="home-target-div" >
-          <a href="" ng-click="isWhat(elements[6].clickName)">
+        <div class="home-target-div" ng-click="isWhat(elements[6].clickName)">
             <div class="{{elements[6].className}}">
-              <h2> <i class="{{elements[6].fontAwe}}"></i> {{elements[6].name}}</h2>
+              <p> <i class="{{elements[6].fontAwe}}"></i> {{elements[6].name}}</p>
             </div>
-          </a>
         </div>
       </li>
 
       <li ng-repeat="elem in elements|limitTo:6" ng-class="{'home-target-li-smaller': menu.length > 0, 'home-target-li': menu.length == 0}">
-        <div class="home-target-div" >
-          <a href="" ng-click="isWhat(elem.clickName)">
-            <div class="{{elem.className}}">
-              <h2> <i class="{{elem.fontAwe}}"></i> {{elem.name}}</h2>
+        <div class="home-target-div" ng-click="isWhat(elem.clickName)">
+          <div class="{{elem.className}}">
+              <p> <i class="{{elem.fontAwe}}"></i> {{elem.name}}</p>
             </div>
             <div class="home-target-content" ng-if="menu.length == 0">
-              {{elem.name}} content here
-            </div>
-          </a>
+              content here
+          </div>
         </div>
       </li>
 
