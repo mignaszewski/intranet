@@ -94,7 +94,7 @@
   background: #ddd;
   border: none;
   font-size: 10pt;
-  color: #fff;
+  color: #333333;
   padding-left: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -119,18 +119,18 @@
   }
 }
 .box .container-4 input#search::-webkit-input-placeholder {
-  color: #817d7d;
+  color: #333333;
 }
 .box .container-4 input#search:-moz-placeholder {
   /* Firefox 18- */
-  color: #817d7d;
+  color: #333333;
 }
 .box .container-4 input#search::-moz-placeholder {
   /* Firefox 19+ */
-  color: #817d7d;
+  color: #333333;
 }
 .box .container-4 input#search:-ms-input-placeholder {
-  color: #817d7d;
+  color: #333333;
 }
 .box .container-4 button.icon {
   -webkit-border-top-right-radius: 5px;
