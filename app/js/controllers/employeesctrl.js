@@ -4,14 +4,16 @@ module.exports = function($scope) {
   $scope.popupvisible = false;
   $scope.showcard = {};
   $scope.click = 0;
+
   $scope.toggle = function(obj, val) {
     $scope.popupvisible = !$scope.popupvisible;
     $scope.showcard = obj;
     $scope.click = val;
     console.log($scope.click);
   };
-
 };
+  
+ 
 
 var employees = [
 {
@@ -27,7 +29,7 @@ var employees = [
   name: 'Aleksander Lewicki',
   position: 'Prezes',
   mail: 'aleksander.lewicki@altimi.com',
-  phone1: '+48 71 786 08 02' ,
+  phone1: '+48 71 786 08 02',
   img: './img/temp_employees/Aleksander.jpg'
 },
 {
@@ -36,7 +38,7 @@ var employees = [
   position: 'Dyrektor Operacyjny',
   mail: ' monika.zmuda@altimi.com',
   phone1: '+48 71 786 08 49',
-  phon2: '+48 605 733 990',
+  phone2: '+48 605 733 990',
   img: './img/temp_employees/Monika.jpg'
 },
 {
