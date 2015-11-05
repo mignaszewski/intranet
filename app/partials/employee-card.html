@@ -1,14 +1,17 @@
 <div class="show-employee" ng-show="popupvisible">
     <div id="popup-wrapper">
         <div id="popup-container">
-            <p class="popup-close" ng-click="toggle(0,0)">[x]</p>
-            <img ng-src="{{ showcard.img }}" class="card-image">
+            <p class="popup-close" ng-click="toggle(0,0)">x</p>
+            <div class="card-img-container">
+                <img ng-src="{{ showcard.img }}" class="card-image">
+            </div>
             <div class="card-content">
                 <h3>{{ showcard.name }}</h3>
                 <h4>{{ showcard.position }}</h4>
-                <p>e-mail: {{ showcard.mail }}</p>
-                <p>telefon: {{ showcard.phone1 }}</p>
-                <p>{{ showcard.phone2 }}</p>
+                <p><i class="fa fa-envelope-o"></i>{{ showcard.mail }}</p>
+                <p><i class="fa fa-phone"></i>{{ showcard.phone1 }}</p>
+                <!-- <p ng-class="{'show-mobile': mobile === 1, 'hide-mobile': mobile === 0"><i class="fa fa-mobile"></i>{{ showcard.phone2 }}</p> -->
+                <p ng-if="showcard.phone2"><i class="fa fa-mobile"></i>{{ showcard.phone2 }}</p>
             </div>
         </div>
     </div>
