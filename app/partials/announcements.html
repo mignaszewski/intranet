@@ -1,4 +1,8 @@
 <!-- announcements.html -->
-<div ng-if='menu === "announcements"'>
-  ANNOUNCEMENTS !!!
+<div ng-if='menu === "announcements"' class="announcements-content">
+  <article class="one-announcement" ng-repeat="ann in announcements | orderBy: 'date'">
+    <span>{{ann.description}}</span>
+    <h5>{{ann.author}}</h5>
+    <h6>{{ann.date}}</h6>
+  </article>
 </div>
