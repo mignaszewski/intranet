@@ -14,6 +14,32 @@
 .injected-employees .search-container {
   display: inline-block;
 }
+@media only screen and (max-width: 480px) {
+  .injected-employees .search-container .input-group {
+    width: 100%;
+    font-size: 0.09rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .injected-employees .search-container .input-group {
+    width: 80%;
+  }
+}
+.injected-employees .search-container .input-group #search_concept {
+  padding-left: 0.5rem;
+}
+@media only screen and (max-width: 480px) {
+  .injected-employees .search-container .input-group #search_concept {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .injected-employees .search-container .input-group .form-control {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
 .injected-employees .staff-members {
   width: 100%;
   padding-left: 60px;

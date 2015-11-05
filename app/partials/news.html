@@ -1,13 +1,17 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
-  <article class="news-main-content" ng-repeat="news in allNews | limitTo: 2">
-    <aside class="left-news-description">
+  <article class="news-main-content" ng-repeat="news in allNews">
+    <aside class="news-description">
       <h4>{{news.date}}</h4>
       <h2>{{news.tittle}}</h2>
-      <p>{{news.description}}</p>
-    </aside>
-    <aside class="right-news-tumb">
-      <img ng-src="{{news.img[0]}}">
+      <figure class="news-tumb">
+        <img ng-src="{{news.img[0]}}">
+      </figure>
+      <div class="module" ng-class="{'line-clamp': !news.pullDown}">
+        <p>{{news.description}}</p>
+      </div>
+      <i class="fa fa-sort-desc" ng-if="!news.pullDown" ng-click="readMore(news)"></i>
+      <i class="fa fa-caret-up" ng-if="news.pullDown" ng-click="readLess(news)"></i>
     </aside>
   </article>
   <div class="button-wrapper">
