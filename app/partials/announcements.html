@@ -1,8 +1,10 @@
 <!-- announcements.html -->
 <div ng-if='menu === "announcements"' class="announcements-content">
-  <article class="one-announcement" ng-repeat="ann in announcements | orderBy: 'date'">
-    <span>{{ann.description}}</span>
-    <h5>{{ann.author}}</h5>
-    <h6>{{ann.date}}</h6>
-  </article>
+  <section class="background-pinboard">
+    <article class="one-announcement" ng-repeat="ann in announcements | orderBy: 'date' : 'reverse'">
+      <span>{{ann.description | limitTo:130}}<span ng-if="ann.description.length > 130">...</span></span>
+      <h5>{{ann.author}}</h5>
+      <h6>{{ann.date}}</h6>
+    </article>
+  </section>
 </div>
