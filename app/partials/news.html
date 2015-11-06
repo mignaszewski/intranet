@@ -1,6 +1,6 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
-  <article class="news-main-content" ng-repeat="news in allNews">
+  <article class="news-main-content" ng-repeat="news in allNews | orderBy: 'date' : 'reverse'">
     <aside class="news-description">
       <h4>{{news.date}}</h4>
       <h2>{{news.tittle}}</h2>

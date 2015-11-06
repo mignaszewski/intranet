@@ -3,11 +3,12 @@
      position: relative;
      overflow: auto;
      height: 100%;
-     text-align: center;
 
   .injected-employees {
     width: 90%;
     
+    
+
     .fixed-class {
       position: fixed;
     }
@@ -16,9 +17,6 @@
     }
     .search-container {
       display: inline-block;
-      margin: 2%;
-      height: 100%;
-      
       
       .input-group {
         @media only screen and (max-width: 480px) {
@@ -26,9 +24,7 @@
           font-size: 0.09rem;
         };
         @media only screen and (min-width: 481px) and (max-width: 767px) {
-          width: 100%;
-          text-align: center;
-          // display: inline-block;
+          width: 80%;
         };
 
         #search_concept {
@@ -42,58 +38,25 @@
             display: none;
           };
         }
-        input.form-control::-webkit-input-placeholder{ 
-          color: rgb(51, 51, 51);
-          opacity: 1;
-          transition: opacity 0.3s ease;
-
-        }
-        input.form-control:-moz-placeholder{
-          color: rgb(51, 51, 51);
-          opacity: 1;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control::-moz-placeholder {
-          color: rgb(51, 51, 51);
-          opacity: 1;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control:-ms-input-placeholder {
-          color: rgb(51, 51, 51);
-          opacity: 1;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control:focus::-webkit-input-placeholder {
-          color: transparent;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control:focus:-moz-placeholder {
-          color: transparent;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control:focus::-moz-placeholder {
-          color: transparent;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-        input.form-control:focus:-ms-input-placeholder{
-          color: transparent;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
         .form-control {
-          height: 100%;
-          width: 100%;
-          padding: auto;
-          margin: auto;
+          height: 87%;
+          @media only screen and (max-width: 480px) {
+            width: 100%; 
+            height: 4.3rem;
+            font-size: 1.4rem;
+          };
+          @media only screen and (min-width: 481px) and (max-width: 767px) {
+            width: 100%;
+          };
         }
       }
     }
 
     .staff-members {
         width: 100%;
+        padding-left: 60px;
+        padding-top: 20px;
+        // position: absolute;
         
       .staff-member {
         width: 120px;
@@ -106,59 +69,30 @@
         text-align: middle;
        
         @media only screen and (max-width: 480px){  
-          width: 12rem;
-          height: 12rem;
-          margin: 1rem;
+          width: 80px;
         };
         @media only screen and (min-width: 481px) and (max-width: 767px){ 
-          width: 15rem;
-          height: 15rem;
-          margin: 1rem;
+          width: 100px;
         };
         .member-description {
           background-color: rgba(255,255,255,0.5);
           padding-bottom: auto;
           position: absolute;
-          bottom: -150%;
+          bottom: -120px;
           transition: all 0.5s ease;
-          width: 100%;
-          // padding: 0.2rem;
-          padding-left: 1%;
-          padding-right: 1%;
-          // margin: auto;
-          .full-name {
-            // margin-top: 0.5rem;
-            // margin: auto;
-          }
           
-          @media only screen and (max-width: 480px){  
-            bottom: -210%;
-            // font-size: 2px;
-            position: absolute;
-            padding-bottom: auto;
-            transition: all 0.5s ease;
-            width: 100%;
-            // object-fit: cover;
-            .full-name {
-              font-size: 1.5rem;
-            }
-            .member-position {
-              font-size: 1.2rem;
-            }
-          };
-          @media only screen and (min-width: 481px) and (max-width: 767px){ 
-            bottom: -100%;
-            position: absolute;
-            padding-bottom: auto;
-            transition: all 0.5s ease;
-            width: 100%;
-            .full-name {
-              font-size: 2.4rem;
-            }
-            .member-position {
-              font-size: 1.7rem;
-            }
-          };
+          width: 100%;
+    
+          .full-name {
+            // font-size: 0.8em;
+            // margin-bottom: 0.3em;
+            // padding-top: 0.5em;
+            // margin-top: 1em;
+          }
+          .member-position {
+            // font-size: 0.7em;
+            // margin-bottom: 0.7em;
+          }
         }
       }
       .staff-member:hover .member-description {
@@ -166,12 +100,7 @@
         bottom: 0;
         height: 100%;
         color: white;
-        // @media only screen and (max-width: 480px){  
-        //   font-size: 0.09rem;
-        //   };
-        //   @media only screen and (min-width: 481px) and (max-width: 767px){ 
-        //     font-size: 0.09rem;
-        //   };
+        
       }
     }
 }
