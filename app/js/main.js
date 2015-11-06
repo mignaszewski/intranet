@@ -10,6 +10,7 @@
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
   var newsCtrl = require('./controllers/newsctrl');
+  var announcementsCtrl = require('./controllers/announcementsctrl');
 
   angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
 
@@ -43,7 +44,7 @@
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
   .controller('NewsController', ['$scope', newsCtrl])
-
+  .controller('AnnouncementsController', ['$scope', announcementsCtrl])
 
 // Load directive
   .directive('employeeCard', function() {

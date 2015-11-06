@@ -1,0 +1,24 @@
+.announcements-content {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
+.announcements-content .one-announcement {
+  background-image: url("../img/temp_announcements/background3.png");
+  background-size: 100% 100%;
+  width: 20%;
+  min-height: 50%;
+  display: inline-block;
+  margin: 1%;
+  padding: 5% 1% 0 1%;
+  position: relative;
+}
+.announcements-content .one-announcement span {
+  font-size: 2rem;
+  color: #4d4d4d;
+}
+.announcements-content .one-announcement h5,
+.announcements-content .one-announcement h6 {
+  color: #4d4d4d;
+}
