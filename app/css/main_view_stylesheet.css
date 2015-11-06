@@ -101,7 +101,8 @@
   height: 70%;
   background-color: white;
 }
-#main-view ul .home-target-li:hover {
+#main-view ul .home-target-li:hover,
+#main-view ul .home-target-li:focus {
   -webkit-animation-name: example;
   /* Chrome, Safari, Opera */
   -webkit-animation-duration: 0.1s;
@@ -244,7 +245,8 @@
 .main-view-slide-left ul .home-target-li-smaller .home-target-div .go-main-page {
   background-color: #ababab;
 }
-.main-view-slide-left ul .home-target-li-smaller:hover {
+.main-view-slide-left ul .home-target-li-smaller:hover,
+.main-view-slide-left ul .home-target-li-smaller:focus {
   -webkit-animation-name: example;
   /* Chrome, Safari, Opera */
   -webkit-animation-duration: 0s;
