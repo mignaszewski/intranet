@@ -12,7 +12,7 @@
   var newsCtrl = require('./controllers/newsctrl');
   var announcementsCtrl = require('./controllers/announcementsctrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination'])
 
   .config([
     '$locationProvider',
