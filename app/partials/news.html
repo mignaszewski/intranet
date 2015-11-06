@@ -1,6 +1,6 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
-  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:2">
+  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
       <h4>{{news.date}}</h4>
       <h2>{{news.tittle}}</h2>
