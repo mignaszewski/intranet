@@ -1,6 +1,6 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
-  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:2">
+  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
       <h4>{{news.date}}</h4>
       <h2>{{news.tittle}}</h2>
@@ -14,12 +14,8 @@
       <i class="fa fa-caret-up" ng-if="news.pullDown" ng-click="readLess(news)"></i>
     </aside>
   </article>
-<!--   <div class="button-wrapper">
-    <button class="btn" type="button"><i class="fa fa-chevron-left"></i>&#32;Następne</button>  
-    <button class="btn" type="button">Poprzednie&#32;<i class="fa fa-chevron-right"></i></button>
-  </div> -->
   <article class="news-pagination-holder">
-    <dir-pagination-controls class="news-pagination" max-size="3" direction-links="true" boundary-links="true" >
+    <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true" >
     </dir-pagination-controls>
   </article>
   

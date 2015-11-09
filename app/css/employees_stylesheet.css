@@ -16,7 +16,6 @@
 .show-employees .injected-employees .search-container {
   display: inline-block;
   margin: 2%;
-  height: 100%;
 }
 @media only screen and (max-width: 480px) {
   .show-employees .injected-employees .search-container .input-group {
@@ -26,8 +25,7 @@
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .show-employees .injected-employees .search-container .input-group {
-    width: 100%;
-    text-align: center;
+    width: 80%;
   }
 }
 .show-employees .injected-employees .search-container .input-group #search_concept {
@@ -86,10 +84,21 @@
   transition: opacity 0.3s ease;
 }
 .show-employees .injected-employees .search-container .input-group .form-control {
-  height: 100%;
   width: 100%;
-  padding: auto;
-  margin: auto;
+}
+@media only screen and (max-width: 480px) {
+  .show-employees .injected-employees .search-container .input-group .form-control {
+    width: 100%;
+    height: 4.2rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .show-employees .injected-employees .search-container .input-group .form-control {
+    width: 100%;
+    height: 4.3rem;
+    font-size: 1.5rem;
+  }
 }
 .show-employees .injected-employees .staff-members {
   width: 100%;
@@ -108,54 +117,30 @@
   .show-employees .injected-employees .staff-members .staff-member {
     width: 12rem;
     height: 12rem;
-    margin: 1rem;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .show-employees .injected-employees .staff-members .staff-member {
     width: 15rem;
     height: 15rem;
-    margin: 1rem;
   }
 }
 .show-employees .injected-employees .staff-members .staff-member .member-description {
   background-color: rgba(255, 255, 255, 0.5);
   padding-bottom: auto;
   position: absolute;
-  bottom: -150%;
+  bottom: -100%;
   transition: all 0.5s ease;
   width: 100%;
-  padding-left: 1%;
-  padding-right: 1%;
 }
 @media only screen and (max-width: 480px) {
   .show-employees .injected-employees .staff-members .staff-member .member-description {
-    bottom: -210%;
-    position: absolute;
-    padding-bottom: auto;
-    transition: all 0.5s ease;
-    width: 100%;
-  }
-  .show-employees .injected-employees .staff-members .staff-member .member-description .full-name {
-    font-size: 1.5rem;
-  }
-  .show-employees .injected-employees .staff-members .staff-member .member-description .member-position {
-    font-size: 1.2rem;
+    bottom: -12rem;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .show-employees .injected-employees .staff-members .staff-member .member-description {
-    bottom: -100%;
-    position: absolute;
-    padding-bottom: auto;
-    transition: all 0.5s ease;
-    width: 100%;
-  }
-  .show-employees .injected-employees .staff-members .staff-member .member-description .full-name {
-    font-size: 2.4rem;
-  }
-  .show-employees .injected-employees .staff-members .staff-member .member-description .member-position {
-    font-size: 1.7rem;
+    bottom: -15rem;
   }
 }
 .show-employees .injected-employees .staff-members .staff-member:hover .member-description {
@@ -163,4 +148,14 @@
   bottom: 0;
   height: 100%;
   color: white;
+}
+@media only screen and (max-width: 480px) {
+  .show-employees .injected-employees .staff-members .staff-member:hover .member-description {
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .show-employees .injected-employees .staff-members .staff-member:hover .member-description {
+    bottom: 0;
+  }
 }
