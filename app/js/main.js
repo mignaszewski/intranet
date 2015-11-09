@@ -5,6 +5,7 @@
   require('angular');
   require('angular-route');
   require('angular-animate');
+
   
   var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
@@ -53,4 +54,6 @@
       templateUrl: './partials/employee-card.html'
     };
   });
+  
+
 }());
