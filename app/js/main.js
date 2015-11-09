@@ -11,6 +11,7 @@
   var employeesCtrl = require('./controllers/employeesctrl');
   var newsCtrl = require('./controllers/newsctrl');
   var announcementsCtrl = require('./controllers/announcementsctrl');
+  var downloadCtrl = require('./controllers/downloadctrl');
 
   angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination'])
 
@@ -45,6 +46,7 @@
   .controller('EmployeesController', ['$scope', employeesCtrl])
   .controller('NewsController', ['$scope', newsCtrl])
   .controller('AnnouncementsController', ['$scope', announcementsCtrl])
+  .controller('DownloadController', ['$scope', downloadCtrl])
 
 // Load directive
   .directive('employeeCard', function() {
