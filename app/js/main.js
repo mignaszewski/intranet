@@ -9,8 +9,10 @@
   var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
+  var newsCtrl = require('./controllers/newsctrl');
+  var announcementsCtrl = require('./controllers/announcementsctrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination'])
 
   .config([
     '$locationProvider',
@@ -40,5 +42,15 @@
   //Load controller
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
-  .controller('EmployeesController', ['$scope', employeesCtrl]);
+  .controller('EmployeesController', ['$scope', employeesCtrl])
+  .controller('NewsController', ['$scope', newsCtrl])
+  .controller('AnnouncementsController', ['$scope', announcementsCtrl])
+
+// Load directive
+  .directive('employeeCard', function() {
+    return {
+      restrict: 'E',
+      templateUrl: './partials/employee-card.html'
+    };
+  });
 }());

@@ -1,83 +1,39 @@
-<section id="main_view">
-  <ul>
+<div>
+  <section id="main-view" ng-class="{'main-view-slide-left': menu.length > 0}">
+    <ul>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head announcements-bckgrd">
-            <h2>Announcements</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
+      <li class="home-target-li-smaller" ng-if="menu.length > 0">
+        <div class="home-target-div" ng-click="isWhat(elements[6].clickName)">
+            <div class="{{elements[6].className}}">
+              <p> <i class="{{elements[6].fontAwe}}"></i> {{elements[6].name}}</p>
+            </div>
+        </div>
+      </li>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head news-bckgrd">
-            <h2>News</h2>
+      <li ng-repeat="elem in elements|limitTo:6" ng-class="{'home-target-li-smaller': menu.length > 0, 'home-target-li': menu.length == 0}">
+        <div class="home-target-div" ng-click="isWhat(elem.clickName)">
+          <div class="{{elem.className}}">
+              <p> <i class="{{elem.fontAwe}}"></i> {{elem.name}}</p>
+            </div>
+            <div class="home-target-content" ng-if="menu.length == 0">
+              content here
           </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
+        </div>
+      </li>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head profile-bckgrd">
-            <h2>Profile</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
 
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head team-bckgrd">
-            <h2>Team</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head download-bckgrd">
-            <h2>Download</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-    <li class="home-target-li">
-      <div class="home-target-div">
-        <a href="">
-          <div class="home-target-head calendar-bckgrd">
-            <h2>Calendar</h2>
-          </div>
-          <div class="home-target-content">
-            content here
-          </div>
-        </a>
-      </div>
-    </li>
-
-  </ul>
-</section>
+    </ul>
+  </section>
+  <div ng-class="{'included-tmpl-visible': menu === 'announcements', 'included-tmpl-invisible': menu.length == 0}"
+  ng-include="'./partials/announcements.html'" ng-controller="AnnouncementsController"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'news', 'included-tmpl-invisible': menu.length == 0}" 
+  ng-include="'./partials/news.html'" ng-controller="NewsController"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'yourprofile', 'included-tmpl-invisible': menu.length == 0}"
+  ng-include="'./partials/yourprofile.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'employees', 'included-tmpl-invisible': menu.length == 0}"
+  ng-include="'./partials/employees.html'" ng-controller="EmployeesController"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'download', 'included-tmpl-invisible': menu.length == 0}"
+  ng-include="'./partials/download.html'"></div>
+  <div ng-class="{'included-tmpl-visible': menu === 'calendar', 'included-tmpl-invisible': menu.length == 0}"
+  ng-include="'./partials/calendar.html'"></div>
+</div>

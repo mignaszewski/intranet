@@ -52,13 +52,13 @@ gulp.task('serve', ['browserify', 'compile-less'], function() {
     server: "./app"
   });
   gulp.watch(['./app/js/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'], ['js-watch']);
-  gulp.watch('./app/css/**/*.less' , ['compile-less', browserSync.reload]);
+  gulp.watch('./app/less/**/*.less' , ['compile-less', browserSync.reload]);
   gulp.watch('./app/**/*.html' , ['html-watch']);
 });
 
 /* Task to compile less */
 gulp.task('compile-less', function() {  
-  gulp.src('./app/css/**/*.less')
+  gulp.src('./app/less/**/*.less')
     .pipe(less())
     .pipe(gulp.dest('./app/css/'));
 });

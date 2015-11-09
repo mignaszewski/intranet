@@ -1,0 +1,86 @@
+@backgroundColor: white;
+@fontFamily: "Verdana", "Arial", sans-serif;
+
+#grad{
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: @fontFamily;
+  font-size: 10px;
+  @media only screen and (max-width: 480px){  
+    font-size: 6px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    font-size: 8px;
+  };
+   @media only screen and (max-height: 480px){  
+    font-size: 6px;
+  };
+  @media only screen and (min-height: 481px) and (max-height: 655px){ 
+    font-size: 8px;
+  };
+}
+
+body {
+  background-color: @backgroundColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.view-ng {
+  position: absolute;
+  bottom: 100px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background-image: url("../img/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+  @media only screen and (max-width: 480px){   
+    top: 70px;
+  };
+  @media only screen and (min-width: 481px) and (max-width: 767px){ 
+    top: 80px;
+  };
+}
+
+section {
+  display: inline-block;
+} 
+
+aside {
+  display: inline-block;
+}
+
+article {
+  display: inline-block;
+}
+
+@import "calendar_stylesheet.less";
+@import "index_stylesheet.less";
+@import "employees_stylesheet.less";
+@import "main_view_stylesheet.less";
+@import "employee_card_stylesheet.less";
+@import "news_stylesheet.less";
+@import "announcements_stylesheet.less";
