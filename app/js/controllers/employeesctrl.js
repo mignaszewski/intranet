@@ -1,10 +1,10 @@
-module.exports = function($scope, $window) {
+module.exports = function($scope) {
   $scope.employees = employees;
 
   $scope.popupvisible = false;
   $scope.showcard = {};
   $scope.click = 0;
-  $scope.clickOut = 1;
+ 
 
 
   $scope.toggle = function(obj, val) {
@@ -12,14 +12,16 @@ module.exports = function($scope, $window) {
     $scope.showcard = obj;
     $scope.click = val;
     console.log($scope.click);
+    $(".show-employee").click(function(event){
+      event.stopPropagation();
+    });
   };
-  $scope.clickOut = function(val) {
-    $scope.popupvisible = false;
-    $scope.clickOut = val;
-  };
+  // $scope.clickOut = function() {
+  //   $scope.popupvisible = false;
+  // };
 
 };
- 
+ // show employee pokazanie clicka, na popupie stop propagation
  
 
 var employees = [
