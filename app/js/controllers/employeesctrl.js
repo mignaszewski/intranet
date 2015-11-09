@@ -1,9 +1,11 @@
-module.exports = function($scope) {
+module.exports = function($scope, $window) {
   $scope.employees = employees;
 
   $scope.popupvisible = false;
   $scope.showcard = {};
   $scope.click = 0;
+  $scope.clickOut = 1;
+
 
   $scope.toggle = function(obj, val) {
     $scope.popupvisible = !$scope.popupvisible;
@@ -11,8 +13,13 @@ module.exports = function($scope) {
     $scope.click = val;
     console.log($scope.click);
   };
+  $scope.clickOut = function(val) {
+    $scope.popupvisible = false;
+    $scope.clickOut = val;
+  };
+
 };
-  
+ 
  
 
 var employees = [
