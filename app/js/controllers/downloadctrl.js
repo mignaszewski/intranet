@@ -12,13 +12,6 @@ module.exports = function($scope) {
 
 var items = [
 {
-  id: 1,
-  name: 'Plik pierwszy',
-  description: 'Plik potrzebny do tego i tego, tego i tego, tamtego i siamtego, hohohoo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic architecto autem delectus omnis eveniet consequatur repudiandae, vel ex, beatae quia amet illum deserunt dolores atque natus fuga. Aspernatur, blanditiis, et. Jeśli potrzebujesz tego, to ten plik na pewno Ci się przyda! Hic architecto autem delectus omnis eveniet consequatur repudiandae, vel ex, beatae quia amet illum deserunt dolores atque natus fuga.',
-  date: '2015.07.02',
-  link: './download/plik1'
-},
-{
   id: 2,
   name: 'Plik drugi',
   description: 'Wzór dokumentu na to i tamto. Aspernatur, blanditiis, et.',
