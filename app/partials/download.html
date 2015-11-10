@@ -37,7 +37,7 @@
         <tr class="main-row download-table-row" dir-paginate="item in items | orderBy:sortKey:reverse | filter:search | itemsPerPage:10">
           <td class="name"><span>{{item.name}}</span></td>
           <td class="description"><span>{{item.description}}</span></td>
-          <td class="add-date"><span>{{item.date}}</span></td>
+          <td class="add-date"><time>{{item.date}}</time></td>
           <td class="font-icon"><a href="{{item.link}}" download><i class="fa fa-arrow-circle-down"></i></a></td>
         </tr>
       </tbody>
