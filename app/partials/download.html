@@ -4,14 +4,33 @@
     <h3>Poniżej znajduje się lista najczęściej poszukiwanych oraz najpotrzebniejszych plików do pobrania:</h3>      
   </section>
   <section class="download-main-content">
-      <ul>
-        <li class="file2download" ng-repeat="item in items">
-          <a href="{{item.link}}" download>
-            <p class="name">{{item.name}}</p>
-            <span class="description">{{item.description}}</span>
-            <i class="fa fa-arrow-circle-down"></i>
-          </a>
-        </li>
-      </ul>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text" class="form-control" placeholder="Wpisz szukaną frazę..." ng-model="search">
+      </div>
+    </form>
+    <table class="file2download">
+      <thead class="download-table-header">
+        <tr class="main-row">
+          <th class="name">Nazwa Pliku</th>
+          <th class="description">Opis</th>
+          <th class="font-icon">Pobierz</th>
+        </tr>
+      </thead>
+      <tbody class="download-table-body">
+        <tr class="main-row download-table-row" dir-paginate="item in items | filter: search |itemsPerPage:4">
+          <td class="name"><span>{{item.name}}</span></td>
+          <td class="description"><span>{{item.description}}</span></td>
+          <td class="font-icon"><a href="{{item.link}}" download><i class="fa fa-arrow-circle-down"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="download-pagination-wrapper">
+    <article class="download-pagination-holder">
+      <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true" >
+      </dir-pagination-controls>
+    </article>
   </section>
 </div>
