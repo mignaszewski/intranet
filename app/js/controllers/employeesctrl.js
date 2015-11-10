@@ -12,16 +12,11 @@ module.exports = function($scope) {
     $scope.showcard = obj;
     $scope.click = val;
     console.log($scope.click);
-    $(".show-employee").click(function(event){
-      event.stopPropagation();
-    });
   };
-  // $scope.clickOut = function() {
-  //   $scope.popupvisible = false;
-  // };
-
+  $scope.closePopup = function($event) {
+      $event.stopPropagation();
+  };
 };
- // show employee pokazanie clicka, na popupie stop propagation
  
 
 var employees = [
