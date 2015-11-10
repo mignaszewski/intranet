@@ -4,7 +4,7 @@
     <article class="one-announcement" dir-paginate="ann in announcements|orderBy:'date':'reverse'|itemsPerPage:12">
       <span>{{ann.description | limitTo:130}}<span ng-if="ann.description.length > 130">...</span></span>
       <h5>{{ann.author}}</h5>
-      <h6>{{ann.date}}</h6>
+      <time>{{ann.date}}</time>
     </article>
     <article class="announcements-pagination-holder">
       <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true" >

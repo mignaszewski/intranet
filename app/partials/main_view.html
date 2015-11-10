@@ -33,7 +33,7 @@
   <div ng-class="{'included-tmpl-visible': menu === 'employees', 'included-tmpl-invisible': menu.length == 0}"
   ng-include="'./partials/employees.html'" ng-controller="EmployeesController"></div>
   <div ng-class="{'included-tmpl-visible': menu === 'download', 'included-tmpl-invisible': menu.length == 0}"
-  ng-include="'./partials/download.html'"></div>
+  ng-include="'./partials/download.html'" ng-controller="DownloadController"></div>
   <div ng-class="{'included-tmpl-visible': menu === 'calendar', 'included-tmpl-invisible': menu.length == 0}"
   ng-include="'./partials/calendar.html'"></div>
 </div>
