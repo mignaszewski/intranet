@@ -16,6 +16,8 @@
     .search-container {
       display: inline-block;
       margin-top: 2%;
+      // padding-bottom: 5%;
+      // position: fixed;
       
       .input-group {
         @media only screen and (max-width: 480px) {
@@ -23,7 +25,7 @@
           font-size: 0.09rem;
         };
         @media only screen and (min-width: 481px) and (max-width: 767px) {
-          width: 80%;
+          width: 100%;
         };
 
         #search_concept {
@@ -53,9 +55,10 @@
 
     .staff-members {
         width: 100%;
-        padding-left: 60px;
-        padding-top: 20px;
+        padding: auto;
+        // margin-top: 7%;
         position: absolute;
+        text-align: center;
         
       .staff-member {
         width: 120px;
@@ -73,8 +76,8 @@
           height: 12rem;
         };
         @media only screen and (min-width: 481px) and (max-width: 767px){ 
-          width: 15rem;
-          height: 15rem;
+          width: 12rem;
+          height: 12rem;
         };
         .member-description {
           background-color: rgba(255,255,255,0.5);
@@ -87,16 +90,37 @@
           padding-left: 1%;
           @media only screen and (max-width: 480px){  
             bottom: -200%;
+            // padding-right: 1.5px;
+            // padding-left: 1.5px;
           };
           @media only screen and (min-width: 481px) and (max-width: 767px){ 
-            bottom: -100%;
+            bottom: -150%;
+            // padding-right: 1px;
+            // padding-left: 1.5px;
           };
+          .full-name {
+            @media only screen and (max-width: 480px){  
+              font-size: 1.8rem;
+            };
+            @media only screen and (min-width: 481px) and (max-width: 767px){ 
+              font-size: 1.9rem;
+            };
+          }
+          .member-position {
+            @media only screen and (max-width: 480px){  
+              font-size: 1.2rem;
+            };
+            @media only screen and (min-width: 481px) and (max-width: 767px){ 
+              font-size: 1.3rem;
+            };
+          }
         }
       }
       .staff-member:hover .member-description, .staff-member:focus .member-description {
         background-color: rgba(0,0,0,0.7);
         bottom: 0;
         height: 100%;
+        width: 100%;
         color: white;
         border-radius: 0.5rem;
         

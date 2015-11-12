@@ -1,13 +1,13 @@
-<div class="show-employee" ng-show="popupvisible">
+<div class="show-employee" ng-show="popupvisible" ng-click="toggle(0,0)">
     <div id="popup-wrapper">
-        <div id="popup-container">
-            <p class="popup-close"><span class="glyphicon glyphicon-remove-circle" ng-click="toggle(0,0)"></span></p>
+        <div id="popup-container" ng-click="closePopup($event)">
+            <!-- <p class="popup-close"> --><span class="glyphicon glyphicon-remove-circle" ng-click="toggle(0,0)"></span><!-- </p> -->
             <div class="card-img-container">
                 <img ng-src="{{ showcard.img }}" class="card-image">
             </div>
             <div class="card-content">
                 <h3>{{ showcard.name }}</h3>
-                <h4>{{ showcard.position }}</h4>
+                <h4>{{ showcard.position }} {{ showcard.projectName }}</h4>
                 <p><i class="fa fa-envelope-o"></i>{{ showcard.mail }}</p>
                 <p ng-if="showcard.phone1"><i class="fa fa-phone"></i>{{ showcard.phone1 }}</p>
                 <p ng-if="showcard.phone2"><i class="fa fa-mobile"></i>{{ showcard.phone2 }}</p>
