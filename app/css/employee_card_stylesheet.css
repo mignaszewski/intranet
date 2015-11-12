@@ -19,20 +19,47 @@
   border-radius: 1rem;
   text-align: center;
   color: black;
-  height: 24em;
-  width: 45em;
-  display: inline-block;
+  height: 330px;
+  width: 650px;
   margin: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 3%;
   border: 0.1rem solid #474747;
+}
+@media only screen and (max-width: 480px) {
+  #popup-container {
+    width: 80%;
+    height: 80%;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #popup-container {
+    width: 320px;
+    height: 450px;
+    padding: 0;
+  }
 }
 .popup-close {
   margin: 0;
 }
 .glyphicon.glyphicon-remove-circle {
-  padding-left: 97%;
   font-size: 1.7rem;
   color: #333333;
+  float: right;
+}
+@media only screen and (max-width: 480px) {
+  .glyphicon.glyphicon-remove-circle {
+    font-size: 2.5rem;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .glyphicon.glyphicon-remove-circle {
+    font-size: 2.3rem;
+    margin-top: 4px;
+    margin-right: 4px;
+  }
 }
 #wrapper {
   width: 100%;
@@ -41,33 +68,85 @@
   margin-bottom: 0;
 }
 .card-img-container {
-  height: 80%;
-  width: 32.5%;
+  height: 250px;
+  width: 175px;
   margin: none;
-  display: inline-block;
+  margin-top: 5px;
+  float: left;
   padding-left: 1.4rem;
   padding-right: 1rem;
 }
+@media only screen and (max-width: 480px) {
+  .card-img-container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-img-container {
+    width: 100%;
+    height: 200px;
+  }
+}
 .card-image {
-  height: 100%;
-  width: 100%;
+  height: 250px;
+  width: 170px;
   text-align: left;
   margin-top: 2.2rem;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .card-image {
+    width: 60%;
+    height: 110%;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-image {
+    width: 45%;
+    height: 80%;
+  }
 }
 .card-content {
   float: right;
   text-align: left;
   margin: 1.5rem;
-  margin-left: 2rem;
+  margin-top: 22px;
+  margin-left: 20px;
   padding-right: 1rem;
-  display: inline-block;
-  height: 27rem;
-  width: 37rem;
+  height: 100px;
+  width: 390px;
+}
+@media only screen and (max-width: 480px) {
+  .card-content {
+    text-align: center;
+    height: 80%;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-content {
+    text-align: center;
+    height: 190px;
+    width: 90%;
+    padding: 0;
+  }
 }
 .card-content h3 {
   font-size: 2em;
   margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 480px) {
+  .card-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-content h3 {
+    font-size: 1.7em;
+    margin-bottom: 1rem;
+  }
 }
 .card-content h4 {
   font-size: 1.5em;
@@ -75,9 +154,35 @@
   border-bottom: 0.2rem solid #ed4574;
   line-height: 4rem;
 }
+@media only screen and (max-width: 480px) {
+  .card-content h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    border-bottom: 0.2rem solid #ed4574;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-content h4 {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    line-height: 3.5rem;
+    border-bottom: 0.2rem solid #ed4574;
+  }
+}
 .card-content p {
   font-size: 20px;
   text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  .card-content p {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .card-content p {
+    font-size: 2rem;
+  }
 }
 .card-content .fa.fa-envelope-o,
 .card-content .fa.fa-phone,
