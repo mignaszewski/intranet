@@ -1,4 +1,36 @@
-<!-- yourprofile.html -->
-<div ng-if="menu === 'yourprofile'">
-  YOUR PROFILE !!! 
+<div ng-if="menu === 'yourprofile'" id="my_profile">
+  <div class="profile_photo" ng-controller="EmployeesController">
+    <img src="./img/temp_employees/profile.jpg">
+  </div>
+  <div class="profile_content">
+    <div class="profile_name">
+        <h2>Jan Kowalski</h2>
+    </div>
+    <div class="profile_data">
+      <div> 
+        <h3>E-mail: malgorzata.pedziwiatr@altimi.com</h3>
+      </div>
+      <div>
+        <h3>Telefon: 000-000-000</h3>
+      </div>
+      <div>
+        <h3>Data urodzenia: 01-01-1900</h3>
+      </div>
+    </div>
+    <!-- <div class="profile_details">
+      <div>
+        <h3>malgorzata.pedziwiatr@altimi.com</h3>
+      </div>
+      <div>
+        <h3>000-000-000</h3>
+      </div>
+      <div>
+        <h3> 01-01-1900</h3>
+      </div>
+    </div> -->
+  </div>
+  <div class="user_events">
+    <button class="my_events">Moje Eventy</button>
+    <button class="my_announcements">Moje Ogłoszenia</button>
+  </div>
 </div>

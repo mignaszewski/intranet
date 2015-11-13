@@ -13,6 +13,7 @@
   var newsCtrl = require('./controllers/newsctrl');
   var announcementsCtrl = require('./controllers/announcementsctrl');
   var downloadCtrl = require('./controllers/downloadctrl');
+  var profileCtrl = require('./controllers/profileCtrl');
 
   angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination'])
 
@@ -35,6 +36,10 @@
           templateUrl: "./partials/employees.html",
           controller: "EmployeesController"
         })
+        .when("/profile", {
+          templateUrl: "./partials/yourprofile.html",
+          controller: "ProfileController"
+        })
         .otherwise({
            redirectTo: '/'
         });
@@ -48,6 +53,7 @@
   .controller('NewsController', ['$scope', newsCtrl])
   .controller('AnnouncementsController', ['$scope', announcementsCtrl])
   .controller('DownloadController', ['$scope', downloadCtrl])
+  .controller('ProfileController', ['$scope', profileCtrl])
 
 // Load directive
   .directive('employeeCard', function() {
