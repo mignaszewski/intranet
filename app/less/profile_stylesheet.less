@@ -2,11 +2,14 @@
   color: rgb(51, 51, 51); 
   .profile_photo, .profile_content {
     display: inline-block;
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      text-align: center;
+      display: inline;
+    };
   }
   .profile_photo {
     float: right;
-    vertical-align: middle;
-    padding-right: 140px;
+    padding-right: 80px;
     padding-top: 50px;
      @media only screen and (max-width: 480px){
       // text-align: center;
@@ -16,7 +19,18 @@
       width: 50%;
 
      };
-     @media only screen and (min-width: 481px) and (max-width: 767px){};
+     @media only screen and (min-width: 481px) and (max-width: 767px){
+      height: 40%;
+      width: 40%;
+      padding: 0;
+      float: none;
+      text-align: center;
+      margin-left: 23%;
+    
+      img {
+        padding-top: 10px;
+      }
+     };
   }
   .profile_content {
     box-sizing: border-box;
@@ -24,6 +38,10 @@
     @media only screen and (max-width: 480px){
       padding-left: 0;
       text-align: center;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      padding-left: 0;
+      margin: 15px;
     };
     .profile_name {
       h2 {
@@ -34,44 +52,64 @@
         @media only screen and (max-width: 480px){
           font-size: 5rem;
         };
-      }
-    }
-    .profile_data {
-      text-align: justify;
-      margin-right: 20px;
-      h3 {
-        @media only screen and (max-width: 480px){
-          font-size: 3rem;
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+          font-size: 4rem;
+          padding-top: 0;
+          padding-bottom: 0;
+          // margin-bottom: 10;
         };
       }
     }
-    
-    .profile_data, .profile_details {
-      display: inline-block;
-      
+    .profile_data {
+      margin-right: 20px;
+      .profile_detail {
+        padding-right: 15px;
+        h3 {
+          font-weight: bold;
+        }
+      }
+      .profile_detail, .employee_detail {
+        display: inline-block;
+        h3 {
+          @media only screen and (max-width: 480px){
+            font-size: 3rem;
+          };
+          @media only screen and (min-width: 481px) and (max-width: 767px){
+            font-size: 2.5rem;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top: 0;
+          };
+        }
+      }
     }
   }
   .user_events{
-    padding-right: 80px;
-    padding-top: 80px;
+    padding-right: 70px;
+    padding-top: 70px;
     text-align: right;
-
+    @media only screen and (max-width: 480px){
+      
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      padding-top: 0;
+      padding-right: 0;
+      text-align: center;
+    };
+    
     .my_events, .my_announcements {
-      -webkit-border-radius: 15;
-      -moz-border-radius: 15;
-      border-radius: 15px;
-      border-color: none;
-      font-family: Arial;
-      color: #fff;
+      border: 1px solid;
+      border-color: rgb(51, 51, 51);
+      color: rgb(51, 51, 51);
+      font-weight: bold;
       font-size: 20px;
-      background: #ed4523;
+      background: transparent;
       padding: 10px 20px 10px 20px;
-      text-decoration: none;
       margin: 10px;
     }
     .my_events:hover, .my_announcements:hover {
-      background: #e64d33;
-      text-decoration: none;
+      border-color: rgb(143,172,230);
+      color: rgb(143,172,230);
     }
   }
 }
