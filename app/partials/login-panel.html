@@ -3,17 +3,18 @@
     <div class="login-section">
       <label for="email" class="login">Login</label>
       <br/>
-      <input type="email" class"login-input" placeholder="podaj swój e-mail" required>
+      <input type="email" class"login-input" placeholder="podaj swój e-mail" ng-model="employee.mail"required>
     </div>
     <div class="password-section">
       <label for="password" class="password">Hasło</label>
       <br/>
-      <input type="password" class="password-input" placeholder="hasło" required>
+      <input type="password" class="password-input" placeholder="hasło" ng-model="employee.password" required>
     </div>
     <br/>
     <div class="btn-section">
-      <button class="login-btn" onclick="Redirect();">Zaloguj</button>
+      <button class="login-btn" ng-click="submit()">Zaloguj</button>
     </div>
-    <!-- <button type="submit" value="submit" name="Zaloguj"></button> -->
   </form>
 </section>
+
+<!-- action="login password true redrect to /yourprofile.html" -->
