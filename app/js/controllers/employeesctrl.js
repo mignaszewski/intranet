@@ -4,7 +4,7 @@ module.exports = function($scope) {
   $scope.popupvisible = false;
   $scope.showcard = {};
   $scope.click = 0;
- 
+
 
 
   $scope.toggle = function(obj, val) {
@@ -170,4 +170,16 @@ var employees = [
   phone1: '',
   phone2: '722 363 724',
   img: './img/temp_employees/profile.jpg'
+},
+{
+  id: 15,
+  name: 'Jan Kowalski',
+  position: 'Developer',
+  projectName: 'Noname',
+  positionWeight: 13,
+  mail: 'jan.kowalski@altimi.com',
+  phone1: '',
+  phone2: '722 363 724',
+  img: './img/temp_employees/profile.jpg',
+  password: 'altimi'
 }];
