@@ -1,0 +1,166 @@
+#my_profile {
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  color: rgb(51, 51, 51); 
+  .profile_photo, .profile_content {
+    display: inline-block;
+    @media only screen and (max-width: 480px){
+      text-align: center;
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      text-align: center;
+    };
+  }
+  .profile_photo {
+    box-sizing: border-box;
+    float: right;
+    padding-right: 80px;
+    padding-top: 50px;
+     @media only screen and (max-width: 480px){
+      float: none;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      img {
+        padding-top: 20px;
+        height: 200px;
+        width: 150px;
+      }
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      padding: 0;
+      float: none;
+      text-align: center;
+      width: 100%;
+      img {
+        padding-top: 20px;
+        height: 200px;
+        width: 150px;
+      }
+    };
+  }
+  .profile_content {
+    box-sizing: border-box;
+    padding-left: 80px;
+    @media only screen and (max-width: 480px){
+      padding-left: 0;
+      margin: 20px;
+      
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      padding-left: 0;
+      margin: 15px;
+    };
+    .profile_name {
+      h2 {
+        padding-bottom: 30px;
+        letter-spacing: 2px;
+        font-size: 4rem;
+        padding-top: 60px;
+        @media only screen and (max-width: 480px){
+          font-size: 30px;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-bottom: 15px;
+          margin-top: 15px;
+
+        };
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+          font-size: 4rem;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-bottom: 20px;
+        };
+      }
+    }
+    .profile_data {
+      margin-right: 20px;
+      .profile_details {
+        @media only screen and (max-width: 480px){
+          text-align: left;
+        };
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+          text-align: left;
+        };
+      }
+      
+      .profile_detail {
+        padding-right: 15px;
+        font-weight: bold;
+      }
+      .employee_detail {
+        @media only screen and (max-width: 480px){  
+          width: 95%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;   
+        };
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+          width: 95%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;      
+        };
+      }
+      .profile_detail, .employee_detail {
+       display: inline-block;
+        @media only screen and (max-width: 480px){
+          margin: 5px; 
+          font-size: 20px; 
+        };
+        @media only screen and (min-width: 481px) and (max-width: 767px){
+          margin: 5px; 
+          font-size: 20px;          
+        };
+      }
+    }
+  }
+  .user_events{
+    padding-right: 70px;
+    padding-top: 70px;
+    text-align: right;
+    @media only screen and (max-width: 480px){
+      padding-top: 0;
+      padding-right: 0;
+      
+      button {
+        height: 30%;
+        width: 47%;
+        display: inline-block;
+        text-align: center;
+      }
+    };
+    @media only screen and (min-width: 481px) and (max-width: 767px){
+      padding-top: 0;
+      padding-right: 0;
+      text-align: center;
+    };
+    
+    .my_events, .my_announcements {
+      border: 1px solid;
+      border-color: rgb(51, 51, 51);
+      color: rgb(51, 51, 51);
+      font-weight: bold;
+      font-size: 20px;
+      background: transparent;
+      padding: 10px 20px 10px 20px;
+      margin: 10px;
+      @media only screen and (max-width: 480px){
+        font-size: 18px;
+        margin: 1px;
+        text-align: center;
+      };
+
+      @media only screen and (min-width: 481px) and (max-width: 767px){
+        font-size: 18px;
+        margin: 1px;
+        text-align: center;
+      };
+    }
+    .my_events:hover, .my_announcements:hover {
+      border-color: rgb(143,172,230);
+      color: rgb(143,172,230);
+    }
+  }
+}
