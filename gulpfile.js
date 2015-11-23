@@ -19,8 +19,8 @@ var loopbackAngular = require('gulp-loopback-sdk-angular');
 gulp.task('slc-loopback', function () {
     return gulp.src('./server/server.js')
     .pipe(loopbackAngular())
-    .pipe(rename('services.js'))
-    .pipe(gulp.dest('./client/js'));
+    .pipe(rename('lb-services.js'))
+    .pipe(gulp.dest('./app/client/js'));
 });
 
 // Default task !

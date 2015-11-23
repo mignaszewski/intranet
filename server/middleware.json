@@ -24,7 +24,7 @@
   },
   "files": {
     "loopback#static": {
-      "params": "$!../"
+      "params": "$!../app"
     }
   },
   "final": {
