@@ -1,0 +1,24 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Downloads": 8
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Downloads": {
+      "1": "{\"name\":\"Plik czwarty\",\"link\":\"./download/plik1\",\"date\":\"2015.07.14\",\"description\":\"Plik potrzebny do tego i tego, tego i tego, tamtego i siamtego, hohohoo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic architecto autem delectus omnis eveniet consequatur repudiandae, vel ex, beatae quia amet illum deserunt dolores atque natus fuga.\",\"id\":1}",
+      "2": "{\"name\":\"Plik drugi\",\"link\":\"./download/plik2\",\"date\":\"2015.07.04\",\"description\":\"Wzór dokumentu na to i tamto. Aspernatur, blanditiis, et.\",\"id\":2}",
+      "3": "{\"name\":\"Plik trzeci\",\"link\":\"./download/plik3\",\"date\":\"2015.07.13\",\"description\":\"Jeśli potrzebujesz tego, to ten plik na pewno Ci się przyda! Hic architecto autem delectus omnis eveniet consequatur repudiandae, vel ex, beatae quia amet illum deserunt dolores atque natus fuga.\",\"id\":3}",
+      "6": "{\"date\":\"2015.07.17\",\"description\":\"Wzór dokumentu na to i tamto. Aspernatur, blanditiis, et.\",\"link\":\"./download/plik2\",\"name\":\"Plik dpioty\",\"id\":6}",
+      "7": "{\"date\":\"2015.07.17\",\"description\":\"Wzór dokumentu na to i tamto. Aspernatur, blanditiis, et.\",\"link\":\"./download/plik2\",\"name\":\"Plik Z DZISIAJ\",\"id\":7}"
+    }
+  }
+}

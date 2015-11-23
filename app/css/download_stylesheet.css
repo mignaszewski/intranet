@@ -1,0 +1,125 @@
+.download-content {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.download-content .download-main-header {
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 6px #333222;
+}
+.download-content .download-main-header h3 {
+  font-size: 2.2rem;
+  color: #4d4d4d;
+}
+.download-content .download-main-content {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 6px #333222;
+}
+.download-content .download-main-content .file2download {
+  width: 100%;
+  color: #4d4d4d;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row,
+.download-content .download-main-content .file2download .download-table-body .main-row,
+.download-content .download-main-content .file2download .download-table-header .download-table-row,
+.download-content .download-main-content .file2download .download-table-body .download-table-row {
+  border-bottom: 1px solid #4d4d4d;
+  font-size: 1.5rem;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .name,
+.download-content .download-main-content .file2download .download-table-body .main-row .name,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .name,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .name {
+  display: inline-block;
+  width: 12%;
+  text-align: left;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .name span,
+.download-content .download-main-content .file2download .download-table-body .main-row .name span,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .name span,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .name span {
+  color: #4d4d4d;
+  font-size: 1.3rem;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .description,
+.download-content .download-main-content .file2download .download-table-body .main-row .description,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .description,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .description {
+  display: inline-block;
+  width: 55%;
+  text-align: left;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .description span,
+.download-content .download-main-content .file2download .download-table-body .main-row .description span,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .description span,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .description span {
+  color: #4d4d4d;
+  font-size: 1.3rem;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .add-date,
+.download-content .download-main-content .file2download .download-table-body .main-row .add-date,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .add-date,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .add-date {
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .add-date time,
+.download-content .download-main-content .file2download .download-table-body .main-row .add-date time,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .add-date time,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .add-date time {
+  color: #4d4d4d;
+  font-size: 1.3rem;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .font-icon,
+.download-content .download-main-content .file2download .download-table-body .main-row .font-icon,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .font-icon,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .font-icon {
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .font-icon a,
+.download-content .download-main-content .file2download .download-table-body .main-row .font-icon a,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .font-icon a,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .font-icon a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+.download-content .download-main-content .file2download .download-table-header .main-row .font-icon a i,
+.download-content .download-main-content .file2download .download-table-body .main-row .font-icon a i,
+.download-content .download-main-content .file2download .download-table-header .download-table-row .font-icon a i,
+.download-content .download-main-content .file2download .download-table-body .download-table-row .font-icon a i {
+  color: #676767;
+  font-size: 2rem;
+}
+.download-content .download-main-content .file2download .download-table-header .download-table-row:hover,
+.download-content .download-main-content .file2download .download-table-body .download-table-row:hover {
+  background-color: #ffffff;
+}
+.download-content .download-main-content .file2download .download-table-header {
+  cursor: pointer;
+}
+.download-content .download-main-content .file2download .download-table-body {
+  cursor: default;
+}
+.download-content .download-pagination-wrapper {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 6px #333222;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
