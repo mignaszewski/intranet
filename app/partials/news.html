@@ -4,18 +4,18 @@
   <article class="news-adding">
     <h3>DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ</h3>
     <form>
-      <h6>Tytuł:</h6>   <input class="search-input form-control" type="text" ng-model="newtitle" required><br />
+      <h6>Tytuł:</h6>   <textarea class="search-input form-control" type="text" ng-model="newtitle" required></textarea><br />
       <h6>Zdjęcie:</h6> <input class="search-input form-control" type="file" ng-model="newimg"><br />
-      <h6>Opis:</h6>    <input class="search-input form-control" type="text" ng-model="newdescription" required><br />
-      <h6>Data:</h6>    <input class="search-input form-control" type="text" ng-model="newdate" placeholder="rrrr.mm.dd" required><br />
-      <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)">
+      <h6>Opis:</h6>    <textarea class="search-input form-control description-input" type="text" ng-model="newdescription" required></textarea><br />
+      <h6>Data:</h6>    <textarea class="search-input form-control" type="text" ng-model="newdate" placeholder="rrrr.mm.dd" required></textarea><br />
+      <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)"  onClick="history.go(0)" VALUE="Refresh">
     </form>
   </article>
 
 
   <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
-      <h5><i class="fa fa-trash" ng-click="removeNews(news.id)"></i> Skasuj</h5>
+      <h5><i class="fa fa-trash" ng-click="removeNews(news.id)" onClick="history.go(0)" VALUE="Refresh"></i> Skasuj</h5>
       <h4>{{news.date}}</h4>
       <h2>{{news.title}}</h2>
       <figure class="news-tumb">

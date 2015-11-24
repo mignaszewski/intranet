@@ -3,14 +3,17 @@ module.exports = function($scope, News){
   $scope.allNews = News.find();
 
   $scope.addAnotherNews = function(newtitle, newimg, newdescription, newdate){
-    News.create({title: newtitle, description: newdescription, img: newimg, date: newdate, pullDown: 0});
-    alert("Dodałeś z powodzeniem aktualność o tytule: " + newtitle);
+    if(confirm("Czy na pewno chcesz dodać tą aktualność?")){
+      News.create({title: newtitle, description: newdescription, img: newimg, date: newdate, pullDown: 0});
+      alert("Dodałeś z powodzeniem aktualność o tytule: " + newtitle);
+    };
   };
   $scope.removeNews = function(ajdi){
-    confirm("Czy na pewno chcesz usunąć tą aktualność?");
-    News.deleteById({ id: ajdi })
-  .$promise
-  .then(function() { console.log('deleted'); alert('deleted'); });
+    if(confirm("Czy na pewno chcesz usunąć tą aktualność?")){
+      News.deleteById({ id: ajdi })
+      .$promise
+      .then(function() { console.log('deleted'); alert('deleted'); });
+    };
   };
 
   $scope.readMore = function(nobj){
