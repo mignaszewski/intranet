@@ -2,6 +2,9 @@ module.exports = function($scope, News){
   $scope.obj = {};
   $scope.allNews = News.find();
 
+  $scope.addAnotherNews = function(newtitle, newimg, newdescription, newdate){
+    News.create({title: newtitle, description: newdescription, img: newimg, date: newdate, pullDown: 0});
+  };
 
   $scope.readMore = function(nobj){
     nobj.pullDown = 1;

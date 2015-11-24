@@ -1,6 +1,18 @@
 <!-- news.html -->
 <div ng-if="menu === 'news'" class="news-content">
 
+  <article class="news-adding">
+    DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ
+    <form>
+      Tytuł: <input type="text" ng-model="newtitle"/><br />
+      Zdjęcie: <input type="text" ng-model="newimg"/><br />
+      Opis: <input type="text" ng-model="newdescription"/><br />
+      Data: <input type="text" ng-model="newdate"/><br />
+      <input type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)"/><br />
+    </form>
+  </article>
+
+
   <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
       <h4>{{news.date}}</h4>
@@ -21,7 +33,6 @@
       <dir-pagination-controls max-size="3" direction-links="true" boundary-links="true" >
       </dir-pagination-controls>
     </article>
-  </section>
-    
+  </section>    
 
 </div>
