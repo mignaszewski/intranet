@@ -2,13 +2,13 @@
 <div ng-if="menu === 'news'" class="news-content">
 
   <article class="news-adding">
-    DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ
+    <h3>DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ</h3>
     <form>
-      Tytuł: <input type="text" ng-model="newtitle"/><br />
-      Zdjęcie: <input type="text" ng-model="newimg"/><br />
-      Opis: <input type="text" ng-model="newdescription"/><br />
-      Data: <input type="text" ng-model="newdate"/><br />
-      <input type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)"/><br />
+      <h6>Tytuł:</h6>   <input class="search-input form-control" type="text" ng-model="newtitle" required><br />
+      <h6>Zdjęcie:</h6> <input class="search-input form-control" type="file" ng-model="newimg"><br />
+      <h6>Opis:</h6>    <input class="search-input form-control" type="text" ng-model="newdescription" required><br />
+      <h6>Data:</h6>    <input class="search-input form-control" type="text" ng-model="newdate" placeholder="rrrr.mm.dd" required><br />
+      <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)">
     </form>
   </article>
 
