@@ -1,20 +1,37 @@
-<section ng-if="menu === 'yourprofile'" class="login_panel-section">
+<section ng-if="menu === 'yourprofile'" class="login-panel-section">
   <form id="login_panel">
     <div class="login-section">
       <label for="email" class="login">Login</label>
       <br/>
-      <input type="email" class"login-input" placeholder="podaj swój e-mail" ng-model="employee.mail"required>
+      <input type="email" name="mail" class"login-input" placeholder="podaj swój e-mail" ng-model="modelMail" required> <!-- podświetlanie inputów -->
     </div>
     <div class="password-section">
       <label for="password" class="password">Hasło</label>
       <br/>
-      <input type="password" class="password-input" placeholder="hasło" ng-model="employee.password" required>
+      <input type="password" name="password" class="password-input" placeholder="hasło" ng-model="modelPassword" required>
     </div>
     <br/>
     <div class="btn-section">
-      <button class="login-btn" ng-click="submit()">Zaloguj</button>
+      <button class="login-btn" type="submit" ng-click="loggedIn(modelMail, modelPassword)">Zaloguj</button>
     </div>
   </form>
 </section>
 
 <!-- action="login password true redrect to /yourprofile.html" -->
+<!-- template: 
+<div class="row"> 
+  <div class="col-xs-12"> 
+    <form name="loginForm"> 
+      <div class="form-group"> 
+        <label for="username">Username</label> 
+        <input type="text" name="username" ng-model="username" required="required" class="form-control"/> 
+      </div> 
+      <div class="form-group"> 
+        <label for="password">Password</label> 
+        <input type="password" name="password" ng-model="password" required="required" class="form-control"/> 
+      </div> 
+      <button type="submit" ng-disabled="!loginForm.$valid" ng-class="{\'btn-default\':!loginForm.$valid,\'btn-success\':loginForm.$valid}" ng-click="login()" class="btn login">Login</button> 
+      <span ng-show="loginError && !loginForm.$valid" class="label label-danger"> <b>Error With Login</b> Please try again. </span>
+    </form> 
+  </div> 
+</div> -->

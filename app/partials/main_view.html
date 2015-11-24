@@ -29,7 +29,7 @@
   <div ng-class="{'included-tmpl-visible': menu === 'news', 'included-tmpl-invisible': menu.length == 0}" 
   ng-include="'./partials/news.html'" ng-controller="NewsController"></div>
   <div ng-class="{'included-tmpl-visible': menu === 'yourprofile', 'included-tmpl-invisible': menu.length == 0}"
-  ng-include="'./partials/login-panel.html'"></div>
+  ng-include="'./partials/login-panel.html'" ng-controller="LoginController"></div>
   <div ng-class="{'included-tmpl-visible': menu === 'employees', 'included-tmpl-invisible': menu.length == 0}"
   ng-include="'./partials/employees.html'" ng-controller="EmployeesController"></div>
   <div ng-class="{'included-tmpl-visible': menu === 'download', 'included-tmpl-invisible': menu.length == 0}"
