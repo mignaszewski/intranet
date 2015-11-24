@@ -46,8 +46,8 @@
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
   .controller('NewsController', ['$scope', 'News', newsCtrl ])
-  .controller('AnnouncementsController', ['$scope', announcementsCtrl])
-  .controller('DownloadController', ['$scope', downloadCtrl])
+  .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
+  .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
 
 // Load directive
   .directive('employeeCard', function() {
