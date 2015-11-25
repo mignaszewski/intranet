@@ -5,8 +5,6 @@ module.exports = function($scope) {
   $scope.showcard = {};
   $scope.click = 0;
 
-
-
   $scope.toggle = function(obj, val) {
     $scope.popupvisible = !$scope.popupvisible;
     $scope.showcard = obj;
@@ -16,6 +14,17 @@ module.exports = function($scope) {
   $scope.closePopup = function($event) {
       $event.stopPropagation();
   };
+  // $scope.zmienna = "";
+  $scope.tab = 1;
+  $scope.switchTab = function(setTab){
+    // $scope.zmienna = what;
+    $scope.tab = setTab;
+    console.log($scope.tab);
+  };
+  $scope.isSelected = function(checkTab) {
+    return $scope.tab === checkTab;
+  };
+
 };
 
 

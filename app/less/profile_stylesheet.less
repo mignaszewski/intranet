@@ -1,8 +1,14 @@
 #my_profile {
-  height: 100%;
+  // height: 100%;
   position: relative;
   overflow: auto;
-  color: rgb(51, 51, 51); 
+  color: rgb(51, 51, 51);
+  // margin-top: 1%;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 6px #333222; 
   .profile_photo, .profile_content {
     display: inline-block;
     @media only screen and (max-width: 480px){
@@ -162,5 +168,17 @@
       border-color: rgb(143,172,230);
       color: rgb(143,172,230);
     }
+  }
+  .admin_section {
+    .selected {
+      visibility: visible;
+    }
+    .unselected {
+      visibility: hidden;
+    }
+    // .nav-tabs {
+    //   overflow: auto;
+    //   -webkit-overflow-scrolling: touch;
+    // }
   }
 }

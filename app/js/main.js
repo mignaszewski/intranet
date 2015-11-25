@@ -37,14 +37,14 @@
           templateUrl: "./partials/employees.html",
           controller: "EmployeesController"
         })
-        // .when("/profile", {
-        //   templateUrl: "./partials/yourprofile.html",
-        //   controller: "EmployeesController"
-        // })
         .when("/profile", {
-          templateUrl: "./partials/login-panel.html",
-          controller: "LoginController"
+          templateUrl: "./partials/yourprofile.html",
+          controller: "EmployeesController"
         })
+        // .when("/profile", {
+        //   templateUrl: "./partials/login-panel.html",
+        //   controller: "LoginController",
+        // })
         .otherwise({
            redirectTo: '/'
         });

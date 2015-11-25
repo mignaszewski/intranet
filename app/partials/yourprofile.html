@@ -1,28 +1,81 @@
-<!-- <div ng-if="menu === 'yourprofile'" id="my_profile">
-  <div class="profile_photo" ng-controller="EmployeesController">
-    <img src="./img/temp_employees/profile.jpg">
-  </div>
-  <div class="profile_content">
-    <div class="profile_name">
-        <h2>Jan Kowalski</h2>
+<div ng-if="menu === 'yourprofile'" id="my_profile" ng-controller="EmployeesController">
+  <!-- <div name="employee_profile">
+    <div class="profile_photo">
+      <img src="./img/temp_employees/profile.jpg">
     </div>
-    <div class="profile_data">
-      <div class="profile_details">
-        <h3 class="profile_detail">E-mail:</h3>
-        <h3 class="employee_detail">malgorzata.pedziwiatr@altimi.com</h3>
+    <div class="profile_content">
+      <div class="profile_name">
+          <h2>Jan Kowalski</h2>
       </div>
-      <div class="profile_details">
-        <h3 class="profile_detail">Telefon:</h3>
-        <h3 class="employee_detail">000-000-000</h3>
-      </div>
-      <div class="profile_details">
-        <h3 class="profile_detail">Urodziny:</h3>
-        <h3 class="employee_detail">01-01-1900</h3>
+      <div class="profile_data">
+        <div class="profile_details">
+          <h3 class="profile_detail">E-mail:</h3>
+          <h3 class="employee_detail">malgorzata.pedziwiatr@altimi.com</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Telefon:</h3>
+          <h3 class="employee_detail">000-000-000</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Urodziny:</h3>
+          <h3 class="employee_detail">01-01-1900</h3>
+        </div>
       </div>
     </div>
+    <div class="user_events">
+      <button class="my_events">Moje Eventy</button>
+      <button class="my_announcements">Moje Ogłoszenia</button>
+    </div>
+  </div> -->
+  <div class="admin_section">
+    <!-- <div class="profile_photo">
+      <img src="./img/temp_employees/profile.jpg">
+    </div> -->
+    <div class="profile_content">
+      <div class="profile_name">
+          <h2>Jan Kowalski</h2>
+      </div>
+      <div></div>
+      <div class="admin-panel">
+      
+        <ul class="nav nav-tabs">
+          <li class="active"><a ng-click="switchTab(1)">User</a></li>
+          <li><a ng-click="switchTab(2)">Menu1</a></li>
+          <li><a ng-click="switchTab(3)">Menu 2</a></li>
+        </ul>
+        <div>
+          <div ng-show="isSelected(1)">
+            <h4>User</h4>
+            <p>Lista pracowników- dodawanie, usuwanie, edytowanie</p>
+          </div>
+          <div ng-show="isSelected(2)">
+            <h4>Menu1</h4>
+            <p>Eventy- dodawanie, usuwanie, edytowanie</p>
+          </div>
+          <div ng-show="isSelected(3)">
+            <h4>Menu2</h4>
+            <p>News- dodawanie, usuwanie, edytowanie</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="profile_data">
+        <div class="profile_details">
+          <h3 class="profile_detail">E-mail:</h3>
+          <h3 class="employee_detail">malgorzata.pedziwiatr@altimi.com</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Telefon:</h3>
+          <h3 class="employee_detail">000-000-000</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Urodziny:</h3>
+          <h3 class="employee_detail">01-01-1900</h3>
+        </div>
+      </div>
+    </div> -->
+    <div class="user_events">
+      <button class="my_events">Moje Eventy</button>
+      <button class="my_announcements">Moje Ogłoszenia</button>
+    </div>
   </div>
-  <div class="user_events">
-    <button class="my_events">Moje Eventy</button>
-    <button class="my_announcements">Moje Ogłoszenia</button>
-  </div>
-</div> -->
+</div>
