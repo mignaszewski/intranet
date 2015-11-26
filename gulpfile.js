@@ -3,7 +3,7 @@ var gulp = require('gulp');
 
 // plugins
 var connect = require('gulp-connect');
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
@@ -15,14 +15,14 @@ var browserSync = require('browser-sync').create();
 
 // Default task !
 gulp.task('default', function() {
-  runSequence(['clean'], ['lint', 'serve'], function() {
+  runSequence(['clean'], ['serve'], function() {
   });
 });
 
 // Build task
 gulp.task('build', ['clean'], function() {
   setTimeout(function() {
-    runSequence(['clean'], ['copy-bower-components', 'copy-html-files', 'lint', 'minify-css', 'browserifyDist', 'connectDist'], function () {
+    runSequence(['clean'], ['copy-bower-components', 'copy-html-files', 'minify-css', 'browserifyDist', 'connectDist'], function () {
 
     });
   },2000);
@@ -37,7 +37,7 @@ gulp.task('clean', function() {
 });
 
 // create a task that ensures the `js` task is complete before reloading browsers, delay by 1sec
-gulp.task('js-watch', ['lint', 'browserify'], function() {
+gulp.task('js-watch', ['browserify'], function() {
   setTimeout(browserSync.reload, 1000);
 });
 
@@ -64,12 +64,12 @@ gulp.task('compile-less', function() {
 });
 
 
-gulp.task('lint', function() {
-  gulp.src(['./app/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'));
-});
+// gulp.task('lint', function() {
+//   gulp.src(['./app/**/*.js', '!./app/bower_components/**', '!./app/js/bundled.js'])
+//     .pipe(jshint())
+//     .pipe(jshint.reporter('default'))
+//     .pipe(jshint.reporter('fail'));
+// });
 
 gulp.task('minify-css', function() {
   var opts = {comments:true,spare:true};
