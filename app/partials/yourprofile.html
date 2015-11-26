@@ -144,11 +144,11 @@
                     <td><span editable-select="employee.mail" e-name="mail" e-form="rowform">{{employee.mail}}</span></td>
                     <td><span editable-select="employee.phone1" e-name="phone1" e-form="rowform" e-required>{{employee.phone1}}</span><br><span editable-select="employee.phone2" e-name="phone2" e-form="rowform">{{employee.phone2}}</span></td>
                     <td style="white-space:nowrap">
-                      <form>
+                      <form ng-show="saveForm">
                         <button type="button">Zapisz</button>
                         <button type="button">Anuluj</button>
                       </form>
-                      <form>
+                      <form class="editForm">
                         <button type="button" ng-click="editmployee()">Edytuj</button>
                         <button type="button" ng-click="removeEmployee()">Usuń</button>
                       </form>

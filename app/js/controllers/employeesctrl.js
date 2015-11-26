@@ -24,6 +24,9 @@ module.exports = function($scope) {
   $scope.isSelected = function(checkTab) {
     return $scope.tab === checkTab;
   };
+  $scope.editEmployee = function() {
+    
+  }
 };
 
 
