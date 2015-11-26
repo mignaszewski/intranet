@@ -19,12 +19,12 @@
       "type": "number",
       "required": true
     },
-    "img": {
-      "type": "string"
-    },
     "description": {
       "type": "string",
       "required": true
+    },
+    "img": {
+      "type": "string"
     }
   },
   "validations": [],

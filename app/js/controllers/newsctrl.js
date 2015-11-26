@@ -16,10 +16,14 @@ module.exports = function($scope, News, Container){
     };
   };
 
-  $scope.cos = {};
+  $scope.cos = "";
   $scope.getImage = function(){
-    $scope.cos = Container.getFiles({container: 'news-imgs', file: 'sylwester.jpg'});
-    console.log($scope.cos);
+    $scope.cos = Container.download({container: 'news-imgs', file: 'smallpic.png'}).$promise.then(function(data) {
+      console.log(data);
+    });
+    // $scope.cos = Container.Resource.url;
+    // console.log()
+    // console.log(substr($scope.cos,0,100));
   };
 
   $scope.readMore = function(nobj){
