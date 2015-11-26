@@ -24,7 +24,6 @@ module.exports = function($scope) {
   $scope.isSelected = function(checkTab) {
     return $scope.tab === checkTab;
   };
-
 };
 
 
@@ -64,7 +63,7 @@ var employees = [
   id: 4,
   name: 'Beata Ocetkiewicz',
   position: 'Delivery IT Manager',
-  projectName: '3three',
+  projectName: '',
   positionWeight: '03three',
   mail: 'beata.ocetkiewicz@altimi.com',
   phone1: '(71) 786 08 20',
@@ -184,7 +183,7 @@ var employees = [
   id: 15,
   name: 'Jan Kowalski',
   position: 'Developer',
-  projectName: 'Noname',
+  projectName: 'Akademia',
   positionWeight: '13thirteen',
   mail: 'jan.kowalski@altimi.com',
   phone1: '',

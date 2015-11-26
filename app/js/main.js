@@ -16,7 +16,7 @@
   var profileCtrl = require('./controllers/profileCtrl');
   var loginCtrl = require('./controllers/loginCtrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination', 'xeditable'])
 
   .config([
     '$locationProvider',
