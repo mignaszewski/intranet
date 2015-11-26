@@ -1,4 +1,4 @@
-module.exports = function($scope, News){
+module.exports = function($scope, News, Container){
   $scope.obj = {};
   $scope.allNews = News.find();
 
@@ -14,6 +14,12 @@ module.exports = function($scope, News){
       .$promise
       .then(function() { console.log('deleted'); alert('deleted'); });
     };
+  };
+
+  $scope.cos = {};
+  $scope.getImage = function(){
+    $scope.cos = Container.getFiles({container: 'news-imgs', file: 'sylwester.jpg'});
+    console.log($scope.cos);
   };
 
   $scope.readMore = function(nobj){
