@@ -49,5 +49,11 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "container": {
+    "dataSource": "myfile",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
