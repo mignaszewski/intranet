@@ -1,4 +1,4 @@
-module.exports = function($scope) {
+module.exports = function($scope, $filter, $http) {
   $scope.employees = employees;
 
   $scope.popupvisible = false;
@@ -24,9 +24,47 @@ module.exports = function($scope) {
   $scope.isSelected = function(checkTab) {
     return $scope.tab === checkTab;
   };
-  $scope.editEmployee = function() {
-    
-  }
+
+  $scope.sortData = "";
+  $scope.sortReverse = false;
+
+  $scope.projectNames = projectNames;
+  $scope.showProject = function(employee) {
+    var selected = [];
+    if(employee.projectName){
+      selected = $filter('filter')($scope.projectNames, {value: $scope.employee.projectName});
+    }
+    // return selected.length ? selected[0].text: 'Not set';
+  };
+
+
+  $scope.addEmployee = function(){
+    $scope.inserted = {
+      id: $scope.employees.length+1,
+      img: '',
+      name: '',
+      position: '',
+      projectName: '',
+      // positionWeight '', też admin dodaje?
+      mail: '',
+      phone1: '',
+      phone2: '',
+      isNew: true
+    };
+    $scope.employees.push($scope.inserted);
+  };
+  $scope.removeEmployee = function(index) {
+    $scope.employees.splice(index, 1);
+    confirm("Jesteś pewien, że chcesz usunąć wybranego pracownika wraz ze wszystkimi danymi?");
+  };
+  $scope.saveEmployee = function(data, id) {
+    angular.extend(data, {id: id});
+    return $http.post('/saveEmployee', data);
+  };
+
+  $scope.updateChanges = function(data) {
+    return $http.post('/updateChanges', {id: $scope.employee.id, name: data});
+  };
 };
 
 
@@ -193,4 +231,62 @@ var employees = [
   phone2: '722 363 724',
   img: './img/temp_employees/profile.jpg',
   password: 'altimi'
+}];
+
+var projectNames = [
+{
+  value: 1,
+  text: 'AC Automation'
+},
+{
+  value: 2,
+  text: 'Akademia'
+},
+{
+  value: 3,
+  text: 'APG/SGA'
+},
+{
+  value: 4,
+  text: 'Birlasoft'
+},
+{
+  value: 5,
+  text: 'GEA'
+},
+{
+  value: 6,
+  text: 'Jetshop'
+},
+{
+  value: 7,
+  text: 'Lorenz'
+},
+{
+  value: 8,
+  text: 'Mappan'
+},
+{
+  value: 9,
+  text: 'Opera Software'
+},
+{
+  value: 10,
+  text: 'Polsource'
+},
+{
+  value: 11,
+  text: 'ADB'
+},
+{
+  value: 12,
+  text: 'Casino Saga Agency'
+},
+{
+  value: 13,
+  text: 'TIDAL'
+},
+{
+  value: 14,
+  text: 'Zenterio AB'
 }];
