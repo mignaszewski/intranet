@@ -41,6 +41,13 @@
     }
   ])
 
+  // ///////////////////////////////////////////////////////////////////////
+  .config(function(LoopBackResourceProvider) {
+    // Change the URL where to access the LoopBack REST API server
+    LoopBackResourceProvider.setUrlBase('http://localhost:3003');
+  })
+  // ///////////////////////////////////////////////////////////////////////
+  
   //Load controller
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
