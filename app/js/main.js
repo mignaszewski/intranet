@@ -16,7 +16,7 @@
   var profileCtrl = require('./controllers/profileCtrl');
   var loginCtrl = require('./controllers/loginCtrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination', 'xeditable', 'base64'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination', 'xeditable'])
 
   .config([
     '$locationProvider',
@@ -66,7 +66,7 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
-  .controller('NewsController', ['$scope', 'News', 'Container', '$base64', newsCtrl ])
+  .controller('NewsController', ['$scope', 'News', 'Container', newsCtrl ])
   .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
   .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
   .controller('ProfileController', ['$scope', profileCtrl])
