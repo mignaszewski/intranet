@@ -16,7 +16,7 @@
   var profileCtrl = require('./controllers/profileCtrl');
   var loginCtrl = require('./controllers/loginCtrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination', 'xeditable'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination', 'xeditable'])
 
   .config([
     '$locationProvider',
@@ -45,6 +45,10 @@
         //   templateUrl: "./partials/login-panel.html",
         //   controller: "LoginController",
         // })
+        .when("/profile", {
+          templateUrl: "./partials/login-panel.html",
+          controller: "LoginController"
+        })
         .otherwise({
            redirectTo: '/'
         });
@@ -62,12 +66,11 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
-  .controller('NewsController', ['$scope', newsCtrl])
-  .controller('AnnouncementsController', ['$scope', announcementsCtrl])
-  .controller('DownloadController', ['$scope', downloadCtrl])
+  .controller('NewsController', ['$scope', 'News', 'Container', newsCtrl ])
+  .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
+  .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
   .controller('ProfileController', ['$scope', profileCtrl])
   .controller('LoginController', ['$scope', loginCtrl])
-
 // Load directive
   .directive('employeeCard', function() {
     return {
