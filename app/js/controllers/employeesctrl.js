@@ -1,6 +1,6 @@
 module.exports = function($scope, $filter, Employees) {
-  
-  $scope.employees = Employees.find();
+  var xyz = Employees.find();
+  // $scope.employees = Employees.find();
 
   $scope.popupvisible =  false;
   $scope.showcard = {};
