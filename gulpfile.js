@@ -16,16 +16,49 @@ var browserSync = require('browser-sync').create();
 var rename = require('gulp-rename');
 var loopbackAngular = require('gulp-loopback-sdk-angular');
 
+//#############################################################################
+var loopback = require('loopback');
+var boot = require('loopback-boot');
+
+gulp.task('api', function() {
+  var app = module.exports = loopback();
+
+  app.start = function() {
+    // start the web server
+    return app.listen(function() {
+      app.emit('started');
+      var baseUrl = app.get('url').replace(/\/$/, '');
+      console.log('Web server listening at: %s', baseUrl);
+      if (app.get('loopback-component-explorer')) {
+        var explorerPath = app.get('loopback-component-explorer').mountPath;
+        console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
+      }
+    });
+  };
+
+  // Bootstrap the application, configure models, datasources and middleware.
+  // Sub-apps like REST API are mounted via boot scripts.
+  boot(app, __dirname, function(err) {
+    if (err) throw err;
+
+    // start the server if `$ node server.js`
+    if (require.main === module)
+      app.start();
+  });
+});
+//#############################################################################
+
+
 gulp.task('slc-loopback', function () {
     return gulp.src('./server/server.js')
     .pipe(loopbackAngular())
-    .pipe(rename('services.js'))
-    .pipe(gulp.dest('./client/js'));
+    .pipe(rename('lb-services.js'))
+    .pipe(gulp.dest('./app/client/js'));
 });
 
 // Default task !
 gulp.task('default', function() {
-  runSequence(['clean'], ['serve', 'slc-loopback'], function() {
+  runSequence(['clean'], ['serve', 'slc-loopback'], ['api'], function() {
   });
 });
 
