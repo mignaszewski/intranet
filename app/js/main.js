@@ -37,9 +37,13 @@
           templateUrl: "./partials/employees.html",
           controller: "EmployeesController"
         })
+        .when("/profile", {
+          templateUrl: "./partials/yourprofile.html",
+          controller: "EmployeesController"
+        })
         // .when("/profile", {
-        //   templateUrl: "./partials/yourprofile.html",
-        //   controller: "EmployeesController"
+        //   templateUrl: "./partials/login-panel.html",
+        //   controller: "LoginController",
         // })
         .when("/profile", {
           templateUrl: "./partials/login-panel.html",

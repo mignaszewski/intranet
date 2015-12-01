@@ -1,28 +1,232 @@
-<!-- <div ng-if="menu === 'yourprofile'" id="my_profile">
-  <div class="profile_photo" ng-controller="EmployeesController">
-    <img src="./img/temp_employees/profile.jpg">
-  </div>
-  <div class="profile_content">
-    <div class="profile_name">
-        <h2>Jan Kowalski</h2>
+<div ng-if="menu === 'yourprofile'" id="my_profile" ng-controller="EmployeesController">
+  <!-- <div name="employee_profile">
+    <div class="profile_photo">
+      <img src="./img/temp_employees/profile.jpg">
     </div>
-    <div class="profile_data">
-      <div class="profile_details">
-        <h3 class="profile_detail">E-mail:</h3>
-        <h3 class="employee_detail">malgorzata.pedziwiatr@altimi.com</h3>
+    <div class="profile_content">
+      <div class="profile_name">
+          <h2>Jan Kowalski</h2>
       </div>
-      <div class="profile_details">
-        <h3 class="profile_detail">Telefon:</h3>
-        <h3 class="employee_detail">000-000-000</h3>
-      </div>
-      <div class="profile_details">
-        <h3 class="profile_detail">Urodziny:</h3>
-        <h3 class="employee_detail">01-01-1900</h3>
+      <div class="profile_data">
+        <div class="profile_details">
+          <h3 class="profile_detail">E-mail:</h3>
+          <h3 class="employee_detail">malgorzata.pedziwiatr@altimi.com</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Telefon:</h3>
+          <h3 class="employee_detail">000-000-000</h3>
+        </div>
+        <div class="profile_details">
+          <h3 class="profile_detail">Urodziny:</h3>
+          <h3 class="employee_detail">01-01-1900</h3>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="user_events">
-    <button class="my_events">Moje Eventy</button>
-    <button class="my_announcements">Moje Ogłoszenia</button>
-  </div>
-</div> -->
+    <div class="user_events">
+      <button class="my_events">Moje Eventy</button>
+      <button class="my_announcements">Moje Ogłoszenia</button>
+    </div>
+  </div> -->
+  <div class="admin-section"> <!-- ADMIN SECTION -->
+    <div class="admin-profile-content">
+      <div class="admin-panel">
+        <ul class="nav nav-tabs">
+          <li class="active"><a ng-click="switchTab(1)">Twoje konto</a></li>
+          <li><a ng-click="switchTab(2)">Pracownicy</a></li>
+          <li><a ng-click="switchTab(3)">Ogłoszenia</a></li>
+          <li><a ng-click="switchTab(4)">Newsy</a></li>
+          <li><a ng-click="switchTab(5)">Projekty/Dodaj nowy</a></li>
+        </ul>
+        <div ng-show="isSelected(1)">
+          <div class="profile_photo">
+            <img src="./img/temp_employees/profile.jpg">
+          </div>
+          <div class="profile_content">
+            <div class="profile_name">
+              <h2>Admin</h2>
+            </div>
+            <div class="profile_data">
+              <div class="profile_details">
+                <h3 class="profile_detail">E-mail:</h3>
+                <h3 class="employee_detail">admin@altimi.com</h3>
+              </div>
+              <div class="profile_details">
+                <h3 class="profile_detail">Telefon:</h3>
+                <h3 class="employee_detail">000-000-000</h3>
+              </div>
+              <div class="profile_details">
+                <h3 class="profile_detail">Urodziny:</h3>
+                <h3 class="employee_detail">01-01-1900</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- EMPLOYEES TAB -->
+        <div class="admin-employee-container" ng-show="isSelected(2)"> 
+          <form class="form-inline" role="form">
+            <div class="form-group" style="width:350px;">
+              <br>
+              <label>Szukaj pracownika:</label>
+              <input type="text" class="form-control" placeholder="Imię, nazwisko" ng-model="searchEmployee" style="width:350px;" >
+            </div>
+            <div class="form-group" style="width:300px;">
+              <br>
+              <label>Szukaj wg działu:</label>
+               <div class="select">
+                <select  style="width:300px;" class="form-control" ng-model="emploPosition">
+                  <option value="">Wybierz dział</option>
+                  <option value="00zero">Zarząd</option>
+                  <option value="01one">Dyrektor Operacyjny</option>
+                  <option value="02two">Project Manager</option>
+                  <option value="03three">Rekrutacja</option>
+                  <option value="04four">Handel</option>
+                  <option value="05five">Kadry</option>
+                  <option value="06six">Finanse</option>
+                  <option value="07seven">Business Development</option>
+                  <option value="08eight">Marketing</option>
+                  <option value="09nine">Sekretariat</option> 
+                  <option value="10ten">Research</option>
+                  <option value="11eleven">Quality</option>
+                  <option value="12twelve">IT Support</option>
+                  <option value="13thirteen">Developerzy</option>
+                </select>
+              </div> 
+            </div>
+
+            <div class="form-group" style="width:300px;">
+              <br>
+              <label>Szukaj wg projektu:</label>
+              <div class="select">
+                <select style="width:300px;" class="form-control" ng-model="emploProjectName">
+                  <option value="">Wybierz projekt</option>
+                  <optgroup label="Altimi" data-max-options="2">
+                    <option value="AC Automation">AC Automation</option>
+                    <option value="Akademia">Akademia</option>
+                    <option value="APG/SGA">APG/SGA</option>
+                    <option value="Birlasoft">Birlasoft</option>
+                    <option value="GEA">GEA</option>
+                    <option value="Jetshop">Jetshop</option>
+                    <option value="Lorenz">Lorenz</option>
+                    <option value="Mappan">Mappan</option>
+                    <option value="Opera Software">Opera Software</option>
+                    <option value="Polsource">Polsource</option>
+                  </optgroup>
+                  <optgroup label="Softiti" data-max-options="2">
+                    <option value="ADB">ADB</option>
+                    <option value="Casino Saga Agency">Casino Saga Agency</option>
+                    <option value="TIDAL">TIDAL</option>
+                    <option value="Zenterio AB">Zenterio AB</option>
+                  </optgroup>
+                </select>
+              </div> 
+            </div>
+            <div class="form-group" style="width:150px;">
+              <br>
+              <label></label>
+              <button class="btn btn-primary" ng-click="addEmployee()">Dodaj nowego pracownika</button>
+            </div>
+          </form>
+          <br>
+          <div class="show-search-result">
+            <!-- <div> -->
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Zdjęcie</th>
+                  <th>
+                    <a ng-click="sortData = 'name'; sortReverse = !sortReverse">Imię i nazwisko
+                    <span ng-show="sortData == 'name' && !sortReverse" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sortData == 'name' && sortReverse" class="glyphicon glyphicon-chevron-up"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a ng-click="sortData = 'position'; sortReverse = !sortReverse">Stanowisko
+                    <span ng-show="sortData == 'position' && !sortReverse" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sortData == 'position' && sortReverse" class="glyphicon glyphicon-chevron-up"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a ng-click="sortData = 'projectName'; sortReverse = !sortReverse">Projekt
+                    <span ng-show="sortData == 'projectName' && !sortReverse" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sortData == 'projectName' && sortReverse" class="glyphicon glyphicon-chevron-up"></span>
+                    </a>
+                  </th>
+                  <th>
+                    <a ng-click="sortData = 'mail'; sortReverse = !sortReverse">E-mail
+                    <span ng-show="sortData == 'mail' && !sortReverse" class="glyphicon glyphicon-chevron-down"></span>
+                    <span ng-show="sortData == 'mail' && sortReverse" class="glyphicon glyphicon-chevron-up"></span>
+                    </a>
+                  </th>
+                  <th>Telefon</th>
+                  <th>Edytuj / Usuń</th>
+                  <!-- <th>Usuń</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row-content" ng-repeat="employee in employees | filter:searchEmployee | filter:emploPosition | filter:emploProjectName | orderBy:sortData:sortReverse">
+                  <td>
+                    <span>
+                    <img ng-src="{{employee.img}}" style="height:25px; width:20px"/>
+                    </span> 
+                    <!-- ng fle upload, ng flow albo osobny panel? -->
+                  </td>
+                  <td>
+                    <span editable-text="employee.name" e-name="name" e-form="rowform" onaftersave="updateChanges($data)" e-placeholder="Imię i Nazwisko" e-required>{{employee.name || 'empty'}}</span>
+                  </td>
+                  <td>
+                    <span editable-text="employee.position" e-name="position" e-form="rowform" onaftersave="updateChanges($data)" e-placeholder="Stanowisko" e-required>{{employee.position || 'empty'}}</span>
+                  </td>
+                  <td>
+                    <span editable-select="employee.projectName" e-name="projectName" e-form="rowform" onaftersave="updateChanges($data)" e-ng-options="s.text as s.text for s in projectNames">{{ employee.projectName }}</span>
+                  </td>
+                  <td>
+                    <span editable-text="employee.mail" e-name="mail" e-form="rowform" onaftersave="updateChanges($data)" e-placeholder="imię.nazwisko@altimi.com" e-required>{{employee.mail}}</span>
+                  </td>
+                  <td>
+                    <span editable-text="employee.phone1" e-name="phone1" e-form="rowform" onaftersave="updateChanges($data)" e-placeholder="Nr stacjonarny" e-required>{{employee.phone1}}</span>
+                    <br>
+                    <span editable-text="employee.phone2" e-name="phone2" e-form="rowform"  onaftersave="updateChanges($data)" e-placeholder="Nr komórkowy" e-required>{{employee.phone2}}</span>
+                  </td>
+                  <td style="white-space:nowrap">
+                    <form editable-form name="rowform" onaftersave="saveEmployee($data, employee.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == employee">
+                      <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">Zapisz</button>
+                      <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">Anuluj</button>
+                    </form>
+                    <div class="edit-remove-buttons" ng-show="!rowform.$visible">
+                      <button class="btn btn-primary" ng-click="rowform.$show()">Edytuj</button>
+                      <button class="btn btn-danger" ng-click="removeEmployee($index)">Usuń</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <nav class="pagination-section">
+            <ul class="pagination">
+              <li><a ng-click="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="active"><a ng-click="#">1 <span class="sr-only"></span></a></li>
+              <li><a ng-click="#">2 <span class="sr-only"></span></a></li>
+              <li><a ng-click="#">3 <span class="sr-only"></span></a></li>
+              <li><a ng-click="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+          </nav> -->
+            
+        </div> <!-- END OF EMPLOYEES TAB -->
+        <!-- ANNOUNCEMENTS TAB -->
+        <div ng-show="isSelected(3)">
+          <h4>Ogłoszenia</h4>
+          <p>ogłoszenia- dodawanie, usuwanie, edytowanie</p>
+        </div> <!-- END OF ANNOUNCEMENTS TAB -->
+        <!-- NEWS TAB -->
+        <div ng-show="isSelected(4)">
+          <h4>Newsy</h4>
+          <p>News- dodawanie, usuwanie, edytowanie</p>
+        </div> <!-- END OF NEWS TAB -->
+        <div ng-show="isSelected(5)">
+          <h4>Projekty/ Dodaj nowy</h4>
+          <p>Panel zarządzania projektami. Przypisywanie pracowników do projekty</p>
+        </div> 
+      </div>
+    </div>
+  </div> <!-- END OF ADMIN SECTION -->
+</div>

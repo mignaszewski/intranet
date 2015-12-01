@@ -4,39 +4,37 @@
       <div class="row">    
         <div class="col-xs-8 col-xs-offset-2">
           <div class="input-group">
-            <div class="input-group-btn search-panel">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></span> 
-                <span id="search_concept">Wybierz dział</span> <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#board">Zarząd</a></li>
-                <li><a href="#pm">Project Manager</a></li>
-                <li><a href="#hr">Rekrutacja</a></li>
-                <li><a href="#sales">Handel</a></li>
-                <li><a href="#personnel">Kadry</a></li>
-                <li><a href="#finance">Finanse</a></li>
-                <li><a href="#businessdevelop">Business Development</a></li>
-                <li><a href="#marketing">Marketing</a></li>
-                <li><a href="#secretary">Sekretariat</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#quality">Quality</a></li>
-                <li><a href="#support">IT Support</a></li>
-                <li><a href="#dev">Developerzy</a></li>
-              </ul>
+            <input type="text" class="search-input form-control" name="x" placeholder="Imię, nazwisko, projekt..." ng-model="searchEmployee">
+            <div class="select">
+              <select style="height:33px;" class="form-control" ng-model="emploPosition">
+                <option value="">Wybierz dział</option>
+                <option value="00zero">Zarząd</option>
+                <option value="01one">Dyrektor Operacyjny</option>
+                <option value="02two">Project Manager</option>
+                <option value="03three">Rekrutacja</option>
+                <option value="04four">Handel</option>
+                <option value="05five">Kadry</option>
+                <option value="06six">Finanse</option>
+                <option value="07seven">Business Development</option>
+                <option value="08eight">Marketing</option>
+                <option value="09nine">Sekretariat</option> 
+                <option value="10ten">Research</option>
+                <option value="11eleven">Quality</option>
+                <option value="12twelve">IT Support</option>
+                <option value="13thirteen">Developerzy</option>
+              </select>
             </div>
-            <input type="hidden" name="search_param" value="all" id="search_param">         
-            <input type="text" class="form-control" name="x" placeholder="Imię, nazwisko, projekt..." ng-model="searchEmployee">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
           </div>
         </div>
-      </div>
+      </div>   
     </div>
-
+    
   <section class="main-emplo-content"> 
     <div class="staff-members">
-      <div class="staff-member" ng-repeat="employee in employees | orderBy: 'positionWeight' | filter:searchEmployee">
+      <div class="staff-member" ng-repeat="employee in employees | orderBy: 'positionWeight' | filter:searchEmployee | filter:emploPosition">
         <div id="wrapper">
           <a ng-click="toggle(employee, 1)">
             <img class="object-fit_contain" ng-src="{{employee.img}}" alt="">
