@@ -31,7 +31,8 @@
     "angular-click-outside": "~2.2.1",
     "angular-simple-calendar": "~1.1.4",
     "angular-resource": "~1.4.8",
-    "angular-xeditable": "~0.1.9"
+    "angular-xeditable": "~0.1.9",
+    "angular-base64": "~2.0.5"
   },
   "devDependencies": {
     "fullcalendar": "~2.4.0"
