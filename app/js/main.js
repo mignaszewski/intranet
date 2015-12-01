@@ -6,7 +6,7 @@
   require('angular-route');
   require('angular-animate');
 
-  
+
   var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
@@ -29,11 +29,11 @@
           templateUrl: "./partials/main_view.html",
           controller: "MainViewController"
         })
-        .when("/calendar", { 
+        .when("/calendar", {
           templateUrl: "./partials/calendar.html",
           controller: "CalendarController"
         })
-        .when("/employees", { 
+        .when("/employees", {
           templateUrl: "./partials/employees.html",
           controller: "EmployeesController"
         })
@@ -56,12 +56,12 @@
   ])
 
   // ///////////////////////////////////////////////////////////////////////
-  // .config(function(LoopBackResourceProvider) {
-  //   // Change the URL where to access the LoopBack REST API server
-  //   LoopBackResourceProvider.setUrlBase('http://localhost:3003');
-  // })
+   .config(function(LoopBackResourceProvider) {
+     // Change the URL where to access the LoopBack REST API server
+     LoopBackResourceProvider.setUrlBase('http://localhost:3003/api');
+   })
   // ///////////////////////////////////////////////////////////////////////
-  
+
   //Load controller
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
@@ -78,6 +78,6 @@
       templateUrl: './partials/employee-card.html'
     };
   });
-  
+
 
 }());
