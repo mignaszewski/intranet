@@ -1,5 +1,6 @@
 module.exports = function($scope, $location, $rootScope) {
 $scope.employees = employees;
+
 $scope.login = true;
   $scope.logged = function() {
     return $scope.login;
@@ -26,43 +27,43 @@ $scope.login = true;
   //   });
   };
 };
-var employees = [
-  {
-    id: 15,
-    name: 'Aneta',
-    position: 'Intern',
-    projectName: 'Noname',
-    positionWeight: 13,
-    mail: 'aneta@altimi.com',
-    phone1: '',
-    phone2: '722 363 724',
-    img: './img/temp_employees/profile.jpg',
-    password: 'aneta'
-  },
-  {
-    id: 16,
-    name: 'Admin',
-    position: 'Admin',
-    projectName: 'Noname',
-    positionWeight: 13,
-    mail: 'admin@altimi.com',
-    phone1: '',
-    phone2: '722 363 724',
-    img: './img/temp_employees/profile.jpg',
-    password: 'admin'
-  },
-  {
-    id: 17,
-    name: 'Aneta',
-    position: 'Intern',
-    projectName: 'Noname',
-    positionWeight: 13,
-    mail: 'adrian@altimi.com',
-    phone1: '',
-    phone2: '722 363 724',
-    img: './img/temp_employees/profile.jpg',
-    password: 'adrian'
-  }];
+// var employees = [
+//   {
+//     id: 15,
+//     name: 'Aneta',
+//     position: 'Intern',
+//     projectName: 'Noname',
+//     positionWeight: 13,
+//     mail: 'aneta@altimi.com',
+//     phone1: '',
+//     phone2: '722 363 724',
+//     img: './img/temp_employees/profile.jpg',
+//     password: 'aneta'
+//   },
+//   {
+//     id: 16,
+//     name: 'Admin',
+//     position: 'Admin',
+//     projectName: '',
+//     positionWeight: 13,
+//     mail: 'admin@altimi.com',
+//     phone1: '',
+//     phone2: '722 363 724',
+//     img: './img/temp_employees/profile.jpg',
+//     password: 'admin'
+//   },
+//   {
+//     id: 17,
+//     name: 'Aneta',
+//     position: 'Intern',
+//     projectName: 'Noname',
+//     positionWeight: 13,
+//     mail: 'adrian@altimi.com',
+//     phone1: '',
+//     phone2: '722 363 724',
+//     img: './img/temp_employees/profile.jpg',
+//     password: 'adrian'
+//   }];
 
   
   

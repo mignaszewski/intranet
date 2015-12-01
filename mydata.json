@@ -7,7 +7,8 @@
     "Role": 1,
     "Downloads": 8,
     "News": 18,
-    "Announcements": 14
+    "Announcements": 14,
+    "Empoyees": 21
   },
   "models": {
     "User": {},
@@ -48,6 +49,24 @@
       "11": "{\"author\":\"Michał\",\"description\":\"Voluptatum, eum beatae! Iste nam dolore rerum, deleniti saepe soluta temporibus maiores nostrum sapiente odit vitae quas suscipit nulla obcaecati sit impedit! Modi, qui, atque!\",\"date\":\"2006.05.12\",\"id\":11}",
       "12": "{\"author\":\"Bogdan\",\"description\":\"Nam consequatur sunt id eos similique, ipsa dolor odio eveniet quas, quaerat facilis quae pariatur dolorum cum.!Iste nam dolore rerum.\",\"date\":\"2007.07.30\",\"id\":12}",
       "13": "{\"author\":\"Agha\",\"description\":\"In tenetur vitae repudiandae odit doloribus quas quae velit nam voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, qui, atque!\",\"date\":\"2008.09.26\",\"id\":13}"
+    },
+    "Employees": {
+      "1": "{\"id\":1,\"name\":\"Tomasz Podoba\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 03\",\"img\":\"./img/temp_employees/Tomasz.jpg\",\"positionWeight\":\"1\",\"position\":\"Prezes\",\"password\":\"altimi\",\"mail\":\"tomasz.podoba@altimi.com\",\"undefined\":1}",
+      "2": "{\"id\":2,\"name\":\"Aleksander Lewicki\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 02\",\"img\":\"./img/temp_employees/Aleksander.jpg\",\"positionWeight\":\"1\",\"position\":\"Prezes\",\"password\":\"altimi\",\"mail\":\"aleksander.lewicki@altimi.com\",\"undefined\":2}",
+      "3": "{\"id\":3,\"name\":\"Monika Zmuda\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 49\",\"phone2\":\"605 733 990\",\"img\":\"./img/temp_employees/Monika.jpg\",\"positionWeight\":\"2\",\"position\":\"Dyrektor Operacyjny\",\"password\":\"altimi\",\"mail\":\"monika.zmuda@altimi.com\",\"undefined\":3}",
+      "4": "{\"id\":4,\"name\":\"Beata Ocetkiewicz\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 20\",\"phone2\":\"796 696 445\",\"img\":\"./img/temp_employees/Beata.jpg\",\"positionWeight\":\"3\",\"position\":\"Delivery IT Manager\",\"password\":\"altimi\",\"mail\":\"beata.ocetkiewicz@altimi.com\",\"undefined\":4}",
+      "5": "{\"id\":5,\"name\":\"Małgorzata Pędziwiatr-Wagan\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 00\",\"img\":\"./img/temp_employees/Malgorzata.jpg\",\"positionWeight\":\"3\",\"position\":\"Kierownik Działu Rekrutacji\",\"password\":\"altimi\",\"mail\":\"malgorzata.pedziwiatr@altimi.com\",\"undefined\":5}",
+      "6": "{\"id\":6,\"name\":\"Marcin Słowiński\",\"projectName\":\"\",\"phone1\":\"\",\"phone2\":\"534 190 316\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"2\",\"position\":\"Project Manager\",\"password\":\"altimi\",\"mail\":\"marcin.slowinski@altimi.com\",\"undefined\":6}",
+      "7": "{\"id\":7,\"name\":\"Tomasz Odrzywołek\",\"projectName\":\"\",\"phone1\":\"\",\"phone2\":\"507 664 444\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"2\",\"position\":\"Project Manager\",\"password\":\"altimi\",\"mail\":\"tomasz.odrzywolek@altimi.com\",\"undefined\":7}",
+      "8": "{\"id\":8,\"name\":\"Marlena Popardowska\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 30\",\"phone2\":\"722 363 701\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"6\",\"position\":\"Dyrektor Finansowy\",\"password\":\"altimi\",\"mail\":\"marlena.popardowska@altimi.com\",\"undefined\":8}",
+      "9": "{\"id\":9,\"name\":\"Dorota Pazdro\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 16\",\"phone2\":\"606 707 232\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"4\",\"position\":\"Dyrektor Handlowy\",\"password\":\"altimi\",\"mail\":\"dorota.pazdro@altimi.com\",\"undefined\":9}",
+      "10": "{\"id\":10,\"name\":\"Kamil Gąciarek\",\"projectName\":\"\",\"phone1\":\"\",\"phone2\":\"534 184 222\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"12\",\"position\":\"Administrator IT\",\"password\":\"altimi\",\"mail\":\"kamil.gaciarek@altimi.com\",\"undefined\":10}",
+      "11": "{\"id\":11,\"name\":\"Agneszka Mastej\",\"projectName\":\"\",\"phone1\":\"(71) 78 60 825\",\"phone2\":\"782 591 073\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"9\",\"position\":\"Asystentka Biura\",\"password\":\"altimi\",\"mail\":\"agnieszka.mastej@altimi.com\",\"undefined\":11}",
+      "12": "{\"id\":12,\"name\":\"Ewa Kasperowicz\",\"projectName\":\"\",\"phone1\":\"(71) 786 08 42\",\"phone2\":\"722 363 718\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"5\",\"position\":\"Specjalista ds. Kadr i Płac\",\"password\":\"altimi\",\"mail\":\"ewa.kasperowicz@altimi.com\",\"undefined\":12}",
+      "13": "{\"id\":13,\"name\":\"Tomasz Żygadło\",\"projectName\":\"GEA\",\"phone1\":\"\",\"phone2\":\"722 363 728\",\"img\":\"./img/temp_employees/TomaszZygadlo.jpg\",\"positionWeight\":\"13\",\"position\":\"Developer\",\"password\":\"altimi\",\"mail\":\"tomasz.zygadlo@altimi.com\",\"undefined\":13}",
+      "14": "{\"id\":14,\"name\":\"Radosław Zieliński\",\"projectName\":\"Lorenz\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\".NET Developer\",\"password\":\"altimi\",\"mail\":\"radoslaw.zielinski@altimi.com\",\"undefined\":14}",
+      "15": "{\"id\":15,\"name\":\"Jan Kowalski\",\"projectName\":\"Akademia\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\"Developer\",\"password\":\"altimi\",\"mail\":\"jan.kowalski@altimi.com\",\"undefined\":15}",
+      "16": "{\"id\":16,\"name\":\"Admin\",\"projectName\":\"\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\"Admin\",\"password\":\"admin\",\"mail\":\"admin@altimi.com\",\"undefined\":16}"
     }
   }
 }
