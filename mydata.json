@@ -8,7 +8,8 @@
     "Downloads": 8,
     "News": 18,
     "Announcements": 14,
-    "Empoyees": 21
+    "Empoyees": 21,
+    "newModel": 101
   },
   "models": {
     "User": {},
@@ -67,6 +68,9 @@
       "14": "{\"id\":14,\"name\":\"Radosław Zieliński\",\"projectName\":\"Lorenz\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\".NET Developer\",\"password\":\"altimi\",\"mail\":\"radoslaw.zielinski@altimi.com\",\"undefined\":14}",
       "15": "{\"id\":15,\"name\":\"Jan Kowalski\",\"projectName\":\"Akademia\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\"Developer\",\"password\":\"altimi\",\"mail\":\"jan.kowalski@altimi.com\",\"undefined\":15}",
       "16": "{\"id\":16,\"name\":\"Admin\",\"projectName\":\"\",\"phone1\":\"\",\"phone2\":\"722 363 724\",\"img\":\"./img/temp_employees/profile.jpg\",\"positionWeight\":\"13\",\"position\":\"Admin\",\"password\":\"admin\",\"mail\":\"admin@altimi.com\",\"undefined\":16}"
+    },
+    "newModel": {
+      "100": "{\"id\":100}"
     }
   }
 }

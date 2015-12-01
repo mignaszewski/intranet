@@ -1,5 +1,5 @@
-module.exports = function($scope, $location, $rootScope) {
-$scope.employees = employees;
+module.exports = function($scope, $location, $rootScope, Employees) {
+// $scope.employees = employees;
 
 $scope.login = true;
   $scope.logged = function() {

@@ -1,4 +1,4 @@
-module.exports = function($scope, News, Container, $base64){
+module.exports = function($scope, News, Container){
   $scope.obj = {};
   $scope.allNews = News.find();
 

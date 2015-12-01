@@ -1,7 +1,8 @@
-module.exports = function($scope, $filter, $http, Employees) {
+module.exports = function($scope, $filter, Employees) {
+  
   $scope.employees = Employees.find();
 
-  $scope.popupvisible = false;
+  $scope.popupvisible =  false;
   $scope.showcard = {};
   $scope.click = 0;
 

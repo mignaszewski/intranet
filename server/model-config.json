@@ -65,5 +65,9 @@
   "Employees": {
     "dataSource": "db",
     "public": true
+  },
+  "newModel": {
+    "dataSource": "db",
+    "public": true
   }
 }
