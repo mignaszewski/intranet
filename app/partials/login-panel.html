@@ -1,0 +1,18 @@
+<section ng-if="menu === 'yourprofile'" class="login-panel-section">
+  <form id="login_panel">
+    <div class="login-section">
+      <label for="email" class="login">Login</label>
+      <br/>
+      <input type="email" name="mail" class"login-input" placeholder="podaj swój e-mail" ng-model="modelMail" required> <!-- podświetlanie inputów -->
+    </div>
+    <div class="password-section">
+      <label for="password" class="password">Hasło</label>
+      <br/>
+      <input type="password" name="password" class="password-input" placeholder="hasło" ng-model="modelPassword" required>
+    </div>
+    <br/>
+    <div class="btn-section">
+      <button class="login-btn" type="submit" ng-click="loggedIn(modelMail, modelPassword)">Zaloguj</button>
+    </div>
+  </form>
+</section>

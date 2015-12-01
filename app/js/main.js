@@ -13,8 +13,10 @@
   var newsCtrl = require('./controllers/newsctrl');
   var announcementsCtrl = require('./controllers/announcementsctrl');
   var downloadCtrl = require('./controllers/downloadctrl');
+  var profileCtrl = require('./controllers/profileCtrl');
+  var loginCtrl = require('./controllers/loginCtrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'angularUtils.directives.dirPagination', 'xeditable'])
 
   .config([
     '$locationProvider',
@@ -35,11 +37,19 @@
           templateUrl: "./partials/employees.html",
           controller: "EmployeesController"
         })
+        .when("/profile", {
+          templateUrl: "./partials/yourprofile.html",
+          controller: "EmployeesController"
+        })
+        // .when("/profile", {
+        //   templateUrl: "./partials/login-panel.html",
+        //   controller: "LoginController",
+        // })
         .otherwise({
            redirectTo: '/'
         });
     }
-  ]) 
+  ])
 
   // ///////////////////////////////////////////////////////////////////////
   // .config(function(LoopBackResourceProvider) {
@@ -52,9 +62,11 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', employeesCtrl])
-  .controller('NewsController', ['$scope', 'News', 'Container', newsCtrl ])
-  .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
-  .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
+  .controller('NewsController', ['$scope', newsCtrl])
+  .controller('AnnouncementsController', ['$scope', announcementsCtrl])
+  .controller('DownloadController', ['$scope', downloadCtrl])
+  .controller('ProfileController', ['$scope', profileCtrl])
+  .controller('LoginController', ['$scope', loginCtrl])
 
 // Load directive
   .directive('employeeCard', function() {

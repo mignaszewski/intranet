@@ -58,7 +58,7 @@ gulp.task('slc-loopback', function () {
 
 // Default task !
 gulp.task('default', function() {
-  runSequence(['clean'], ['serve', 'slc-loopback'], ['api'], function() {
+  runSequence(['clean'], ['serve'], function() {
   });
 });
 
