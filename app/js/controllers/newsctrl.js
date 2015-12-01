@@ -17,13 +17,13 @@ module.exports = function($scope, News, Container){
   };
 
   $scope.cos = "";
+  $scope.filePath = "";
   $scope.getImage = function(){
-    $scope.cos = Container.download({container: 'news-imgs', file: 'smallpic.png'}).$promise.then(function(data) {
+    var infoString = Container.getFile({container: 'news-imgs', file: 'sylwester.jpg'}).$promise.then(function(data){
       console.log(data);
+      $scope.cos = data;
     });
-    // $scope.cos = Container.Resource.url;
-    // console.log()
-    // console.log(substr($scope.cos,0,100));
+    $scope.filePath = "http://localhost:3003/api/containers/" + $scope.cos.container + "/download/" + $scope.cos.name;
   };
 
   $scope.readMore = function(nobj){
