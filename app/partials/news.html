@@ -13,10 +13,11 @@
   </article>
 
   <div ng-click="getImage()">
-    <img ng-src="{{filePath}}" alt="">
+    <img ng-src="" alt="">
     BLEBLEBLE
-    {{cos.container}} <br />
-    {{cos.name}} <br />
+    {{cos}}
+    <!-- {{cos.container}} <br /> -->
+    <!-- {{cos.name}} <br /> -->
   </div>
 
   <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">

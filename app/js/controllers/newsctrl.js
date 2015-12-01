@@ -1,4 +1,4 @@
-module.exports = function($scope, News, Container){
+module.exports = function($scope, News, Container, $base64){
   $scope.obj = {};
   $scope.allNews = News.find();
 
@@ -18,12 +18,17 @@ module.exports = function($scope, News, Container){
 
   $scope.cos = "";
   $scope.filePath = "";
+  // $scope.getImage = function(){
+  //   var infoString = Container.getFile({container: 'news-imgs', file: 'smallpic.png'}).$promise.then(function(data){
+  //     console.log(data);
+  //     $scope.cos = data;
+  //   });
+  //   $scope.filePath = "http://localhost:3003/api/containers/" + $scope.cos.container + "/download/" + $scope.cos.name;
+  // };
   $scope.getImage = function(){
-    var infoString = Container.getFile({container: 'news-imgs', file: 'sylwester.jpg'}).$promise.then(function(data){
-      console.log(data);
-      $scope.cos = data;
-    });
-    $scope.filePath = "http://localhost:3003/api/containers/" + $scope.cos.container + "/download/" + $scope.cos.name;
+    $scope.cos = Container.download({container: 'news-imgs', file: 'smallpic.png'});
+    // $scope.cos = jQuery.parseJSON($scope.cos);
+    console.log($scope.cos);
   };
 
   $scope.readMore = function(nobj){
