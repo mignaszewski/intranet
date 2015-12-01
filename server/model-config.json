@@ -55,5 +55,19 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "Users": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Employees": {
+    "dataSource": "db",
+    "public": true
+  },
+  "newModel": {
+    "dataSource": "db",
+    "public": true
   }
 }
