@@ -32,7 +32,9 @@
     "angular-simple-calendar": "~1.1.4",
     "angular-resource": "~1.4.8",
     "angular-xeditable": "~0.1.9",
-    "angular-base64": "~2.0.5"
+    "angular-base64": "~2.0.5",
+    "ng-file-model": "*",
+    "angular-file-upload": "~2.2.0"
   },
   "devDependencies": {
     "fullcalendar": "~2.4.0"

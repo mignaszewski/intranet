@@ -1,26 +1,169 @@
 <!-- news.html -->
-<div ng-if="menu === 'news'" class="news-content">
+<div ng-if="menu === 'news'" class="news-content" nv-file-drop uploader="uploader">
 
-  <article class="news-adding">
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- <article class="news-adding">
     <h3>DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ</h3>
     <form>
       <h6>Tytuł:</h6>   <textarea class="search-input form-control" type="text" ng-model="newtitle" required></textarea><br />
-      <h6>Zdjęcie:</h6> <input class="search-input form-control" type="file" ng-model="newimg"><br />
+      <h6>Zdjęcie:</h6> <input class="search-input form-control" type="file" ng-file-model="newimg"><br />
+      <input class="submitt" type="button" value="Dodaj!" ng-click="addPhoto(newimg)">
       <h6>Opis:</h6>    <textarea class="search-input form-control description-input" type="text" ng-model="newdescription" required></textarea><br />
       <h6>Data:</h6>    <textarea class="search-input form-control" type="text" ng-model="newdate" placeholder="rrrr.mm.dd" required></textarea><br />
-      <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newimg, newdescription, newdate)"  onClick="history.go(0)" VALUE="Refresh">
+      <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newdescription, newimg, newdate)"  onClick="history.go(0)" VALUE="Refresh">
     </form>
-  </article>
+  </article> -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->  
+  <!-- <img src="{{newimg.data}}" alt="">
 
   <div ng-click="getImage()">
     <img ng-src="" alt="">
     BLEBLEBLE
     {{cos}}
-    <!-- {{cos.container}} <br /> -->
-    <!-- {{cos.name}} <br /> -->
-  </div>
+    {{cos.container}} <br />
+    {{cos.name}} <br />
+  </div> -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
+<div class="container">
+
+  <div class="row">
+
+          <div class="col-md-3">
+
+          <!-- <img ng-src="{{image}}"> </img> -->
+              <!-- nv-file-select | nv-file-select="options" -->
+              <input nv-file-select uploader="uploader" type="file" multiple/><br/>
+          </div>
+
+          <div class="col-md-9" style="margin-bottom: 40px">
+<!-- 
+              <h3>Upload queue</h3>
+
+              <p>Queue length: {{ uploader.queue.length }}</p> -->
+
+              <table class="table">
+<!--                   <thead>
+                  <tr>
+                      <th width="50%">Name</th>
+                      <th ng-show="uploader.isHTML5">Size</th>
+                      <th ng-show="uploader.isHTML5">Progress</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                  </tr>
+                  </thead>
+ -->                  <tbody>
+                  <tr ng-repeat="item in uploader.queue">
+                      <td><strong>{{ item.file.name }}</strong></td>
+                      <td ng-show="uploader.isHTML5" nowrap>{{
+                          item.file.size/1024/1024|number:2 }} MB
+                      </td>
+                      <td ng-show="uploader.isHTML5">
+                          <div class="progress" style="margin-bottom: 0;">
+                              <div class="progress-bar" role="progressbar"
+                                   ng-style="{ 'width': item.progress + '%' }"></div>
+                          </div>
+                      </td>
+                      <td class="text-center">
+                          <span ng-show="item.isSuccess"><i
+                                  class="glyphicon glyphicon-ok"></i></span>
+                          <span ng-show="item.isCancel"><i
+                                  class="glyphicon glyphicon-ban-circle"></i></span>
+                          <span ng-show="item.isError"><i
+                                  class="glyphicon glyphicon-remove"></i></span>
+                      </td>
+                      <td nowrap>
+                          <button type="button" class="btn btn-success btn-xs"
+                                  ng-click="item.upload()"
+                                  ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                              <span class="glyphicon glyphicon-upload"></span>
+                              Upload
+                          </button>
+                          <button type="button" class="btn btn-warning btn-xs"
+                                  ng-click="item.cancel()"
+                                  ng-disabled="!item.isUploading">
+                              <span class="glyphicon glyphicon-ban-circle"></span>
+                              Cancel
+                          </button>
+                          <button type="button" class="btn btn-danger btn-xs"
+                                  ng-click="item.remove()">
+                              <span class="glyphicon glyphicon-trash"></span>
+                              Remove
+                          </button>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <div>
+                  <p>
+                      Queue progress:
+
+                  <div class="progress" style="">
+                      <div class="progress-bar" role="progressbar"
+                           ng-style="{ 'width': uploader.progress + '%' }"></div>
+                  </div>
+                  </p>
+                  <button type="button" class="btn btn-success btn-s"
+                          ng-click="uploader.uploadAll()"
+                          ng-disabled="!uploader.getNotUploadedItems().length">
+                      <span class="glyphicon glyphicon-upload"></span> Upload all
+                  </button>
+                  <button type="button" class="btn btn-warning btn-s"
+                          ng-click="uploader.cancelAll()"
+                          ng-disabled="!uploader.isUploading">
+                      <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                      all
+                  </button>
+                  <button type="button" class="btn btn-danger btn-s"
+                          ng-click="uploader.clearQueue()"
+                          ng-disabled="!uploader.queue.length">
+                      <span class="glyphicon glyphicon-trash"></span> Remove all
+                  </button>
+              </div>
+
+          </div>
+
+          <div class="col-md-9" style="margin-bottom: 40px" data-ng-init="load()">
+
+              <h3>Files in the container</h3>
+
+              <table class="table">
+
+                  <tbody>
+                  <tr ng-repeat="file in files">
+                      <td>
+                          <a href="/api/containers/news-imgs/download/{{file.name}}"><strong>{{
+                              file.name }}</strong></a></td>
+                      <td>
+                      <td>
+                          <button type="button" class="btn btn-danger btn-xs"
+                                  ng-click="delete($index, file.name)"
+                                  title="Delete the file">
+                              <span class="glyphicon glyphicon-trash"></span>
+                              Remove
+                          </button>
+
+                      </td>
+                      </button>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
       <h5><i class="fa fa-trash" ng-click="removeNews(news.id)" onClick="history.go(0)" VALUE="Refresh"></i> Skasuj</h5>
       <h4>{{news.date}}</h4>
@@ -41,6 +184,6 @@
       <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" >
       </dir-pagination-controls>
     </article>
-  </section>    
-
+  </section>     -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </div>

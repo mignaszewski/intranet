@@ -7,6 +7,7 @@
   require('angular-animate');
 
 
+
   var mainviewCtrl = require('./controllers/mainviewctrl');
   var calendarCtrl = require('./controllers/calendarctrl');
   var employeesCtrl = require('./controllers/employeesctrl');
@@ -16,7 +17,7 @@
   var profileCtrl = require('./controllers/profileCtrl');
   var loginCtrl = require('./controllers/loginCtrl');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination', 'xeditable'])
+  angular.module('SampleApp', ['ngRoute', 'ngAnimate', 'lbServices', 'angularUtils.directives.dirPagination', 'xeditable', 'ng-file-model', 'angularFileUpload'])
 
   .config([
     '$locationProvider',
@@ -66,7 +67,7 @@
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
   .controller('EmployeesController', ['$scope', 'Employees', '$filter', employeesCtrl])
-  .controller('NewsController', ['$scope', 'News', 'Container', newsCtrl ])
+  .controller('NewsController', ['$scope', 'News', 'Container', 'FileUploader', newsCtrl ])
   .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
   .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
   .controller('ProfileController', ['$scope', profileCtrl])
