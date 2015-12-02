@@ -65,7 +65,7 @@
   //Load controller
   .controller('MainViewController', ['$scope', mainviewCtrl])
   .controller('CalendarController', ['$scope', calendarCtrl])
-  .controller('EmployeesController', ['$scope', 'Employees', employeesCtrl])
+  .controller('EmployeesController', ['$scope', 'Employees', '$filter', employeesCtrl])
   .controller('NewsController', ['$scope', 'News', 'Container', newsCtrl ])
   .controller('AnnouncementsController', ['$scope', 'Announcements', announcementsCtrl])
   .controller('DownloadController', ['$scope', 'Downloads', downloadCtrl])
