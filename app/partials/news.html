@@ -2,17 +2,31 @@
 <div ng-if="menu === 'news'" class="news-content" nv-file-drop uploader="uploader">
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- <article class="news-adding">
+  <article class="news-adding">
     <h3>DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ</h3>
     <form>
       <h6>Tytuł:</h6>   <textarea class="search-input form-control" type="text" ng-model="newtitle" required></textarea><br />
-      <h6>Zdjęcie:</h6> <input class="search-input form-control" type="file" ng-file-model="newimg"><br />
-      <input class="submitt" type="button" value="Dodaj!" ng-click="addPhoto(newimg)">
+      <h6>Zdjęcie:</h6> <input nv-file-select uploader="uploader" type="file" multiple/><br/>
+      <table class="table">
+        <tbody>
+          <tr ng-repeat="item in uploader.queue">
+              <td><strong>{{item.file.name}}</strong></td>
+              <td nowrap>
+                  <button type="button" class="btn btn-danger btn-xs"
+                          ng-click="item.remove()">
+                      <span class="glyphicon glyphicon-trash"></span>
+                      Remove
+                  </button>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+      <!-- <input class="submitt" type="button" value="Dodaj!" ng-click="addPhoto(newimg)"> -->
       <h6>Opis:</h6>    <textarea class="search-input form-control description-input" type="text" ng-model="newdescription" required></textarea><br />
       <h6>Data:</h6>    <textarea class="search-input form-control" type="text" ng-model="newdate" placeholder="rrrr.mm.dd" required></textarea><br />
       <input class="submitt" type="button" value="Dodaj!" ng-click="addAnotherNews(newtitle, newdescription, newimg, newdate)"  onClick="history.go(0)" VALUE="Refresh">
     </form>
-  </article> -->
+  </article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->  
   <!-- <img src="{{newimg.data}}" alt="">
@@ -26,6 +40,9 @@
   </div> -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <div class="container">
 
   <div class="row">
@@ -95,11 +112,8 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
-
-
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <!-- <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
+  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:5">
     <aside class="news-description">
       <h5><i class="fa fa-trash" ng-click="removeNews(news.id)" onClick="history.go(0)" VALUE="Refresh"></i> Skasuj</h5>
       <h4>{{news.date}}</h4>
@@ -120,6 +134,6 @@
       <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" >
       </dir-pagination-controls>
     </article>
-  </section>     -->
+  </section>    
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </div>

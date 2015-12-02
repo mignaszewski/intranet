@@ -1,4 +1,4 @@
-module.exports = function($scope, News, Container, FileUploader, $http){
+module.exports = function($scope, News, Container, FileUploader){
   $scope.obj = {};
   $scope.allNews = News.find();
 
@@ -8,9 +8,9 @@ module.exports = function($scope, News, Container, FileUploader, $http){
       alert("Dodałeś z powodzeniem aktualność o tytule: " + newtitle);
     };
   };
-  $scope.removeNews = function(ajdi){
+  $scope.removeNews = function(funcId){
     if(confirm("Czy na pewno chcesz usunąć tą aktualność?")){
-      News.deleteById({ id: ajdi })
+      News.deleteById({ id: funcId })
       .$promise
       .then(function() { console.log('deleted'); alert('deleted'); });
     };
