@@ -6,17 +6,22 @@
     <h3>DODAJ / ABY DODAĆ MUSISZ SIĘ ZALOGOWAĆ</h3>
     <form>
       <h6>Tytuł:</h6>   <textarea class="search-input form-control" type="text" ng-model="newtitle" required></textarea><br />
-      <h6>Zdjęcie:</h6> <input nv-file-select uploader="uploader" type="file" multiple/><br/>
+      <h6>Zdjęcie:</h6> <input nv-file-select uploader="uploader" type="file"/><br/>
       <table class="table">
         <tbody>
           <tr ng-repeat="item in uploader.queue">
               <td><strong>{{item.file.name}}</strong></td>
               <td nowrap>
-                  <button type="button" class="btn btn-danger btn-xs"
-                          ng-click="item.remove()">
-                      <span class="glyphicon glyphicon-trash"></span>
-                      Remove
-                  </button>
+                <button type="button" class="btn btn-success btn-xs"
+                        ng-click="uploadNewimgName(item.file.name); item.upload()">
+                    <span class="glyphicon glyphicon-upload"></span>
+                    Załaduj
+                </button>
+                <button type="button" class="btn btn-danger btn-xs"
+                        ng-click="item.remove()">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Usuń
+                </button>
               </td>
           </tr>
           </tbody>

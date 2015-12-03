@@ -24,7 +24,8 @@
       "required": true
     },
     "img": {
-      "type": "string"
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

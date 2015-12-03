@@ -1,10 +1,15 @@
 module.exports = function($scope, News, Container, FileUploader){
   $scope.obj = {};
   $scope.allNews = News.find();
+  $scope.newimg = "";
+
+  $scope.uploadNewimgName = function(name){
+    $scope.newimg = name;
+  };
 
   $scope.addAnotherNews = function(newtitle, newdescription, newimg, newdate){
     if(confirm("Czy na pewno chcesz dodać tą aktualność?")){
-      News.create({title: newtitle, description: newdescription, img: newimg.data, date: newdate, pullDown: 0});
+      News.create({title: newtitle, description: newdescription, img: "/api/containers/news-imgs/download/"+ newimg, date: newdate, pullDown: 0});
       alert("Dodałeś z powodzeniem aktualność o tytule: " + newtitle);
     };
   };
@@ -16,32 +21,26 @@ module.exports = function($scope, News, Container, FileUploader){
     };
   };
 
-  ///////////////////////////////// UPLOAD POST --> TO SERVER  
+///////////////////////////////////////////////////////////////////////////////////////////////////
   // create a uploader with options
+  var uploader = $scope.uploader = new FileUploader({
+    scope: $scope,                          // to automatically update the html. Default: $rootScope
+    url: '/api/containers/news-imgs/upload',
+  });
 
-    var uploader = $scope.uploader = new FileUploader({
-      scope: $scope,                          // to automatically update the html. Default: $rootScope
-      url: '/api/containers/news-imgs/upload',
-    });
+  // ADDING FILTERS
+  uploader.filters.push({
+      name: 'filterName',
+      fn: function (item, options) { // second user filter
+          console.info('filter2');
+          return true;
+      }
+  });
 
-    // ADDING FILTERS
-    uploader.filters.push({
-        name: 'filterName',
-        fn: function (item, options) { // second user filter
-            console.info('filter2');
-            return true;
-        }
-    });
-
-
-    uploader.onSuccessItem = function(item, response, status, headers) {
-      console.info('Success', response, status, headers);
-      $scope.$broadcast('uploadCompleted', item);
-    };
-
-
-
-
+  uploader.onSuccessItem = function(item, response, status, headers) {
+    console.info('Success', response, status, headers);
+    $scope.$broadcast('uploadCompleted', item);
+  };
 
   $scope.load = function () {
     Container.getFiles({container: 'news-imgs'}).$promise.then(function(data) {
@@ -50,43 +49,17 @@ module.exports = function($scope, News, Container, FileUploader){
     });
   };
 
-    $scope.delete = function (index, ffile) {
-      Container.removeFile({container: 'news-imgs', file: ffile}).$promise.then(function (data, status, headers) {
-        $scope.files.splice(index, 1);
-      });
-    };
-
-    $scope.$on('uploadCompleted', function(event) {
-      console.log('uploadCompleted event received');
-      $scope.load();
+  $scope.delete = function (index, ffile) {
+    Container.removeFile({container: 'news-imgs', file: ffile}).$promise.then(function (data, status, headers) {
+      $scope.files.splice(index, 1);
     });
+  };
 
-
-
-
-
-
-
-
-
-
-
-
-  ///////////////////////////////// DOWNLOAD GET --> DISPLAY
-  // $scope.cos = "";
-  // $scope.filePath = "";
-  // $scope.getImage = function(){
-  //   var infoString = Container.download({container: 'news-imgs', file: 'smallpic.png'}).$promise.then(function(data){
-  //     console.log(data);
-  //     $scope.cos = data;
-  //   });
-  //   $scope.filePath = "http://localhost:3003/api/containers/" + $scope.cos.container + "/download/" + $scope.cos.name;
-  // };
-  // $scope.getImage = function(){
-  //   $scope.cos = Container.download({container: 'news-imgs', file: 'smallpic.png'});
-  //   // $scope.cos = jQuery.parseJSON($scope.cos);
-  //   console.log($scope.cos);
-  // };
+  $scope.$on('uploadCompleted', function(event) {
+    console.log('uploadCompleted event received');
+    $scope.load();
+  });
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
   $scope.readMore = function(nobj){
     nobj.pullDown = 1;
@@ -95,7 +68,9 @@ module.exports = function($scope, News, Container, FileUploader){
     nobj.pullDown = 0;
   };
 
-  // $scope.allNews = [
+};
+
+  // var allNews = [
   // {
   //   id: 1,
   //   date: '2014.11.03',
@@ -176,4 +151,3 @@ module.exports = function($scope, News, Container, FileUploader){
   //   img: ['./img/temp_news/Tomasz.jpg'],
   //   pullDown: 0
   // }];
-};
