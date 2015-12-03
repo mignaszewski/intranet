@@ -1,50 +1,46 @@
 module.exports = function($scope) {
   $scope.menu = "";
 
-  // $scope.$watch('menu', function(newValue, oldValue){
-  //   console.log(newValue);
-  //   console.log(oldValue);
-  // });
   $scope.elements = [
     {
       clickName: 'announcements',
-      name: 'Announcements',
+      name: 'Ogłoszenia',
       className: 'home-target-head announcements-bckgrd',
       fontAwe: 'fa fa-exclamation-triangle'
     },
     {
       clickName: 'news',
-      name: 'News',
+      name: 'Aktualności',
       className: 'home-target-head news-bckgrd',
       fontAwe: 'fa fa-list-alt'
     },
     {
       clickName: 'yourprofile',
-      name: 'Your Profile',
+      name: 'Twój Profil',
       className: 'home-target-head profile-bckgrd',
       fontAwe: 'fa fa-user'
     },
     {
       clickName: 'employees',
-      name: 'Our Team',
+      name: 'Pracownicy',
       className: 'home-target-head team-bckgrd',
       fontAwe: 'fa fa-users'
     },
     {
       clickName: 'download',
-      name: 'Download',
+      name: 'Do pobrania',
       className: 'home-target-head download-bckgrd',
       fontAwe: 'fa fa-download'
     },
     {
       clickName: 'calendar',
-      name: 'Calendar',
+      name: 'Kalendarz',
       className: 'home-target-head calendar-bckgrd',
       fontAwe: 'fa fa-birthday-cake'
     },
     {
       clickName: "",
-      name: 'Main Page',
+      name: 'Główny widok',
       className: 'home-target-head go-main-page',
       fontAwe: 'fa fa-home'
     }
