@@ -115,7 +115,8 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:1">
+  <!-- <article class="news-main-content" dir-paginate="news in allNews|orderBy:'date':'reverse'|itemsPerPage:1"> -->
+  <article class="news-main-content" ng-repeat="news in allNews">
     <aside class="news-description">
       <h5><i class="fa fa-trash" ng-click="removeNews(news.id)"></i> Skasuj</h5>
       <h4>{{news.date}}</h4>
@@ -133,8 +134,10 @@
 
   <section class="news-pagination-wrapper">
     <article class="news-pagination-holder">
-      <dir-pagination-controls max-size="1" direction-links="true" boundary-links="true" >
-      </dir-pagination-controls>
+      <!-- <dir-pagination-controls max-size="1" direction-links="true" boundary-links="true" >
+      </dir-pagination-controls> -->
+      <button class="btn btn-primary btn-pag" ng-click="changePage(-howManyPerPage)" ng-if="page > 0">PREVIOUS</button>
+      <button class="btn btn-primary btn-pag" ng-click="changePage(howManyPerPage)">NEXT</button>
     </article>
   </section>    
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
