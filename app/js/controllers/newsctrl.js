@@ -11,6 +11,7 @@ module.exports = function($scope, News, Container, FileUploader){
     if(confirm("Czy na pewno chcesz dodać tą aktualność?")){
       News.create({title: newtitle, description: newdescription, img: "/api/containers/news-imgs/download/"+ newimg, date: newdate, pullDown: 0});
       alert("Dodałeś z powodzeniem aktualność o tytule: " + newtitle);
+      history.go(0);
     };
   };
   $scope.removeNews = function(funcId){
