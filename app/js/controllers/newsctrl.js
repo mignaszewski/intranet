@@ -19,6 +19,7 @@ module.exports = function($scope, News, Container, FileUploader){
       News.deleteById({ id: funcId })
       .$promise
       .then(function() { console.log('deleted'); alert('deleted'); });
+      history.go(0);
     };
   };
 
