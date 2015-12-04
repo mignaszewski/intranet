@@ -136,8 +136,8 @@
     <article class="news-pagination-holder">
       <!-- <dir-pagination-controls max-size="1" direction-links="true" boundary-links="true" >
       </dir-pagination-controls> -->
-      <button class="btn btn-primary btn-pag" ng-click="changePage(-howManyPerPage)" ng-if="page > 0">POPRZEDNIA</button>
-      <button class="btn btn-primary btn-pag" ng-click="changePage(howManyPerPage)" ng-if="page < countAll.count - 1">NASTĘPNA</button>
+      <button class="btn btn-primary btn-pag" ng-click="changePage(-howManyPerPage)" ng-if="howManySkip > 0">POPRZEDNIA</button>
+      <button class="btn btn-primary btn-pag" ng-click="changePage(howManyPerPage)" ng-if="howManySkip < countAll.count - 1">NASTĘPNA</button>
     </article>
   </section>    
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->

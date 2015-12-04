@@ -1,13 +1,13 @@
 module.exports = function($scope, News, Container, FileUploader){
   $scope.obj = {};
-  $scope.page = 0;
+  $scope.howManySkip = 0;
   $scope.howManyPerPage = 2;
-  $scope.allNews =  News.find({filter: {order: 'date DESC', limit:$scope.howManyPerPage, skip:$scope.page}});
+  $scope.allNews =  News.find({filter: {order: 'date DESC', limit:$scope.howManyPerPage, skip:$scope.howManySkip}});
   $scope.newimg = "";
   $scope.countAll = News.count();
   $scope.changePage = function(value){
-    $scope.page += value
-    $scope.allNews =  News.find({filter: {order: 'date DESC', limit:$scope.howManyPerPage, skip:$scope.page}});
+    $scope.howManySkip += value
+    $scope.allNews =  News.find({filter: {order: 'date DESC', limit:$scope.howManyPerPage, skip:$scope.howManySkip}});
   };
 
   $scope.uploadNewimgName = function(name){
